@@ -1,0 +1,426 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     17275,        417]
+NotebookOptionsPosition[     16722,        394]
+NotebookOutlinePosition[     17065,        409]
+CellTagsIndexPosition[     17022,        406]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"Position", " ", "of", " ", "the", " ", "Sensors"}], ",", " ", 
+    RowBox[{"Latitude", " ", "and", " ", "Longitude"}]}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"sensors", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"GeoPosition", "[", 
+        RowBox[{"{", 
+         RowBox[{"41.3821`", ",", "2.10303`"}], "}"}], "]"}], ",", 
+       RowBox[{"GeoPosition", "[", 
+        RowBox[{"{", 
+         RowBox[{"41.383`", ",", "2.10587`"}], "}"}], "]"}], ",", 
+       RowBox[{"GeoPosition", "[", 
+        RowBox[{"{", 
+         RowBox[{"41.3846`", ",", "2.11191`"}], "}"}], "]"}], ",", 
+       RowBox[{"GeoPosition", "[", 
+        RowBox[{"{", 
+         RowBox[{"41.3859`", ",", "2.11708`"}], "}"}], "]"}], ",", 
+       RowBox[{"GeoPosition", "[", 
+        RowBox[{"{", 
+         RowBox[{"41.3866`", ",", "2.11993`"}], "}"}], "]"}], ",", 
+       RowBox[{"GeoPosition", "[", 
+        RowBox[{"{", 
+         RowBox[{"41.3872`", ",", "2.12252`"}], "}"}], "]"}], ",", 
+       RowBox[{"GeoPosition", "[", 
+        RowBox[{"{", 
+         RowBox[{"41.3888`", ",", "2.12873`"}], "}"}], "]"}], ",", 
+       RowBox[{"GeoPosition", "[", 
+        RowBox[{"{", 
+         RowBox[{"41.3905`", ",", "2.13537`"}], "}"}], "]"}], ",", 
+       RowBox[{"GeoPosition", "[", 
+        RowBox[{"{", 
+         RowBox[{"41.3913`", ",", "2.13864`"}], "}"}], "]"}], ",", 
+       RowBox[{"GeoPosition", "[", 
+        RowBox[{"{", 
+         RowBox[{"41.3925`", ",", "2.14373`"}], "}"}], "]"}]}], "}"}]}], 
+    ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+    "Mapping", " ", "of", " ", "the", " ", "values", " ", "from", " ", "the", 
+     " ", "Wolfram", " ", 
+     RowBox[{"Cloud", ".", " ", "This"}], " ", "values", " ", "in", " ", 
+     "the", " ", "cloud", " ", "have", " ", "been", " ", "gathered", " ", 
+     "from", " ", "every", " ", "sensor", " ", "locally"}], "*)"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"values", "=", 
+     RowBox[{"Map", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Last", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{
+            "Databin", "[", 
+             "\"\<DDbabaf235462-1b3c-411c-b723-49472ddc9487\>\"", "]"}], "[", 
+            "\"\<Data\>\"", "]"}], "[", "#", "]"}], "[", "\"\<Values\>\"", 
+          "]"}], "]"}], "&"}], ",", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"\"\<Gas\>\"", "<>", 
+          RowBox[{"ToString", "[", "i", "]"}]}], ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", "10"}], "}"}]}], "]"}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+    "We", " ", "connect", " ", "to", " ", "our", " ", "Twitter", " ", 
+     "account", " ", "and", " ", "post", " ", "the", " ", "sensors", " ", 
+     "data", " ", "from", " ", "the", " ", "Wolfram", " ", "cloud"}], "*)"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"ServiceExecute", "[", 
+    RowBox[{
+     RowBox[{"ServiceConnect", "[", 
+      RowBox[{
+      "\"\<Twitter\>\"", ",", 
+       "\"\<connection-0ec0d465443eb29712f5d96e9cbeb8bd\>\""}], "]"}], ",", 
+     "\"\<ImageTweet\>\"", ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+       "\"\<Message\>\"", "\[Rule]", " ", 
+        "\"\<Take a look to the Gas Emissions in Barcelona! :)\>\""}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"\"\<Image\>\"", "->", 
+        RowBox[{"Column", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Legended", "[", 
+            RowBox[{
+             RowBox[{"ListLinePlot", "[", 
+              RowBox[{"values", ",", 
+               RowBox[{
+               "ColorFunction", " ", "\[Rule]", "\"\<NeonColors\>\""}], ",", 
+               RowBox[{"ImageSize", "\[Rule]", "Medium"}]}], "]"}], ",", 
+             RowBox[{"BarLegend", "[", "\"\<NeonColors\>\"", "]"}]}], "]"}], 
+           ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+           RowBox[{"GeoGraphics", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"PointSize", "[", ".03", "]"}], ",", 
+               RowBox[{"Map", "[", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"ColorData", "[", "\"\<NeonColors\>\"", "]"}], 
+                    "[", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "-", "30"}], ")"}], "/", 
+                    "90."}], "]"}], ",", 
+                    RowBox[{"Point", "[", 
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}], "]"}]}], "}"}], "&"}], 
+                 ",", 
+                 RowBox[{"Transpose", "[", 
+                  RowBox[{"{", 
+                   RowBox[{"values", ",", "sensors"}], "}"}], "]"}]}], 
+                "]"}]}], "}"}], ",", 
+             RowBox[{"ImageSize", "\[Rule]", "Medium"}]}], "]"}]}], "}"}], 
+         "]"}]}]}], "}"}]}], "]"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.633593433610702*^9, 3.633593457770066*^9}, {
+   3.633593544194169*^9, 3.6335935478816986`*^9}, {3.6335936360772552`*^9, 
+   3.63359367281852*^9}, {3.6335937078296237`*^9, 3.633593724664579*^9}, {
+   3.6335938581274614`*^9, 3.633593891464163*^9}, 3.6335939321743193`*^9, {
+   3.6335944688461156`*^9, 3.633594516827003*^9}, {3.6335946018420253`*^9, 
+   3.6335946666971045`*^9}, {3.6335947379831038`*^9, 3.633594744321579*^9}, {
+   3.6335952311444144`*^9, 3.6335952444838314`*^9}, {3.633595375698881*^9, 
+   3.6335953827628736`*^9}, {3.6335954580456724`*^9, 3.633595480536977*^9}, {
+   3.633595511211666*^9, 3.633595511439827*^9}, {3.6335955811844735`*^9, 
+   3.633595612587803*^9}, {3.633595659299264*^9, 3.6335957282848215`*^9}, {
+   3.633596219409957*^9, 3.633596242535283*^9}, {3.6335962886471243`*^9, 
+   3.6335962933144107`*^9}, {3.6335963402225385`*^9, 
+   3.6335963866222057`*^9}, {3.633596441885176*^9, 3.6335964470117955`*^9}, 
+   3.633596498793727*^9, {3.633596675048689*^9, 3.6335967774222283`*^9}, {
+   3.633596865081768*^9, 3.6335968674464383`*^9}, {3.633596919394084*^9, 
+   3.633596920232677*^9}, {3.6335971143420424`*^9, 3.633597116733734*^9}, {
+   3.6335993112196913`*^9, 3.6335993309716177`*^9}, {3.6335997091099396`*^9, 
+   3.6335997439096975`*^9}, {3.6335999076056104`*^9, 
+   3.6335999454403906`*^9}, {3.6336004025322294`*^9, 3.6336006292775073`*^9}, 
+   3.633600832944436*^9, {3.633600915253496*^9, 3.6336009870525093`*^9}, {
+   3.633601020574565*^9, 3.633601024857588*^9}, {3.633601071768845*^9, 
+   3.633601073416009*^9}, {3.633603141928432*^9, 3.633603517529734*^9}, {
+   3.6336035775651293`*^9, 3.633603606578741*^9}, {3.6336036696349306`*^9, 
+   3.6336036732693243`*^9}, {3.633603789159012*^9, 3.6336039729970703`*^9}, {
+   3.6336040052615504`*^9, 3.6336040140684743`*^9}}],
+
+Cell[BoxData["\<\"Healthy Running data http://t.co/FlhCjJSbl8\"\>"], "Output",
+ CellChangeTimes->{
+  3.6335992309920464`*^9, 3.633599758073696*^9, {3.633599930417161*^9, 
+   3.633599955850725*^9}, 3.6336003460063295`*^9, 3.6336008547869534`*^9, 
+   3.6336009740494*^9, 3.633601046348189*^9, 3.633601087675077*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"SendMessage", "[", 
+  RowBox[{"\"\<Twitter\>\"", ",", 
+   RowBox[{"\"\<ImageTweet\>\"", "\[Rule]", 
+    RowBox[{"Rasterize", "[", 
+     RowBox[{"GraphicsColumn", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Legended", "[", 
+          RowBox[{
+           RowBox[{"ListLinePlot", "[", 
+            RowBox[{"values", ",", 
+             RowBox[{"ColorFunction", " ", "\[Rule]", "\"\<NeonColors\>\""}], 
+             ",", 
+             RowBox[{"ImageSize", "\[Rule]", "Medium"}]}], "]"}], ",", 
+           RowBox[{"BarLegend", "[", "\"\<NeonColors\>\"", "]"}]}], "]"}], 
+         ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         RowBox[{"GeoGraphics", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"PointSize", "[", ".03", "]"}], ",", 
+            RowBox[{"Map", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"ColorData", "[", "\"\<NeonColors\>\"", "]"}], "[", 
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "-", "30"}], ")"}], "/", 
+                   "90."}], "]"}], ",", 
+                 RowBox[{"Point", "[", 
+                  RowBox[{"#", "[", 
+                   RowBox[{"[", "2", "]"}], "]"}], "]"}]}], "}"}], "&"}], ",", 
+              RowBox[{"Transpose", "[", 
+               RowBox[{"{", 
+                RowBox[{"values", ",", "sensors"}], "}"}], "]"}]}], "]"}]}], 
+           "}"}], "]"}]}], "}"}], ",", 
+       RowBox[{"ImageSize", "\[Rule]", "Full"}]}], "]"}], "]"}]}]}], 
+  "]"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell["Task", "Subsubsection",
+ CellChangeTimes->{{3.633602875889974*^9, 3.6336028776424737`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{"Auto", "-", 
+   RowBox[{
+   "Tweet", " ", "system", " ", "for", " ", "sending", " ", "information", 
+    " ", "every", " ", "10", " ", "minutes"}]}], " ", "*)"}]], "Input",
+ CellChangeTimes->{{3.6336030981901937`*^9, 3.633603128248226*^9}, {
+  3.633604099701956*^9, 3.6336041010584297`*^9}, {3.63360414724049*^9, 
+  3.633604151623929*^9}, {3.6336042038082547`*^9, 3.633604230793063*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"sensors", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"GeoPosition", "[", 
+      RowBox[{"{", 
+       RowBox[{"41.3821`", ",", "2.10303`"}], "}"}], "]"}], ",", 
+     RowBox[{"GeoPosition", "[", 
+      RowBox[{"{", 
+       RowBox[{"41.383`", ",", "2.10587`"}], "}"}], "]"}], ",", 
+     RowBox[{"GeoPosition", "[", 
+      RowBox[{"{", 
+       RowBox[{"41.3846`", ",", "2.11191`"}], "}"}], "]"}], ",", 
+     RowBox[{"GeoPosition", "[", 
+      RowBox[{"{", 
+       RowBox[{"41.3859`", ",", "2.11708`"}], "}"}], "]"}], ",", 
+     RowBox[{"GeoPosition", "[", 
+      RowBox[{"{", 
+       RowBox[{"41.3866`", ",", "2.11993`"}], "}"}], "]"}], ",", 
+     RowBox[{"GeoPosition", "[", 
+      RowBox[{"{", 
+       RowBox[{"41.3872`", ",", "2.12252`"}], "}"}], "]"}], ",", 
+     RowBox[{"GeoPosition", "[", 
+      RowBox[{"{", 
+       RowBox[{"41.3888`", ",", "2.12873`"}], "}"}], "]"}], ",", 
+     RowBox[{"GeoPosition", "[", 
+      RowBox[{"{", 
+       RowBox[{"41.3905`", ",", "2.13537`"}], "}"}], "]"}], ",", 
+     RowBox[{"GeoPosition", "[", 
+      RowBox[{"{", 
+       RowBox[{"41.3913`", ",", "2.13864`"}], "}"}], "]"}], ",", 
+     RowBox[{"GeoPosition", "[", 
+      RowBox[{"{", 
+       RowBox[{"41.3925`", ",", "2.14373`"}], "}"}], "]"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"twtask", "=", 
+  RowBox[{"RunScheduledTask", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"values", "=", 
+      RowBox[{"Map", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Last", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{
+             "Databin", "[", 
+              "\"\<DDbabaf235462-1b3c-411c-b723-49472ddc9487\>\"", "]"}], 
+             "[", "\"\<Data\>\"", "]"}], "[", "#", "]"}], "[", 
+           "\"\<Values\>\"", "]"}], "]"}], "&"}], ",", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"\"\<Gas\>\"", "<>", 
+           RowBox[{"ToString", "[", "i", "]"}]}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", "10"}], "}"}]}], "]"}]}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"ServiceExecute", "[", 
+      RowBox[{
+       RowBox[{"ServiceConnect", "[", 
+        RowBox[{
+        "\"\<Twitter\>\"", ",", 
+         "\"\<connection-0ec0d465443eb29712f5d96e9cbeb8bd\>\""}], "]"}], ",", 
+       "\"\<ImageTweet\>\"", ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+         "\"\<Message\>\"", "\[Rule]", " ", 
+          "\"\<Take a look to the Gas Emissions in Barcelona! :)\>\""}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"\"\<Image\>\"", "->", 
+          RowBox[{"Column", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"Legended", "[", 
+              RowBox[{
+               RowBox[{"ListLinePlot", "[", 
+                RowBox[{"values", ",", 
+                 RowBox[{
+                 "ColorFunction", " ", "\[Rule]", "\"\<NeonColors\>\""}], ",", 
+                 RowBox[{"ImageSize", "\[Rule]", "Medium"}]}], "]"}], ",", 
+               RowBox[{"BarLegend", "[", "\"\<NeonColors\>\"", "]"}]}], "]"}],
+              ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+             RowBox[{"GeoGraphics", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"PointSize", "[", ".03", "]"}], ",", 
+                 RowBox[{"Map", "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"ColorData", "[", "\"\<NeonColors\>\"", "]"}], 
+                    "[", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "-", "30"}], ")"}], "/", 
+                    "90."}], "]"}], ",", 
+                    RowBox[{"Point", "[", 
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}], "]"}]}], "}"}], "&"}], 
+                   ",", 
+                   RowBox[{"Transpose", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"values", ",", "sensors"}], "}"}], "]"}]}], 
+                  "]"}]}], "}"}], ",", 
+               RowBox[{"ImageSize", "\[Rule]", "Medium"}]}], "]"}]}], "}"}], 
+           "]"}]}]}], "}"}]}], "]"}]}], ",", "600"}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.633593433610702*^9, 3.633593457770066*^9}, {
+   3.633593544194169*^9, 3.6335935478816986`*^9}, {3.6335936360772552`*^9, 
+   3.63359367281852*^9}, {3.6335937078296237`*^9, 3.633593724664579*^9}, {
+   3.6335938581274614`*^9, 3.633593891464163*^9}, 3.6335939321743193`*^9, {
+   3.6335944688461156`*^9, 3.633594516827003*^9}, {3.6335946018420253`*^9, 
+   3.6335946666971045`*^9}, {3.6335947379831038`*^9, 3.633594744321579*^9}, {
+   3.6335952311444144`*^9, 3.6335952444838314`*^9}, {3.633595375698881*^9, 
+   3.6335953827628736`*^9}, {3.6335954580456724`*^9, 3.633595480536977*^9}, {
+   3.633595511211666*^9, 3.633595511439827*^9}, {3.6335955811844735`*^9, 
+   3.633595612587803*^9}, {3.633595659299264*^9, 3.6335957282848215`*^9}, {
+   3.633596219409957*^9, 3.633596242535283*^9}, {3.6335962886471243`*^9, 
+   3.6335962933144107`*^9}, {3.6335963402225385`*^9, 
+   3.6335963866222057`*^9}, {3.633596441885176*^9, 3.6335964470117955`*^9}, 
+   3.633596498793727*^9, {3.633596675048689*^9, 3.6335967774222283`*^9}, {
+   3.633596865081768*^9, 3.6335968674464383`*^9}, {3.633596919394084*^9, 
+   3.633596920232677*^9}, {3.6335971143420424`*^9, 3.633597116733734*^9}, {
+   3.6335993112196913`*^9, 3.6335993309716177`*^9}, {3.6335997091099396`*^9, 
+   3.6335997439096975`*^9}, {3.6335999076056104`*^9, 
+   3.6335999454403906`*^9}, {3.6336004025322294`*^9, 3.6336006292775073`*^9}, 
+   3.633600832944436*^9, {3.633600915253496*^9, 3.6336009870525093`*^9}, {
+   3.633601020574565*^9, 3.633601024857588*^9}, {3.633601071768845*^9, 
+   3.633601073416009*^9}, {3.633602904685051*^9, 3.633602968857888*^9}, {
+   3.633603044796754*^9, 3.6336030510623198`*^9}, 3.633604134836972*^9}],
+
+Cell[BoxData[
+ RowBox[{"RemoveScheduledTask", "[", "twtask", "]"}]], "Input",
+ CellChangeTimes->{{3.6336029725567694`*^9, 3.633603003988175*^9}, {
+  3.6336030551000414`*^9, 3.633603061234455*^9}}]
+}, Open  ]]
+},
+WindowSize->{752, 798},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (December 4, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 7174, 158, 652, "Input"],
+Cell[7757, 182, 313, 4, 31, "Output"]
+}, Open  ]],
+Cell[8085, 189, 1740, 43, 212, "Input"],
+Cell[CellGroupData[{
+Cell[9850, 236, 97, 1, 39, "Subsubsection"],
+Cell[9950, 239, 433, 8, 31, "Input"],
+Cell[10386, 249, 6121, 137, 452, "Input"],
+Cell[16510, 388, 196, 3, 31, "Input"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

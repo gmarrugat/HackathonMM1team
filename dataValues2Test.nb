@@ -1,0 +1,2616 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    162116,       2607]
+NotebookOptionsPosition[    161070,       2563]
+NotebookOutlinePosition[    161414,       2578]
+CellTagsIndexPosition[    161371,       2575]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Chart", " ", "from", " ", "a", " ", "particular", " ", "sensor"}],
+    "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Databins", "[", "]"}], "[", 
+    RowBox[{"[", "2", "]"}], "]"}], "[", "\"\<Data\>\"", "]"}]}]], "Input",
+ CellChangeTimes->{{3.633611212703006*^9, 3.6336113117070966`*^9}},
+ EmphasizeSyntaxErrors->True,
+ CellID->11],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DateListPlot", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Databins", "[", "]"}], "[", 
+     RowBox[{"[", "2", "]"}], "]"}], "["}]}], "\"\<Data\>\"", 
+  RowBox[{"]", "["}], "\"\<Gas1\>\"", 
+  RowBox[{"]", "]"}]}]], "Input",
+ CellID->57],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{}, {}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.019444444444444445`],
+      AbsoluteThickness[1.6], 
+     LineBox[{{3.6335490388292556`*^9, 54.5}, {3.633549039891007*^9, 63.}, {
+      3.633549043854643*^9, 62.}, {3.633549047874094*^9, 65.}, {
+      3.633549051851082*^9, 70.}, {3.633549055854331*^9, 65.}, {
+      3.633549060094312*^9, 64.}, {3.633549063896849*^9, 62.}, {
+      3.633549067943698*^9, 67.}, {3.633549071994733*^9, 63.}}]}}, {}},
+  BoxID -> 
+  "{\"imageData\":{\"imageSource\":\"data:image/png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAWgAAADmCAYAAAD4KB/\
+JAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAFV5JREFUeJzt3d2LJNd5x/\
+HfU9NiRfyqRF4HOQ5O/\
+gHdBOMQyLawUGB3bx1j4pnBWXXt4kQybBxZIhddnRAsCH65iRjV7CrRjsD4IjdhdhFRYHsCJjYYFCz\
+7KlcJelmvbAuBIBqvtp5cTFertzU12z1d3VV16vsBod2eqZrqszW/\
+PnWeqnMkAAAAAACAxrNFNo7j2Ms6EADAAXcfSkoW2kkcxx7Hcb+MA4rjuF/\
+ivkr54KjjMZW5L97fXPvi/a14X21+f/nXojJ+EACgfAQ0ANRUZ9EdjMZKFlbWfkaSMnZSx2Mqc1+\
+8v7kkddsX728uSd32Ncv7W7hImKbpQvsAANwpH5tmiAMAaoqABoCa6kgfvG3E3X+5vb19/\
+7lz5z4ZRdGOmX3O3X+YZdn65cuXf17NoQJAu3QkaXIcOY7jPzSzM5K0trb2tLu/\
+IukLZtaPouibkv68mkMFgHY5bIjjbyT94+\
+jPj0RR9O00Td82s29JemR1h4a22Uh2S3koAQjFHbfZnT9//o/c/Vdpmr4xeul+d78pSe5+08w+\
+Mb2DyeER7ujAca0Prp2SPNlIdnUlOTuo+niAVTvkCcXkjoDOsmywtrb21xMv/\
+cLMTkp6zcxOZln25vROCWWUwrNEZpJZsj64Ntzpn96r+pCAVZoaar7zNrs4jv/\
+YzDpbW1svT2zzUpZlF+M4/liWZRfN7KUVHi9aYn1w7ZSZdeWeSDoIawDvB7S7DyR9d/\
+KLnU7nSUkPuvurkh7sdDpPrfj40AKmgyeqriRnB3JPzKx7MOQBtNt4iGN7e/uh6S8+\
+88wzNyQ9vNIjQqvkhUGXdaWDkF5PdrtmGmrBJ12BpuNBFVRmfXDtlMwSd79zzNmiRJLWk93rVR0bUA\
+cENKqTjzWPAjm30z+95+\
+5DhjrQdgQ0KjFZGDzsjo2d5OzBkBsFQ7QYAY1K3FEYLDIqGPIAC9qKgMbKTRcGi1xJzg7cfSizZBXH\
+BdQNAY2VKiwMFqFgiBYjoLFaBYXBIhQM0WYLB3SZq+\
+UibHcrDBahYIi2GK3m7Rotq7VwQDMXB2Y1U2GwCAVDtECapoNRpiYSQxxYkVkLg0UoGKKNCGgs3dyF\
+wSIUDNEyBDSWbzR2PB5LPqad/uk9JlNCmxDQWKoPTCW6oPH4NQVDtAABjaUy+\
+dDdh2WukuKyLgVDtAEBjaUZB+\
+iM9zzPKr83moIhQkdAYylKKwwWoWCIFiCgsRwlFQaLUDBEGxDQKF3ZhcEi+bh2/\
+gAMEBoCGqVbRmGwSP7gCwVDhKiMuTj4xcDYsgqDRSYLhgx1oOl6vd6pOI777t6V6EGjREsvDBbJPwy\
+4NxqBKWOypKVfxqIhllwYLELBEKHY3t7eS9N0YGZDiR40SrKqwmARCoYIEQGNUqyyMFiEgiFCQ0BjY\
+asuDBahYIjQENBYSGWFwSIUDBEQAhqLqagwWISCIUJCQOPYqi4MFqFgiFAQ0Di2OhQGi1AwRAgIaBz\
+LeBa5iguDRSgYIgQENOaWD23UpjBYYDwuTsEQDUVAY341KwweiYJh6zV5mKuMyZK8jANBM2wku/\
+06FgaLXEnODtx9SMGwxcySpizsEMdxf5SpiVTOXBy26D7QIKN7nutYGCzE6iutlf+\
+bN2UNyzRNB6NMTSSGODCHuhcGi+QFQ4Y62mWyVtLUgjEBjZk0pTBYhIJhC03USvJ//\
+6YNdRHQmE2TCoNFRgXDJlzqYjF5rSS/H156/\
+974Jg11EdC4q6YVBovkBUOZJVUfC5bskPlhdvqn91zWNbNuU0KagMbdNbEwWISCYfCOqpU0rR5BQON\
+ITS0MFmnaLyjmMzk/TFGtZCc5+1B+\
+62XdzwECGoWaXhgsQsEwXHkR8K5Xew2ZlpaARrEQCoMFMgqGwcn/\
+LScLg0WaMh5NQONQoRQGi7xAwTAox1k4ognDXQQ0DhdSYbAIBcNw5EMVc9ZK6j4ezVwc+\
+IDQCoNFmtCDwt3NUhg80ug8r8NDLMzFgSOFWhgsQsGw+\
+RZdOCIfj5aqv5piLg4cLeDCYJG8WETBsHnKutqbXMuyTucBAY2x0AuDRSZXX6n6WDC7sq/\
+2Jp80rcuQFwGN97WhMFiEgmHzLOFqr26TKhHQkNSewmCRyUvcuvSeUGyZV3t1GY+\
+WCGiofYXBIvmVQ116TzjCEq/26jQeTUCjlYXBInnvqepfTBRbxdVeXcajCeiWa2thsMhkwZChjvpZ+\
+J7nOUyOR1d1LhDQbdfmwmCRhkyk00qjf5NVna/jeT0qOhciSer3+1Gv1/t6HMf/\
+3ev1budPB8Zx7JP/\
+VXGAWJ62FwaL7PRP72UUDGvnsFVSlq3qSZUiSXrjjTceN7Pzkr70wAMP3DP5dGCappb/t+qDw/\
+JQGDzaCxQMa+U4kyGVpcopATqS5O4X3P2JS5cu/Xj6G+\
+I4fktSNloZ92uXLl16derr42JKmqZcJjeFZ4nMKAwewWVdkw/\
+Xk93rtFPFRudrVVd7O8nZh9aT3etmGq4PrnWX8SExmaXu3jWzYWf0989EUfRwHMc77v66mT2epumLe\
+a/5woULJ2/fvv2NKIqel/T5sg8Mq3Vwoq32UrGJdvqn99aT3aGZdTcGV/\
+1g1jMN3SKuOlZofXDtlMkPCoPJmera3aJE8uFoPHolH9gmSXEcvyYpPnHixL/v7+8/LClN0/RTk9/\
+42GOPffTdd999bXt7+yP5a3EcO0MfzTIOZ/chvcLZrA+unTLPuh94FNw9IayXb2Nw1SXpSv9M5Vkz+\
+rAYLvv3J+9N53dxvChJN27cyAuB2eQ3b25ufnx/f/9JM3t5WQeE5cvD+aAnQjjPaqd/eu9KcnZwpX/\
+GXAftl9+KZ/LhxuCqbyS7fQqK5ZtnlZRVmByPXsW98h1JiqLoqSzL/vm+++77vqT/\
+dfevSHfM9fy2u//A3TeXfUBYjslhjUovExtu1FvekzSQDgLEpa4dhLU2BleVD4Vw6+\
+JiDj7wDj4M63TOvj8ebcn64NpSr6AWumRgiKMZ7ghnLseXZtyjmhgKIayPLz9v6zC0cZhlDr3kQxyd\
+u30jmo1wXp2JEB7k49Z2ENbdjcHVRBLj1jPaSHb7qvkTrqu4y4cedMAI53qgyDi//\
+K6ZutdKRh8kidyTMq+S8h40AR0owrm+Jsatu+MXRz1FhkKad+\
+4u43gJ6IA17QRvs8PCus3j1qu6ja1sZY9HMwYdKMK5WUYhPL4jRJImx61bF9YNfcJ1WePR9KADQjiH\
+o43j1vl4blPP3/Hxl9D7Z4gjMIRzuPKwPmzcOqSwbkph8Chl/R6WFtDSwYx3i+\
+wHiyGc22V63LrpoSaFdQ4v8l5GwZyM/\
+prQg264kE5szG98m5cOxkGbeA7khcGyb1WrShmFzum5ONBAhDOuJGcHroPJr/\
+IiVdXHNK98zu0Qwlkqd5J/ArqhCGfkdvqn93aSsw+\
+NV6IeXPWmTNxUt8mQylLWJP8EdAMRzjhM3puWRgud1rw3XeUqKauwk5x9aHxlc8yQJqAbhnDGUXb6p\
+/eu9M/YuPeW7F6vbW86X4g15DUxF1yAmIBuiPXBtVOEM2a1k5x9KB8HNflwFXMXzyNfE1PuScjn8qL\
+j0QR0A+RVYcIZ85jsTcssqVNvOr/LIZTC4FF2+qf3xvWBOT8oCeiaG9+\
+CpObeRoVqTRYQFxkPLcu4Jxny0MaUK8nZwfiDco72J6BrjHBGWepyO14+tBFqYfAo+T3R+e/\
+0LAjomiKcUbZa3I43KpY1/\
+cnH48rvspn1A5KAriHCGctUVW96I9nt54XBVfy8Opp3PDqouTjGcxQ0eHpGwhmrNF7pXcs/\
+30KYDKksRXdkTc/\
+FsXAPui7hnDOzrsySjcFVX092r9ft9qKjEM5Ytfx2POlgbHRZvy9tLAwepehDKk3TwShTEymw6UbzV\
+Q1c1p2eS7fuE58TzqjauFfnPpRFpd2fHNpkSKsQ7mRJoxvfryRnB1f6Z8x1MOZV55414Yw6WNrDLaP\
+CIOE8v/ACesp0WGc1C2vCGXWSP/k2+XDLIvvLC4OhTYa0Kq1ak3AUfnuSBvkqFVWu/0Y4o45G5+\
+FDo3BNNgZX/Tjn58EtfD5aAuoM5/YxBN+\
+DLjLLMMiXl9izJpxRdwvfjteGyZCWLJgiYVmFiMMW6yy7Z004o2nmXbmFwuBigisSmmddSXKLhovsZ\
+9k9a8IZTTTvXNOhrZJSleDGoMsMvOkxa/esG5kldswxa8IZTTY6Xy2/HW892b1+\
+2O14oa6SUoVgetDLttM/vffCArfuEc4IxVG344W+\
+SsqqBdeDXoWinrUKetaEM0Iz1ZtO1pPdrixK5Fkis9ZOhlS2MubiSNI0rXycKb/sutI/\
+U1nRsrDAuKK5DoAqTBYQJYnC4PH1er18OtaumQ2DGeIYP6JaocICowhnhGvydry2rJLSCPlsdnWwMb\
+jqdXp8G2ijqldrCUUcx/04jvvB9KABVI+\
+rxHIR0ABQUwQ0ANRUEAHN2DOAEAUR0DmqxwBCElRAA0BICGgAqCkCGgBqKoyAnnzMFAACEUZA62DOi\
+6qPAQDKtHBA1+\
+Vxb5OGVR8DACxi9Ii3S0qkEgK6LkteAUDTpWk6GGVqIgU0xAEAoWl8QDN7FoBQNT6gy1osFgDqpvEB\
+nWOaQwChCSagASA0BDQA1FTjA9qlbtXHAADL0JGkfr8fvf766xfN7Ly7/\
+76ZRWma2rlz5z4ZRdGOmX3O3X+YZdn65cuXf171QU/KF2UFgNBEkvTGG288bmbnJX3pgQceuCd/+\
+GRtbe1pSa9I+rSZ/TSKom9WeKzF3JOqDwEAytaRJHe/4O5PXLp06cdTX38kiqLPPvvss2+fP3/+W+\
+7+owqOEQBaqTP6/2eiKHo4juMdd3/dzB5P0/RFSfe7+\
+01JcvebZvaJ6R1MzsXBY98AcDyHzGuUdCTJzH4p6dqJEycu7u/\
+vPyzpsqRPSfqFmZ2U9JqZncyy7M3pnRLKALC4ySyN47gvvX8Xx4uSdOPGjTzBs9H/X8qy7GIcxx/\
+Lsuyimb20sqOdAYvFAghZJElRFD0l6S/uu+++X0n6B3f/\
+iiR1Op0nJT3o7q9KerDT6TxV3aEWY7FYACHqSNLW1tZNSaenv/jMM8/\
+ckPTwqg8KABDAgyoAECoCGgBqqtEBzWPeAELW6IA2sy6LxQIIVaMDWmKxWADhanxAA0CoCGgAqKmFA\
+zp/JHHVWCwWQGh6vd6pOI777t6VGtyDZrFYAKHr3P1bjpamaaWPWbNYLIBQbG9v70nai+\
+NYUoN70AAQOgIaAGqKgAaAmmpuQJslVR8CACxTcwNaYrFYAEFrdkADQMAIaACoKQIaAGqqkQHNYrEA\
+2qCRAZ1jsVgAIStjsiQv40AAoO3iOO6PMjWRSgjoNE1t0X0AAA7mNhplaiI1fIgDAELWyIBmsVgAbd\
+DIgGaxWABt0MiAllgsFkD4GhvQABA6AhoAaqpxAc1isQDaonEBnS8WCwCha1xA53jMG0DoGhvQABA6\
+5uIAgJpgLg4AqKnmz8XBYrEAWqJ5AS2xWCyAVmhmQANACxDQAFBTBDQA1FSjAprFYgG0SaMCOucWDa\
+s+BgBYtkYG9E7/\
+9F7VxwAAy9bIgAaANiCgAaCmypiLY2WFOxaLBRCyXq93Ko7jvrt3pYb1oFksFkCbdBbdQZqmK52Xmc\
+ViAYRqe3t7T9JeHMeSGtaDBoA2IaABoKYIaACoqcYENI95A2ibxgR0jsViAbRF4wIaANqCgAaAmupI\
+H1yZO18Ituh1AMDyjR9UKQrf2oQyi8UCaJlxQMdx/\
+JakzN2H7v61S5cuvXrU65VgsVgALdKR3u8lX7hw4eTt27e/EUXR85I+X/\
+T65A4mh0Fq09sGgIaZHlKWlNwxF8fW1tbNxx57bPDuu+++NsvrEqEMAGWYzNJ8ltA7Anpzc/Pj+/\
+v7T5jZy7O8DgBYnum7ON529x+4++ZRr6/a+\
+uDaKWm69w8AYbtjDHpaXYYvzLOuzFgsFkCrNOpBFRaLBdAmjQpoAGiTRgS0WzTkHmgAbbPwklerMBr\
+aYHgDQKs0ogcNAG1EQANATRHQAFBTCwf0Ic+PAwCOIY7j/ihTE6mEgHb37qL7kKRer3eq1+udKmNf+\
+XPsi6rjMZW5L97f7Hh/\
+q99XG99fmqaD0QOCiVRCQJtZd9F95Pspa18avblF1fGYytwX728uSUn7KW1fvL+5JCXtp7R9zfL+\
+GIMGgJpaaK6NOI7d3YdmNlz0QPKhkjL2pYNPuGTRndTxmMrcF+\
+9vLol4fyvdV5vfn7t3zWy4aECXNq4DAHhfmqaDqo8BAAAAAAAAABCuWqyYEsfxF/xgOtHfk/QzM/\
+urNE3/I47jL7r7QNLvSvqZpK9vb2/vTW176Kri586d+2QURTtm9jl3/2GWZeuXL1/++WE/\
+v9frJWbWz7efZ9umqqrNp588pc0Xa/Oi1ycVtW0b2lyqrt3LyKa63Af9hbW1tS/++te//\
+k0ze1bS90avn7l9+/affPjDH/4tM/uOmX1vesM0Te2wBlpbW3ta0iuSPm1mP42i6JuH/eA4jv/\
+AzOLjbNtwlbV5vv3kPmjz47V50euTitq2JW0uVdTui/6eSDUJ6DRN/3Rra+unzz///Lvufl3S/\
+41e33juuef+57333svcfV/Sm9LM8388EkXRt9M0fdvMviXpkeltNzc375X0nKQ/m2XbkFTV5qO/\
+vxXH8S97vd6/PProo79z1LYhWVKbH2pq26K2Db7NpUrbvcjM7V6rCfu/+tWv/vZ77733fXe/\
+mL8Wx7Hv7+9L0ltZlp2WZl7M9n53vylJ7n7TzD4xve2JEyeedvd/2t7evh7H8V23DdGq2zz/\
+84ULF07evn37G1EUPS/p80XbhqjkNj/U1LZFbduaNpcqafciM7d7LXrQknT+/PnP3rp16z+\
+zLPvO9vb2v+avp2lqH/rQh37DzP4yiqKdOXb5CzM7KUlmdtLd3zzkex43s2/\
+nn3oTn36zbNt4FbW5JGlra+vmvffeO3D3z867bZMtoc1nUdS2rWhzqbJ2LzJzu9eiB/3oo4/\
+23P3voihaf/bZZ1/KX4/j+Lu3bt36e0nvuHsm6cQcu30py7KLcRz/bZZlF83spelvSNN0/\
+AEVx7FPfPrdddumq6rNc5ubmx/f399/wsxennfbplpSm8+iqG2Db3Op0nYvMnO71yKgoyhKJcnd/\
+y0fauh0Oh+5devWT+65557/eueddz5qZj+R9EXpzjCdHPPJ/5ymqXU6nSdv3br1gru/\
+KulHnU7ny9PbFinaNiRVtfnEtm+7+w/cfXP0s2nzY7T5Ua/\
+n2xa1bRvaXKqu3ef9PQEAAACwqP8HTwphfvmO34cAAAAASUVORK5CYII=\",\"boundingBox\":{\
+\"width\":360,\"height\":230,\"baseline\":118}},\"jsonData\":{\"width\":360.0,\
+\"type\":\"Graphics\",\"UserCoords\":[3.63355e9,70.8611,3.63355e9,53.6389],\"\
+offset\":[-66.0,-5.0],\"primitives\":[{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0]\
+,\"type\":\"clip\",\"path\":[[81,9],[81,222],[425,222],[425,9]]},{\"points\":[\
+[108.261,210.68],[118.165,105.902],[155.138,118.229],[192.631,81.2487],[229.\
+729,19.6147],[267.072,81.2487],[306.622,93.5755],[342.093,118.229],[379.842,\
+56.5951],[417.63,105.902]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\"\
+:true,\"edgeForm\":{\"color\":[93.9455,129.23,181],\"capForm\":\"Square\",\"\
+opacity\":1,\"thickness\":{\"absolute\":1.6},\"joinForm\":{\"type\":\"Miter\",\
+\"d\":3.25},\"dashing\":[]}},{\"type\":\"Group\",\"name\":\"Frame\",\"\
+primitives\":[{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"\
+path\":[[66,5],[66,235],[426,235],[426,5]]},{\"points\":[[424.5,221.295],[81,\
+221.295]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":false,\"\
+edgeForm\":{\"color\":[102,102,102],\"capForm\":\"Square\",\"opacity\":1,\"\
+thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"\
+dashing\":[]}},{\"points\":[[81,221.295],[81,9]],\"type\":\"Line\",\"faceForm\
+\":null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\
+\":\"Square\",\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"\
+type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"points\":[[81,9],[424.5,9]],\
+\"type\":\"Line\",\"faceForm\":null,\"antialiased\":false,\"edgeForm\":{\"\
+color\":[102,102,102],\"capForm\":\"Square\",\"opacity\":1,\"thickness\":{\"\
+absolute\":0.5},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},\
+{\"points\":[[424.5,9],[424.5,221.295]],\"type\":\"Line\",\"faceForm\":null,\"\
+antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\"\
+Square\",\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\"\
+:\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"points\":[[119.181,221.295],[119.\
+181,217.295]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":false,\"\
+edgeForm\":{\"color\":[102,102,102],\"capForm\":\"Butt\",\"opacity\":1,\"\
+thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"\
+dashing\":[]}},{\"type\":\"Inset\",\"metadata\":{\"localRect\":{\"left\":32,\"\
+top\":102,\"bottom\":112,\"right\":74},\"transform\":[1,0,0,1,66,122]},\"\
+boxImageData\":{\"imageSource\":\"data:image/png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAACoAAAAMCAYAAAAUNi9wAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAfhJREFUOI3tkr9rU1EUx7/fmxciJjr4o7oo+D+I+\
+BfUwblmqDVDkhsI4hAd3KyK2MXWMTmPREKF4upohqKLuklt/wDBxdZFCNjkJvc4mFceL0+j4Ga/0+\
+Hc8zn3e79c4FD/VgQAa+2Cqi4DuABgh+RtEXljrS2q6n0A5wHsALgThuHr+AJrrUa1iDCqy+\
+XyGWPMOsnLqvrOe7/Ubre/pJmoVqvLJO9FfBprJrMLmUymOBwOT5BsAdiY9K+Ox+\
+MrhULhJMk1khvJS0SEcYORMpnMCoCPAM6R3DbGPE4zaa29SNLOYs3ksmvNZnO72+3uq+omgO+T/\
+o1Op/NpNBp5VR0A2Eum+BvNG2NWReQbyScA5pNsqVQ6AqADYHEWa+Kn9Xr9LMkXqtqIvVgHg8E+\
+gNB7X5s8YCrBFJ1S1V0AUNVdkqeTbC6XW1HVZyKyOYs9MFqr1S45595679fCMHwZ9UWE+Xz+\
+KMmbxpj1PzAY6SvJOQAgOaeqeykzt0iuRinH0p5iAwCoVCpVVX1ojFlqtVq9aIu19qlz7hGAvqp6AL\
+m/MNrz3jestQ+89w2SveSAiBwEZa3VWNpTbAAAxhgBAFV9Ze3Pfx0EwTHn3FY2m/3Q7/\
+ePk9wCUEwujf+5qBYRBkFw1zn3XFU/A3gfBMH1FEOp+\
+hV7qP9SPwAUTxBcWvoEFAAAAABJRU5ErkJggg==\",\"boundingBox\":{\"width\":42,\"\
+height\":12,\"baseline\":10}}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\"\
+type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[426,5]]},{\"points\":[[\
+212.462,221.295],[212.462,217.295]],\"type\":\"Line\",\"faceForm\":null,\"\
+antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\"Butt\"\
+,\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\":\"\
+Miter\",\"d\":3.25},\"dashing\":[]}},{\"type\":\"Inset\",\"metadata\":{\"\
+localRect\":{\"left\":125,\"top\":102,\"bottom\":112,\"right\":167},\"\
+transform\":[1,0,0,1,66,122]},\"boxImageData\":{\"imageSource\":\"data:image/\
+png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAACoAAAAMCAYAAAAUNi9wAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAgFJREFUOI3tk79rU3EUxc+9eSXFoFGwVVQER/+\
+B4l9QByeHmqUaapIbKE7RoZt20sUfY/i+\
+thCqiINLRzuIgqiTUu3moOBiqkihIX285HtcXiSE94qCmz3T5cv9nHvuhS+\
+wr38rAQAzmyF5C8AZAJsict0599LMSiQXAZwGsAngRhiGL4YNzIyD2jkng7pSqRxT1VUROUfyjff+\
+8vLy8rcsdphPY4OkZyaXy5W63e6nfD4/C+AxgJMALvT7/fPFYrHd6XQuJu8n0sxHh+\
+ZyuTskPwCYEZGbqnobwNXRSw0vtxerSfOlZrP5sdVq7ZJ8DqCbvF9ZWVn50uv1PMkIwFZaqAxNq+\
+o959y2iNwFMJ3GmtlPM/tRq9WeVqvVU1msDkPz8/PHReQJycaQEaMo2gUQeu/\
+rWVdI0VGSbQAg2RaRiVHWOSfOuSOqehbAZ1VtZbG/g9br9ak4jl977++\
+HYbg2bFYoFA6IyDVVXf2DgAN9F5FJABCRSZJbWY3NZrM9Pj6+\
+SHIqi1UAqFarNZJrqmpLS0uPBgZm9mBubm4i2cyTzP9F0HXvfcPMit77hoisZzWWy+\
+XDURQtiMi7LDYAAFV1SZhnZgYACILgYBzHG2NjY+93dnYOicgGgFKyANM+0aB2zkkQBAtxHD8k+\
+RXA2yAIZvdgt0m+IllOZqey+/ov9QtK8CkJ+rtLJgAAAABJRU5ErkJggg==\",\"boundingBox\":\
+{\"width\":42,\"height\":12,\"baseline\":10}}},{\"transform\":[1.0,0.0,0.0,1.\
+0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[426,5]]},{\"\
+points\":[[305.743,221.295],[305.743,217.295]],\"type\":\"Line\",\"faceForm\":\
+null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\
+\"Butt\",\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\"\
+:\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"type\":\"Inset\",\"metadata\":{\"\
+localRect\":{\"left\":219,\"top\":102,\"bottom\":112,\"right\":261},\"\
+transform\":[1,0,0,1,66,122]},\"boxImageData\":{\"imageSource\":\"data:image/\
+png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAACoAAAAMCAYAAAAUNi9wAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAb9JREFUOI3tkjFrU1EUx///824QTFRQW10U/\
+BLiJ6igc82iQkg8geAUHRx10kXrGO9LAqFKce1oB9FF3aS2H0BwsRVECGjyXu9xeQ8eoS+idLO/\
+6fKD87/nnHuBQw4WAoCqLpvZfQAXAGyTvOO9f6uqdTN7AOA8gG0Ad+M4flMMUFXLz957/\
+skXaTabZ0RkleQlM3sfQrgxGAy+7uclq1mOoqg+nU5PknwGYC3zV/\
+f29i7XarVTJFdIrs1e5r3nfo2U+SJRFD0C8AnAOZJbIvKwzEsWeq3X622NRqNfZvYawM/M3xwOh5/\
+TNA1mNgGwO7utv2WmdklEnnjvf5B8DGCpzLtiSKfTOZum6Usz6xaDJ5MJAHwPIVzJBpi7qXnM1J42s\
+x0AMLMdkgtlPn96tNvti0mSvAshrMRxvF4MrlarR0neFpHVf22whG8kFwGA5KKZ7ZZ5AYBWq3XLzNZ\
+FRPv9/os8RVWfNhqNhWyyYGZHDrjRjRBCV1VPhBC6JDfKvAMAEfFZM69UFQDgnDuWJMlmpVL5OB6Pj\
+5PcBFDPBrD8CYt/Lj977znP57XOuXtJkjw3sy8APjjnrs/zh/yX/AawxgWHsS+\
+LUwAAAABJRU5ErkJggg==\",\"boundingBox\":{\"width\":42,\"height\":12,\"\
+baseline\":10}}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"\
+path\":[[66,5],[66,235],[426,235],[426,5]]},{\"points\":[[399.023,221.295],[\
+399.023,217.295]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":false,\"\
+edgeForm\":{\"color\":[102,102,102],\"capForm\":\"Butt\",\"opacity\":1,\"\
+thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"\
+dashing\":[]}},{\"type\":\"Inset\",\"metadata\":{\"localRect\":{\"left\":312,\
+\"top\":102,\"bottom\":112,\"right\":354},\"transform\":[1,0,0,1,66,122]},\"\
+boxImageData\":{\"imageSource\":\"data:image/png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAACoAAAAMCAYAAAAUNi9wAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAa5JREFUOI3tk89qU0EYxc+Ze4NgUhf+\
+qd1Y6EtUn6CCrtturJvECVxcpX2AapG60bpM5kIgtFDcus2i1E11q+\
+0DuG0FEQRN5maOm3sh1DZNVQShv9Vwvjkf358Z4IK/\
+CwHAWjsvaRXADIADksvOubfW2kVJTwBMAzgAsJKm6e5wAmutirNzjmfp43ir1epNY8wmyTuS3oUQlk\
+wem4+iaLHf718l2QKwnev3B4PB3Uqlco3kBsltHMM5x5MKOU0f504URc8BfARwi+S+\
+MWbd5IaFZrO53+l0fkjaAfA91x+22+\
+1PWZYFST0AR8cncV7G9M4ZY146576SfAFgLh6OJkkylWXZa0mN4cS9Xg8AvoQQ7uUNjJzUKMb0Xpd0\
+CACSDkneKFaPer0+673fCyFspGn6ZjhxuVy+\
+TPKxMWbzdws8J59JTgIAyUlJRzEA1Gq1R5LWjDFLrVarW9y21r7y3j8D8E1SAHDpHxXaDSE0rLVPQw\
+gNkt3i1//ybuI4nvDeL5Bck3SF5AcAK865PWutihWe5HXOcZR+ljdJkinv/RaA2wDel0qlB3/c+gX/\
+Kz8B19HV8OOFkWoAAAAASUVORK5CYII=\",\"boundingBox\":{\"width\":42,\"height\":\
+12,\"baseline\":10}}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\"type\":\"\
+clip\",\"path\":[[66,5],[66,235],[426,235],[426,5]]},{\"points\":[[81.8693,\
+221.295],[81.8693,217.295]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\
+\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\"Butt\",\"opacity\
+\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\":\"Miter\",\"d\":\
+3.25},\"dashing\":[]}},{\"type\":\"Inset\",\"metadata\":{\"localRect\":{\"\
+left\":16,\"top\":102,\"bottom\":103,\"right\":17},\"transform\":[1,0,0,1,66,\
+122]},\"boxImageData\":{\"imageSource\":\"data:image/png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAMCAYAAACji9dXAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAAxJREFUCJljYCAfAAAAPAABus/D5AAAAABJRU5ErkJggg==\",\"\
+boundingBox\":{\"width\":1,\"height\":12,\"baseline\":10}}},{\"transform\":[1.\
+0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[\
+426,5]]},{\"points\":[[100.525,221.295],[100.525,217.295]],\"type\":\"Line\",\
+\"faceForm\":null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\
+\"capForm\":\"Butt\",\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"\
+joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"type\":\"Inset\
+\",\"metadata\":{\"localRect\":{\"left\":35,\"top\":102,\"bottom\":103,\"\
+right\":36},\"transform\":[1,0,0,1,66,122]},\"boxImageData\":{\"imageSource\":\
+\"data:image/png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAMCAYAAACji9dXAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAAxJREFUCJljYCAfAAAAPAABus/D5AAAAABJRU5ErkJggg==\",\"\
+boundingBox\":{\"width\":1,\"height\":12,\"baseline\":10}}},{\"transform\":[1.\
+0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[\
+426,5]]},{\"points\":[[137.838,221.295],[137.838,217.295]],\"type\":\"Line\",\
+\"faceForm\":null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\
+\"capForm\":\"Butt\",\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"\
+joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"type\":\"Inset\
+\",\"metadata\":{\"localRect\":{\"left\":72,\"top\":102,\"bottom\":103,\"\
+right\":73},\"transform\":[1,0,0,1,66,122]},\"boxImageData\":{\"imageSource\":\
+\"data:image/png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAMCAYAAACji9dXAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAAxJREFUCJljYCAfAAAAPAABus/D5AAAAABJRU5ErkJggg==\",\"\
+boundingBox\":{\"width\":1,\"height\":12,\"baseline\":10}}},{\"transform\":[1.\
+0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[\
+426,5]]},{\"points\":[[156.494,221.295],[156.494,217.295]],\"type\":\"Line\",\
+\"faceForm\":null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\
+\"capForm\":\"Butt\",\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"\
+joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"type\":\"Inset\
+\",\"metadata\":{\"localRect\":{\"left\":90,\"top\":102,\"bottom\":103,\"\
+right\":91},\"transform\":[1,0,0,1,66,122]},\"boxImageData\":{\"imageSource\":\
+\"data:image/png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAMCAYAAACji9dXAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAAxJREFUCJljYCAfAAAAPAABus/D5AAAAABJRU5ErkJggg==\",\"\
+boundingBox\":{\"width\":1,\"height\":12,\"baseline\":10}}},{\"transform\":[1.\
+0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[\
+426,5]]},{\"points\":[[175.15,221.295],[175.15,217.295]],\"type\":\"Line\",\"\
+faceForm\":null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"\
+capForm\":\"Butt\",\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\"\
+:{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"type\":\"Inset\",\"\
+metadata\":{\"localRect\":{\"left\":109,\"top\":102,\"bottom\":103,\"right\":\
+110},\"transform\":[1,0,0,1,66,122]},\"boxImageData\":{\"imageSource\":\"data:\
+image/png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAMCAYAAACji9dXAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAAxJREFUCJljYCAfAAAAPAABus/D5AAAAABJRU5ErkJggg==\",\"\
+boundingBox\":{\"width\":1,\"height\":12,\"baseline\":10}}},{\"transform\":[1.\
+0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[\
+426,5]]},{\"points\":[[193.806,221.295],[193.806,217.295]],\"type\":\"Line\",\
+\"faceForm\":null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\
+\"capForm\":\"Butt\",\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"\
+joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"type\":\"Inset\
+\",\"metadata\":{\"localRect\":{\"left\":128,\"top\":102,\"bottom\":103,\"\
+right\":129},\"transform\":[1,0,0,1,66,122]},\"boxImageData\":{\"imageSource\"\
+:\"data:image/png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAMCAYAAACji9dXAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAAxJREFUCJljYCAfAAAAPAABus/D5AAAAABJRU5ErkJggg==\",\"\
+boundingBox\":{\"width\":1,\"height\":12,\"baseline\":10}}},{\"transform\":[1.\
+0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[\
+426,5]]},{\"points\":[[231.118,221.295],[231.118,217.295]],\"type\":\"Line\",\
+\"faceForm\":null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\
+\"capForm\":\"Butt\",\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"\
+joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"type\":\"Inset\
+\",\"metadata\":{\"localRect\":{\"left\":165,\"top\":102,\"bottom\":103,\"\
+right\":166},\"transform\":[1,0,0,1,66,122]},\"boxImageData\":{\"imageSource\"\
+:\"data:image/png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAMCAYAAACji9dXAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAAxJREFUCJljYCAfAAAAPAABus/D5AAAAABJRU5ErkJggg==\",\"\
+boundingBox\":{\"width\":1,\"height\":12,\"baseline\":10}}},{\"transform\":[1.\
+0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[\
+426,5]]},{\"points\":[[249.774,221.295],[249.774,217.295]],\"type\":\"Line\",\
+\"faceForm\":null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\
+\"capForm\":\"Butt\",\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"\
+joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"type\":\"Inset\
+\",\"metadata\":{\"localRect\":{\"left\":184,\"top\":102,\"bottom\":103,\"\
+right\":185},\"transform\":[1,0,0,1,66,122]},\"boxImageData\":{\"imageSource\"\
+:\"data:image/png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAMCAYAAACji9dXAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAAxJREFUCJljYCAfAAAAPAABus/D5AAAAABJRU5ErkJggg==\",\"\
+boundingBox\":{\"width\":1,\"height\":12,\"baseline\":10}}},{\"transform\":[1.\
+0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[\
+426,5]]},{\"points\":[[268.43,221.295],[268.43,217.295]],\"type\":\"Line\",\"\
+faceForm\":null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"\
+capForm\":\"Butt\",\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\"\
+:{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"type\":\"Inset\",\"\
+metadata\":{\"localRect\":{\"left\":202,\"top\":102,\"bottom\":103,\"right\":\
+203},\"transform\":[1,0,0,1,66,122]},\"boxImageData\":{\"imageSource\":\"data:\
+image/png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAMCAYAAACji9dXAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAAxJREFUCJljYCAfAAAAPAABus/D5AAAAABJRU5ErkJggg==\",\"\
+boundingBox\":{\"width\":1,\"height\":12,\"baseline\":10}}},{\"transform\":[1.\
+0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[\
+426,5]]},{\"points\":[[287.086,221.295],[287.086,217.295]],\"type\":\"Line\",\
+\"faceForm\":null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\
+\"capForm\":\"Butt\",\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"\
+joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"type\":\"Inset\
+\",\"metadata\":{\"localRect\":{\"left\":221,\"top\":102,\"bottom\":103,\"\
+right\":222},\"transform\":[1,0,0,1,66,122]},\"boxImageData\":{\"imageSource\"\
+:\"data:image/png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAMCAYAAACji9dXAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAAxJREFUCJljYCAfAAAAPAABus/D5AAAAABJRU5ErkJggg==\",\"\
+boundingBox\":{\"width\":1,\"height\":12,\"baseline\":10}}},{\"transform\":[1.\
+0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[\
+426,5]]},{\"points\":[[324.399,221.295],[324.399,217.295]],\"type\":\"Line\",\
+\"faceForm\":null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\
+\"capForm\":\"Butt\",\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"\
+joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"type\":\"Inset\
+\",\"metadata\":{\"localRect\":{\"left\":258,\"top\":102,\"bottom\":103,\"\
+right\":259},\"transform\":[1,0,0,1,66,122]},\"boxImageData\":{\"imageSource\"\
+:\"data:image/png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAMCAYAAACji9dXAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAAxJREFUCJljYCAfAAAAPAABus/D5AAAAABJRU5ErkJggg==\",\"\
+boundingBox\":{\"width\":1,\"height\":12,\"baseline\":10}}},{\"transform\":[1.\
+0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[\
+426,5]]},{\"points\":[[343.055,221.295],[343.055,217.295]],\"type\":\"Line\",\
+\"faceForm\":null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\
+\"capForm\":\"Butt\",\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"\
+joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"type\":\"Inset\
+\",\"metadata\":{\"localRect\":{\"left\":277,\"top\":102,\"bottom\":103,\"\
+right\":278},\"transform\":[1,0,0,1,66,122]},\"boxImageData\":{\"imageSource\"\
+:\"data:image/png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAMCAYAAACji9dXAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAAxJREFUCJljYCAfAAAAPAABus/D5AAAAABJRU5ErkJggg==\",\"\
+boundingBox\":{\"width\":1,\"height\":12,\"baseline\":10}}},{\"transform\":[1.\
+0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[\
+426,5]]},{\"points\":[[361.711,221.295],[361.711,217.295]],\"type\":\"Line\",\
+\"faceForm\":null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\
+\"capForm\":\"Butt\",\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"\
+joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"type\":\"Inset\
+\",\"metadata\":{\"localRect\":{\"left\":296,\"top\":102,\"bottom\":103,\"\
+right\":297},\"transform\":[1,0,0,1,66,122]},\"boxImageData\":{\"imageSource\"\
+:\"data:image/png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAMCAYAAACji9dXAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAAxJREFUCJljYCAfAAAAPAABus/D5AAAAABJRU5ErkJggg==\",\"\
+boundingBox\":{\"width\":1,\"height\":12,\"baseline\":10}}},{\"transform\":[1.\
+0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[\
+426,5]]},{\"points\":[[380.367,221.295],[380.367,217.295]],\"type\":\"Line\",\
+\"faceForm\":null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\
+\"capForm\":\"Butt\",\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"\
+joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"type\":\"Inset\
+\",\"metadata\":{\"localRect\":{\"left\":314,\"top\":102,\"bottom\":103,\"\
+right\":315},\"transform\":[1,0,0,1,66,122]},\"boxImageData\":{\"imageSource\"\
+:\"data:image/png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAMCAYAAACji9dXAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAAxJREFUCJljYCAfAAAAPAABus/D5AAAAABJRU5ErkJggg==\",\"\
+boundingBox\":{\"width\":1,\"height\":12,\"baseline\":10}}},{\"transform\":[1.\
+0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[\
+426,5]]},{\"points\":[[417.679,221.295],[417.679,217.295]],\"type\":\"Line\",\
+\"faceForm\":null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\
+\"capForm\":\"Butt\",\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"\
+joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"type\":\"Inset\
+\",\"metadata\":{\"localRect\":{\"left\":352,\"top\":102,\"bottom\":103,\"\
+right\":353},\"transform\":[1,0,0,1,66,122]},\"boxImageData\":{\"imageSource\"\
+:\"data:image/png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAMCAYAAACji9dXAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAAxJREFUCJljYCAfAAAAPAABus/D5AAAAABJRU5ErkJggg==\",\"\
+boundingBox\":{\"width\":1,\"height\":12,\"baseline\":10}}},{\"transform\":[1.\
+0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[\
+426,5]]},{\"points\":[[81,216.843],[83.4,216.843]],\"type\":\"Line\",\"\
+faceForm\":null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"\
+capForm\":\"Butt\",\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\"\
+:{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"transform\":[1.0,0.0,0.0,\
+1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[426,5]]},{\
+\"points\":[[81,204.517],[85,204.517]],\"type\":\"Line\",\"faceForm\":null,\"\
+antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\"Butt\"\
+,\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\":\"\
+Miter\",\"d\":3.25},\"dashing\":[]}},{\"type\":\"Inset\",\"metadata\":{\"\
+localRect\":{\"left\":0,\"top\":78,\"bottom\":88,\"right\":12},\"transform\":[\
+1,0,0,1,66,122]},\"boxImageData\":{\"imageSource\":\"data:image/png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAIRJREFUKJFjYKA1YGRgYGBIS0v7jyw4a9YsvOIYEjCATRzZpA8MDAz//v//\
+f+D////5c+bMeYJNnBFZd0ZGhtjfv3/LGRkZDWbNmuWMTZwJWcOMGTNecXBwNP7//\
+98MlzgLskR8fLzAz58/yxgZGc/jEmdB89zH////H/3//\
+388PvFBBgAeLF3jTigIAAAAAABJRU5ErkJggg==\",\"boundingBox\":{\"width\":12,\"\
+height\":12,\"baseline\":10}}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\"\
+type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[426,5]]},{\"points\":[[\
+81,192.19],[83.4,192.19]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":\
+false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\"Butt\",\"opacity\":\
+1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\":\"Miter\",\"d\":3.\
+25},\"dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\
+\",\"path\":[[66,5],[66,235],[426,235],[426,5]]},{\"points\":[[81,179.863],[\
+83.4,179.863]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":false,\"\
+edgeForm\":{\"color\":[102,102,102],\"capForm\":\"Butt\",\"opacity\":1,\"\
+thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"\
+dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"\
+path\":[[66,5],[66,235],[426,235],[426,5]]},{\"points\":[[81,167.536],[83.4,\
+167.536]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":false,\"\
+edgeForm\":{\"color\":[102,102,102],\"capForm\":\"Butt\",\"opacity\":1,\"\
+thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"\
+dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"\
+path\":[[66,5],[66,235],[426,235],[426,5]]},{\"points\":[[81,155.209],[83.4,\
+155.209]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":false,\"\
+edgeForm\":{\"color\":[102,102,102],\"capForm\":\"Butt\",\"opacity\":1,\"\
+thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"\
+dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"\
+path\":[[66,5],[66,235],[426,235],[426,5]]},{\"points\":[[81,142.883],[85,142.\
+883]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":false,\"edgeForm\":{\
+\"color\":[102,102,102],\"capForm\":\"Butt\",\"opacity\":1,\"thickness\":{\"\
+absolute\":0.5},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},\
+{\"type\":\"Inset\",\"metadata\":{\"localRect\":{\"left\":0,\"top\":16,\"\
+bottom\":26,\"right\":12},\"transform\":[1,0,0,1,66,122]},\"boxImageData\":{\"\
+imageSource\":\"data:image/png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAQBJREFUKJG1kT9KQ3Ecwz/\
+59klHKWqFgiBeoJt4APEODg5SeE8QBDuInToqiAfojzr1DiL0AgpuegRpi//AC/\
+zi8iZXaZYQEkIgsGwIYDgcxmw260uqbO9IipSSer3eZkRMJO3Zfsw5HwXAfD4/\
+k1QBh51OZyWlJIBGo3ENvABbkl4j4qoAsH1i+2I8Hj//\
+WXAQEbuj0einqqpb209FbWxHxH5ZlhPbM0lnKaUHYN32e136LmkjACR9AffNZnNN0jlwVxd9SmrXmb\
+btj6iNB4DFYuFa55qnOed+WZarOee+pGkARMQAOG21Wt/Aje1jgKIoLoGu7TegWxTF4H+nLAW/\
+kt9hsCX+aDgAAAAASUVORK5CYII=\",\"boundingBox\":{\"width\":12,\"height\":12,\"\
+baseline\":10}}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"\
+path\":[[66,5],[66,235],[426,235],[426,5]]},{\"points\":[[81,130.556],[83.4,\
+130.556]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":false,\"\
+edgeForm\":{\"color\":[102,102,102],\"capForm\":\"Butt\",\"opacity\":1,\"\
+thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"\
+dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"\
+path\":[[66,5],[66,235],[426,235],[426,5]]},{\"points\":[[81,118.229],[83.4,\
+118.229]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":false,\"\
+edgeForm\":{\"color\":[102,102,102],\"capForm\":\"Butt\",\"opacity\":1,\"\
+thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"\
+dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"\
+path\":[[66,5],[66,235],[426,235],[426,5]]},{\"points\":[[81,105.902],[83.4,\
+105.902]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":false,\"\
+edgeForm\":{\"color\":[102,102,102],\"capForm\":\"Butt\",\"opacity\":1,\"\
+thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"\
+dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"\
+path\":[[66,5],[66,235],[426,235],[426,5]]},{\"points\":[[81,93.5755],[83.4,\
+93.5755]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":false,\"\
+edgeForm\":{\"color\":[102,102,102],\"capForm\":\"Butt\",\"opacity\":1,\"\
+thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"\
+dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"\
+path\":[[66,5],[66,235],[426,235],[426,5]]},{\"points\":[[81,81.2487],[85,81.\
+2487]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":false,\"edgeForm\":\
+{\"color\":[102,102,102],\"capForm\":\"Butt\",\"opacity\":1,\"thickness\":{\"\
+absolute\":0.5},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},\
+{\"type\":\"Inset\",\"metadata\":{\"localRect\":{\"left\":0,\"top\":-46,\"\
+bottom\":-36,\"right\":12},\"transform\":[1,0,0,1,66,122]},\"boxImageData\":{\
+\"imageSource\":\"data:image/png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAOpJREFUKJHFkL9Kw3AUhb/zI9COBsGho0/g5Ls4BYekmSo6+\
+GcqeYvyowVXX0A6uriJvoNDGgQRNzMkx6WF4OAmnvFyvnvPufDXEsB8Pg91XV9Imto+\
+lBRijCqKwkNzjFEJwGazmUmaAieTyeS5qqp+aBpCCYDt0vblcrl8+\
+hmhKIoPoLf9YPtMAHmef0laAZntWtIsxrjeQWVZHnRddyXpKABIegfuR6PRvqRzYDW8slgs3sbjcWX\
+7OGxna4CmaXYl+yGQZdle27bXkl4SgBDCTd/3t2ma3gGvtk+3+XcLPm0/2s5++fh/\
+6RsnIGG15lMszgAAAABJRU5ErkJggg==\",\"boundingBox\":{\"width\":12,\"height\":\
+12,\"baseline\":10}}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\"type\":\"\
+clip\",\"path\":[[66,5],[66,235],[426,235],[426,5]]},{\"points\":[[81,68.9219]\
+,[83.4,68.9219]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":false,\"\
+edgeForm\":{\"color\":[102,102,102],\"capForm\":\"Butt\",\"opacity\":1,\"\
+thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"\
+dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"\
+path\":[[66,5],[66,235],[426,235],[426,5]]},{\"points\":[[81,56.5951],[83.4,\
+56.5951]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":false,\"\
+edgeForm\":{\"color\":[102,102,102],\"capForm\":\"Butt\",\"opacity\":1,\"\
+thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"\
+dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"\
+path\":[[66,5],[66,235],[426,235],[426,5]]},{\"points\":[[81,44.2683],[83.4,\
+44.2683]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":false,\"\
+edgeForm\":{\"color\":[102,102,102],\"capForm\":\"Butt\",\"opacity\":1,\"\
+thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"\
+dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"\
+path\":[[66,5],[66,235],[426,235],[426,5]]},{\"points\":[[81,31.9415],[83.4,\
+31.9415]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":false,\"\
+edgeForm\":{\"color\":[102,102,102],\"capForm\":\"Butt\",\"opacity\":1,\"\
+thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"\
+dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"\
+path\":[[66,5],[66,235],[426,235],[426,5]]},{\"points\":[[81,19.6147],[85,19.\
+6147]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":false,\"edgeForm\":\
+{\"color\":[102,102,102],\"capForm\":\"Butt\",\"opacity\":1,\"thickness\":{\"\
+absolute\":0.5},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},\
+{\"type\":\"Inset\",\"metadata\":{\"localRect\":{\"left\":0,\"top\":-107,\"\
+bottom\":-97,\"right\":12},\"transform\":[1,0,0,1,66,122]},\"boxImageData\":{\
+\"imageSource\":\"data:image/png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAANlJREFUKJHFjz9KA3EQhd+b/fU2MR4jrSJYprG2tFqY7VMpFpJKG/\
+80wjJbeoxcwM7CKwhCTAQvMM9mDRtIK75q+JiPNwP8dQgA7q4hlLTuum5U1/\
+WBmT2TPJT0kpnnBQAigr/L7n5E8hQAqqq6lfQG4IzktZnd2I7WKwBP/Tw1s/uI+\
+CZ5B2C6JTRNcwzgKyI+ejSStOzPXJLc3xIyc25mDwO0IjkGAJJjSZ8bwd1PSJa2bV8HwiIzZ+6+\
+l5kzkouNIGkO4HHYWEq5ADCR9A5gUkq53PHzf+cHdIBNNc1UoyEAAAAASUVORK5CYII=\",\"\
+boundingBox\":{\"width\":12,\"height\":12,\"baseline\":10}}},{\"transform\":[\
+1.0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235]\
+,[426,5]]},{\"points\":[[119.181,9],[119.181,13]],\"type\":\"Line\",\"\
+faceForm\":null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"\
+capForm\":\"Butt\",\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\"\
+:{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"type\":\"Inset\",\"\
+metadata\":{\"localRect\":{\"left\":53,\"top\":-117,\"bottom\":-116,\"right\":\
+54},\"transform\":[1,0,0,1,66,122]},\"boxImageData\":{\"imageSource\":\"data:\
+image/png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAMCAYAAACji9dXAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAAxJREFUCJljYCAfAAAAPAABus/D5AAAAABJRU5ErkJggg==\",\"\
+boundingBox\":{\"width\":1,\"height\":12,\"baseline\":10}}},{\"transform\":[1.\
+0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[\
+426,5]]},{\"points\":[[212.462,9],[212.462,13]],\"type\":\"Line\",\"faceForm\"\
+:null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\
+\"Butt\",\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\"\
+:\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"type\":\"Inset\",\"metadata\":{\"\
+localRect\":{\"left\":146,\"top\":-117,\"bottom\":-116,\"right\":147},\"\
+transform\":[1,0,0,1,66,122]},\"boxImageData\":{\"imageSource\":\"data:image/\
+png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAMCAYAAACji9dXAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAAxJREFUCJljYCAfAAAAPAABus/D5AAAAABJRU5ErkJggg==\",\"\
+boundingBox\":{\"width\":1,\"height\":12,\"baseline\":10}}},{\"transform\":[1.\
+0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[\
+426,5]]},{\"points\":[[305.743,9],[305.743,13]],\"type\":\"Line\",\"faceForm\"\
+:null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\
+\"Butt\",\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\"\
+:\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"type\":\"Inset\",\"metadata\":{\"\
+localRect\":{\"left\":240,\"top\":-117,\"bottom\":-116,\"right\":241},\"\
+transform\":[1,0,0,1,66,122]},\"boxImageData\":{\"imageSource\":\"data:image/\
+png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAMCAYAAACji9dXAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAAxJREFUCJljYCAfAAAAPAABus/D5AAAAABJRU5ErkJggg==\",\"\
+boundingBox\":{\"width\":1,\"height\":12,\"baseline\":10}}},{\"transform\":[1.\
+0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[\
+426,5]]},{\"points\":[[399.023,9],[399.023,13]],\"type\":\"Line\",\"faceForm\"\
+:null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\
+\"Butt\",\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\"\
+:\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"type\":\"Inset\",\"metadata\":{\"\
+localRect\":{\"left\":333,\"top\":-117,\"bottom\":-116,\"right\":334},\"\
+transform\":[1,0,0,1,66,122]},\"boxImageData\":{\"imageSource\":\"data:image/\
+png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAMCAYAAACji9dXAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAAxJREFUCJljYCAfAAAAPAABus/D5AAAAABJRU5ErkJggg==\",\"\
+boundingBox\":{\"width\":1,\"height\":12,\"baseline\":10}}},{\"transform\":[1.\
+0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[\
+426,5]]},{\"points\":[[81.8693,9],[81.8693,13]],\"type\":\"Line\",\"faceForm\"\
+:null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\
+\"Butt\",\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\"\
+:\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"type\":\"Inset\",\"metadata\":{\"\
+localRect\":{\"left\":16,\"top\":-117,\"bottom\":-116,\"right\":17},\"\
+transform\":[1,0,0,1,66,122]},\"boxImageData\":{\"imageSource\":\"data:image/\
+png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAMCAYAAACji9dXAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAAxJREFUCJljYCAfAAAAPAABus/D5AAAAABJRU5ErkJggg==\",\"\
+boundingBox\":{\"width\":1,\"height\":12,\"baseline\":10}}},{\"transform\":[1.\
+0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[\
+426,5]]},{\"points\":[[100.525,9],[100.525,13]],\"type\":\"Line\",\"faceForm\"\
+:null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\
+\"Butt\",\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\"\
+:\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"type\":\"Inset\",\"metadata\":{\"\
+localRect\":{\"left\":35,\"top\":-117,\"bottom\":-116,\"right\":36},\"\
+transform\":[1,0,0,1,66,122]},\"boxImageData\":{\"imageSource\":\"data:image/\
+png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAMCAYAAACji9dXAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAAxJREFUCJljYCAfAAAAPAABus/D5AAAAABJRU5ErkJggg==\",\"\
+boundingBox\":{\"width\":1,\"height\":12,\"baseline\":10}}},{\"transform\":[1.\
+0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[\
+426,5]]},{\"points\":[[137.838,9],[137.838,13]],\"type\":\"Line\",\"faceForm\"\
+:null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\
+\"Butt\",\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\"\
+:\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"type\":\"Inset\",\"metadata\":{\"\
+localRect\":{\"left\":72,\"top\":-117,\"bottom\":-116,\"right\":73},\"\
+transform\":[1,0,0,1,66,122]},\"boxImageData\":{\"imageSource\":\"data:image/\
+png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAMCAYAAACji9dXAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAAxJREFUCJljYCAfAAAAPAABus/D5AAAAABJRU5ErkJggg==\",\"\
+boundingBox\":{\"width\":1,\"height\":12,\"baseline\":10}}},{\"transform\":[1.\
+0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[\
+426,5]]},{\"points\":[[156.494,9],[156.494,13]],\"type\":\"Line\",\"faceForm\"\
+:null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\
+\"Butt\",\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\"\
+:\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"type\":\"Inset\",\"metadata\":{\"\
+localRect\":{\"left\":90,\"top\":-117,\"bottom\":-116,\"right\":91},\"\
+transform\":[1,0,0,1,66,122]},\"boxImageData\":{\"imageSource\":\"data:image/\
+png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAMCAYAAACji9dXAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAAxJREFUCJljYCAfAAAAPAABus/D5AAAAABJRU5ErkJggg==\",\"\
+boundingBox\":{\"width\":1,\"height\":12,\"baseline\":10}}},{\"transform\":[1.\
+0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[\
+426,5]]},{\"points\":[[175.15,9],[175.15,13]],\"type\":\"Line\",\"faceForm\":\
+null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\
+\"Butt\",\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\"\
+:\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"type\":\"Inset\",\"metadata\":{\"\
+localRect\":{\"left\":109,\"top\":-117,\"bottom\":-116,\"right\":110},\"\
+transform\":[1,0,0,1,66,122]},\"boxImageData\":{\"imageSource\":\"data:image/\
+png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAMCAYAAACji9dXAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAAxJREFUCJljYCAfAAAAPAABus/D5AAAAABJRU5ErkJggg==\",\"\
+boundingBox\":{\"width\":1,\"height\":12,\"baseline\":10}}},{\"transform\":[1.\
+0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[\
+426,5]]},{\"points\":[[193.806,9],[193.806,13]],\"type\":\"Line\",\"faceForm\"\
+:null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\
+\"Butt\",\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\"\
+:\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"type\":\"Inset\",\"metadata\":{\"\
+localRect\":{\"left\":128,\"top\":-117,\"bottom\":-116,\"right\":129},\"\
+transform\":[1,0,0,1,66,122]},\"boxImageData\":{\"imageSource\":\"data:image/\
+png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAMCAYAAACji9dXAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAAxJREFUCJljYCAfAAAAPAABus/D5AAAAABJRU5ErkJggg==\",\"\
+boundingBox\":{\"width\":1,\"height\":12,\"baseline\":10}}},{\"transform\":[1.\
+0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[\
+426,5]]},{\"points\":[[231.118,9],[231.118,13]],\"type\":\"Line\",\"faceForm\"\
+:null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\
+\"Butt\",\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\"\
+:\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"type\":\"Inset\",\"metadata\":{\"\
+localRect\":{\"left\":165,\"top\":-117,\"bottom\":-116,\"right\":166},\"\
+transform\":[1,0,0,1,66,122]},\"boxImageData\":{\"imageSource\":\"data:image/\
+png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAMCAYAAACji9dXAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAAxJREFUCJljYCAfAAAAPAABus/D5AAAAABJRU5ErkJggg==\",\"\
+boundingBox\":{\"width\":1,\"height\":12,\"baseline\":10}}},{\"transform\":[1.\
+0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[\
+426,5]]},{\"points\":[[249.774,9],[249.774,13]],\"type\":\"Line\",\"faceForm\"\
+:null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\
+\"Butt\",\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\"\
+:\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"type\":\"Inset\",\"metadata\":{\"\
+localRect\":{\"left\":184,\"top\":-117,\"bottom\":-116,\"right\":185},\"\
+transform\":[1,0,0,1,66,122]},\"boxImageData\":{\"imageSource\":\"data:image/\
+png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAMCAYAAACji9dXAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAAxJREFUCJljYCAfAAAAPAABus/D5AAAAABJRU5ErkJggg==\",\"\
+boundingBox\":{\"width\":1,\"height\":12,\"baseline\":10}}},{\"transform\":[1.\
+0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[\
+426,5]]},{\"points\":[[268.43,9],[268.43,13]],\"type\":\"Line\",\"faceForm\":\
+null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\
+\"Butt\",\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\"\
+:\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"type\":\"Inset\",\"metadata\":{\"\
+localRect\":{\"left\":202,\"top\":-117,\"bottom\":-116,\"right\":203},\"\
+transform\":[1,0,0,1,66,122]},\"boxImageData\":{\"imageSource\":\"data:image/\
+png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAMCAYAAACji9dXAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAAxJREFUCJljYCAfAAAAPAABus/D5AAAAABJRU5ErkJggg==\",\"\
+boundingBox\":{\"width\":1,\"height\":12,\"baseline\":10}}},{\"transform\":[1.\
+0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[\
+426,5]]},{\"points\":[[287.086,9],[287.086,13]],\"type\":\"Line\",\"faceForm\"\
+:null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\
+\"Butt\",\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\"\
+:\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"type\":\"Inset\",\"metadata\":{\"\
+localRect\":{\"left\":221,\"top\":-117,\"bottom\":-116,\"right\":222},\"\
+transform\":[1,0,0,1,66,122]},\"boxImageData\":{\"imageSource\":\"data:image/\
+png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAMCAYAAACji9dXAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAAxJREFUCJljYCAfAAAAPAABus/D5AAAAABJRU5ErkJggg==\",\"\
+boundingBox\":{\"width\":1,\"height\":12,\"baseline\":10}}},{\"transform\":[1.\
+0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[\
+426,5]]},{\"points\":[[324.399,9],[324.399,13]],\"type\":\"Line\",\"faceForm\"\
+:null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\
+\"Butt\",\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\"\
+:\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"type\":\"Inset\",\"metadata\":{\"\
+localRect\":{\"left\":258,\"top\":-117,\"bottom\":-116,\"right\":259},\"\
+transform\":[1,0,0,1,66,122]},\"boxImageData\":{\"imageSource\":\"data:image/\
+png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAMCAYAAACji9dXAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAAxJREFUCJljYCAfAAAAPAABus/D5AAAAABJRU5ErkJggg==\",\"\
+boundingBox\":{\"width\":1,\"height\":12,\"baseline\":10}}},{\"transform\":[1.\
+0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[\
+426,5]]},{\"points\":[[343.055,9],[343.055,13]],\"type\":\"Line\",\"faceForm\"\
+:null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\
+\"Butt\",\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\"\
+:\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"type\":\"Inset\",\"metadata\":{\"\
+localRect\":{\"left\":277,\"top\":-117,\"bottom\":-116,\"right\":278},\"\
+transform\":[1,0,0,1,66,122]},\"boxImageData\":{\"imageSource\":\"data:image/\
+png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAMCAYAAACji9dXAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAAxJREFUCJljYCAfAAAAPAABus/D5AAAAABJRU5ErkJggg==\",\"\
+boundingBox\":{\"width\":1,\"height\":12,\"baseline\":10}}},{\"transform\":[1.\
+0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[\
+426,5]]},{\"points\":[[361.711,9],[361.711,13]],\"type\":\"Line\",\"faceForm\"\
+:null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\
+\"Butt\",\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\"\
+:\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"type\":\"Inset\",\"metadata\":{\"\
+localRect\":{\"left\":296,\"top\":-117,\"bottom\":-116,\"right\":297},\"\
+transform\":[1,0,0,1,66,122]},\"boxImageData\":{\"imageSource\":\"data:image/\
+png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAMCAYAAACji9dXAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAAxJREFUCJljYCAfAAAAPAABus/D5AAAAABJRU5ErkJggg==\",\"\
+boundingBox\":{\"width\":1,\"height\":12,\"baseline\":10}}},{\"transform\":[1.\
+0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[\
+426,5]]},{\"points\":[[380.367,9],[380.367,13]],\"type\":\"Line\",\"faceForm\"\
+:null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\
+\"Butt\",\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\"\
+:\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"type\":\"Inset\",\"metadata\":{\"\
+localRect\":{\"left\":314,\"top\":-117,\"bottom\":-116,\"right\":315},\"\
+transform\":[1,0,0,1,66,122]},\"boxImageData\":{\"imageSource\":\"data:image/\
+png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAMCAYAAACji9dXAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAAxJREFUCJljYCAfAAAAPAABus/D5AAAAABJRU5ErkJggg==\",\"\
+boundingBox\":{\"width\":1,\"height\":12,\"baseline\":10}}},{\"transform\":[1.\
+0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[\
+426,5]]},{\"points\":[[417.679,9],[417.679,13]],\"type\":\"Line\",\"faceForm\"\
+:null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\
+\"Butt\",\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\"\
+:\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"type\":\"Inset\",\"metadata\":{\"\
+localRect\":{\"left\":352,\"top\":-117,\"bottom\":-116,\"right\":353},\"\
+transform\":[1,0,0,1,66,122]},\"boxImageData\":{\"imageSource\":\"data:image/\
+png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAMCAYAAACji9dXAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAAxJREFUCJljYCAfAAAAPAABus/D5AAAAABJRU5ErkJggg==\",\"\
+boundingBox\":{\"width\":1,\"height\":12,\"baseline\":10}}},{\"transform\":[1.\
+0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[\
+426,5]]},{\"points\":[[424.5,216.843],[422.1,216.843]],\"type\":\"Line\",\"\
+faceForm\":null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"\
+capForm\":\"Butt\",\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\"\
+:{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"transform\":[1.0,0.0,0.0,\
+1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[426,5]]},{\
+\"points\":[[424.5,204.517],[420.5,204.517]],\"type\":\"Line\",\"faceForm\":\
+null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\
+\"Butt\",\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\"\
+:\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.\
+0],\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[426,5]]},{\"points\"\
+:[[424.5,192.19],[422.1,192.19]],\"type\":\"Line\",\"faceForm\":null,\"\
+antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\"Butt\"\
+,\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\":\"\
+Miter\",\"d\":3.25},\"dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\
+\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[426,5]]},{\"points\":[[\
+424.5,179.863],[422.1,179.863]],\"type\":\"Line\",\"faceForm\":null,\"\
+antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\"Butt\"\
+,\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\":\"\
+Miter\",\"d\":3.25},\"dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\
+\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[426,5]]},{\"points\":[[\
+424.5,167.536],[422.1,167.536]],\"type\":\"Line\",\"faceForm\":null,\"\
+antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\"Butt\"\
+,\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\":\"\
+Miter\",\"d\":3.25},\"dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\
+\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[426,5]]},{\"points\":[[\
+424.5,155.209],[422.1,155.209]],\"type\":\"Line\",\"faceForm\":null,\"\
+antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\"Butt\"\
+,\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\":\"\
+Miter\",\"d\":3.25},\"dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\
+\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[426,5]]},{\"points\":[[\
+424.5,142.883],[420.5,142.883]],\"type\":\"Line\",\"faceForm\":null,\"\
+antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\"Butt\"\
+,\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\":\"\
+Miter\",\"d\":3.25},\"dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\
+\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[426,5]]},{\"points\":[[\
+424.5,130.556],[422.1,130.556]],\"type\":\"Line\",\"faceForm\":null,\"\
+antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\"Butt\"\
+,\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\":\"\
+Miter\",\"d\":3.25},\"dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\
+\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[426,5]]},{\"points\":[[\
+424.5,118.229],[422.1,118.229]],\"type\":\"Line\",\"faceForm\":null,\"\
+antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\"Butt\"\
+,\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\":\"\
+Miter\",\"d\":3.25},\"dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\
+\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[426,5]]},{\"points\":[[\
+424.5,105.902],[422.1,105.902]],\"type\":\"Line\",\"faceForm\":null,\"\
+antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\"Butt\"\
+,\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\":\"\
+Miter\",\"d\":3.25},\"dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\
+\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[426,5]]},{\"points\":[[\
+424.5,93.5755],[422.1,93.5755]],\"type\":\"Line\",\"faceForm\":null,\"\
+antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\"Butt\"\
+,\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\":\"\
+Miter\",\"d\":3.25},\"dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\
+\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[426,5]]},{\"points\":[[\
+424.5,81.2487],[420.5,81.2487]],\"type\":\"Line\",\"faceForm\":null,\"\
+antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\"Butt\"\
+,\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\":\"\
+Miter\",\"d\":3.25},\"dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\
+\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[426,5]]},{\"points\":[[\
+424.5,68.9219],[422.1,68.9219]],\"type\":\"Line\",\"faceForm\":null,\"\
+antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\"Butt\"\
+,\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\":\"\
+Miter\",\"d\":3.25},\"dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\
+\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[426,5]]},{\"points\":[[\
+424.5,56.5951],[422.1,56.5951]],\"type\":\"Line\",\"faceForm\":null,\"\
+antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\"Butt\"\
+,\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\":\"\
+Miter\",\"d\":3.25},\"dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\
+\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[426,5]]},{\"points\":[[\
+424.5,44.2683],[422.1,44.2683]],\"type\":\"Line\",\"faceForm\":null,\"\
+antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\"Butt\"\
+,\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\":\"\
+Miter\",\"d\":3.25},\"dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\
+\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[426,5]]},{\"points\":[[\
+424.5,31.9415],[422.1,31.9415]],\"type\":\"Line\",\"faceForm\":null,\"\
+antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\"Butt\"\
+,\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\":\"\
+Miter\",\"d\":3.25},\"dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\
+\"type\":\"clip\",\"path\":[[66,5],[66,235],[426,235],[426,5]]},{\"points\":[[\
+424.5,19.6147],[420.5,19.6147]],\"type\":\"Line\",\"faceForm\":null,\"\
+antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\"Butt\"\
+,\"opacity\":1,\"thickness\":{\"absolute\":0.5},\"joinForm\":{\"type\":\"\
+Miter\",\"d\":3.25},\"dashing\":[]}}],\"metadata\":\"TBD\"},{\"type\":\"Group\
+\",\"name\":\"Axes\",\"primitives\":[],\"metadata\":\"TBD\"}],\"height\":230.\
+0,\"PlotRange\":{\"left\":15.0,\"top\":-113.0,\"bottom\":99.2947,\"right\":\
+358.5}}}",
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{False, False},
+  AxesLabel->{None, None},
+  AxesOrigin->{3.633549036643297*^9, 53.725},
+  DisplayFunction->Identity,
+  Frame->{{True, True}, {True, True}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {{{3.63354903*^9, 
+       FormBox["\"23:10:30\"", TraditionalForm]}, {3.63354904*^9, 
+       FormBox["\"23:10:40\"", TraditionalForm]}, {3.63354905*^9, 
+       FormBox["\"23:10:50\"", TraditionalForm]}, {3.63354906*^9, 
+       FormBox["\"23:11:00\"", TraditionalForm]}, {3.63354907*^9, 
+       FormBox["\"23:11:10\"", TraditionalForm]}, {3.63354908*^9, 
+       FormBox["\"23:11:20\"", TraditionalForm]}, {3.633549032*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}, {3.633549034*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}, {3.633549036*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}, {3.633549038*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}, {3.633549042*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}, {3.633549044*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}, {3.633549046*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}, {3.633549048*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}, {3.633549052*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}, {3.633549054*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}, {3.633549056*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}, {3.633549058*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}, {3.633549062*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}, {3.633549064*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}, {3.633549066*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}, {3.633549068*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}, {3.633549072*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}}, {{3.63354903*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}, {3.63354904*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}, {3.63354905*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}, {3.63354906*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}, {3.63354907*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}, {3.63354908*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}, {3.633549032*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}, {3.633549034*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}, {3.633549036*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}, {3.633549038*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}, {3.633549042*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}, {3.633549044*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}, {3.633549046*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}, {3.633549048*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}, {3.633549052*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}, {3.633549054*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}, {3.633549056*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}, {3.633549058*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}, {3.633549062*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}, {3.633549064*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}, {3.633549066*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}, {3.633549068*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}, {3.633549072*^9, 
+       FormBox[
+        InterpretationBox[
+         StyleBox[
+          GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> Baseline], 
+          "CacheGraphics" -> False], 
+         Spacer[{0, 0}]], TraditionalForm]}}}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  Method->{},
+  PlotRange->{{3.633549036643297*^9, 3.633549071994733*^9}, {54.5, 70.}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.05], 
+     Scaled[0.05]}},
+  Ticks->{None, None}]], "Output",
+ CellID->90]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"Databins", "[", "]"}], "[", 
+    RowBox[{"[", "2", "]"}], "]"}], "["}], "\"\<Data\>\"", 
+  RowBox[{"]", "["}], "\"\<Gas1\>\"", 
+  RowBox[{"]", "["}], "\"\<Values\>\"", "]"}]], "Input",
+ CellID->119],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "37.`", ",", "63.`", ",", "62.`", ",", "65.`", ",", "70.`", ",", "65.`", 
+   ",", "64.`", ",", "62.`", ",", "67.`", ",", "63.`"}], "}"}]], "Output",
+ CellID->122]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Table", "["}], "\"\<Gas\>\"", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"<>", 
+     RowBox[{"ToString", "[", "i", "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", "10"}], "}"}]}], "]"}]}]], "Input",
+ CellID->102],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"Gas1\"\>", ",", "\<\"Gas2\"\>", ",", "\<\"Gas3\"\>", 
+   ",", "\<\"Gas4\"\>", ",", "\<\"Gas5\"\>", ",", "\<\"Gas6\"\>", 
+   ",", "\<\"Gas7\"\>", ",", "\<\"Gas8\"\>", ",", "\<\"Gas9\"\>", 
+   ",", "\<\"Gas10\"\>"}], "}"}]], "Output",
+ CellID->103]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"Map", "[", 
+      RowBox[{"Last", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Databins", "[", "]"}], "[", 
+         RowBox[{"[", "2", "]"}], "]"}], "["}]}]}], "\"\<Data\>\"", 
+     RowBox[{"]", 
+      RowBox[{"[", "#", "]"}], "["}], "\"\<Values\>\"", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"]", "]"}], "&"}], ",", 
+      RowBox[{"Table", "["}]}], "\"\<Gas\>\"", 
+     RowBox[{
+      RowBox[{"<>", 
+       RowBox[{"ToString", "[", "i", "]"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "10"}], "}"}]}]}], "]"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.6335924990647316`*^9, {3.633593002794341*^9, 3.6335930330776*^9}},
+ EmphasizeSyntaxErrors->True,
+ CellID->96],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Legended", "[", 
+   RowBox[{"ListLinePlot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "63.`", ",", "61.`", ",", "50.`", ",", "56.`", ",", "50.`", ",", "39.`",
+        ",", "32.`", ",", "32.`", ",", "33.`", ",", "33.`"}], "}"}], ",", 
+     RowBox[{"ColorFunction", " ", "\[Rule]"}]}]}]}], "\"\<NeonColors\>\"", 
+  RowBox[{"]", ",", 
+   RowBox[{"BarLegend", "["}]}], "\"\<NeonColors\>\"", 
+  RowBox[{"]", "]"}]}]], "Input",
+ NumberMarks->False],
+
+Cell[BoxData[
+ TemplateBox[{GraphicsBox[{{}, 
+     GraphicsComplexBox[{{1., 63.}, {2., 61.}, {3., 50.}, {4., 56.}, {5., 
+      50.}, {6., 39.}, {7., 32.}, {8., 32.}, {9., 33.}, {10., 
+      33.}}, {{{}, {}, {
+         Hue[0.67, 0.6, 0.6], 
+         Directive[
+          PointSize[0.019444444444444445`], 
+          RGBColor[0.368417, 0.506779, 0.709798], 
+          AbsoluteThickness[1.6]], 
+         LineBox[{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, VertexColors -> 
+          Automatic]}}}, 
+      VertexColors -> {{0.805814, 0.208576, 0.769757}, {0.8158574193548387, 
+       0.232412064516129, 0.6953682258064517}, {0.8580564838709678, 
+       0.3183044838709677, 0.2999096451612902}, {0.8409659677419355, 
+       0.29200222580645163`, 0.5093973225806452}, {0.8580564838709678, 
+       0.3183044838709677, 0.2999096451612902}, {0.7640699677419355, 
+       0.5892764193548387, 0.28520632258064516`}, {0.720287, 0.923781, 
+       0.297597}, {0.720287, 0.923781, 0.297597}, {0.7265417096774194, 
+       0.8759947741935484, 0.29582690322580646`}, {0.7265417096774194, 
+       0.8759947741935484, 0.29582690322580646`}}], {}}, {
+    DisplayFunction -> Identity, PlotRangePadding -> {{
+        Scaled[0.02], 
+        Scaled[0.02]}, {
+        Scaled[0.05], 
+        Scaled[0.05]}}, AxesOrigin -> {0, 30.45}, 
+     PlotRange -> {{0., 10.}, {32., 63.}}, DisplayFunction -> Identity, 
+     AspectRatio -> NCache[GoldenRatio^(-1), 0.6180339887498948], 
+     Axes -> {True, True}, AxesLabel -> {None, None}, 
+     AxesOrigin -> {0, 30.45}, DisplayFunction :> Identity, 
+     Frame -> {{False, False}, {False, False}}, 
+     FrameLabel -> {{None, None}, {None, None}}, 
+     FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
+     GridLines -> {None, None}, GridLinesStyle -> Directive[
+       GrayLevel[0.5, 0.4]], Method -> {}, 
+     PlotRange -> {{0., 10.}, {32., 63.}}, PlotRangeClipping -> True, 
+     PlotRangePadding -> {{
+        Scaled[0.02], 
+        Scaled[0.02]}, {
+        Scaled[0.05], 
+        Scaled[0.05]}}, Ticks -> {Automatic, Automatic}}, BoxID -> 
+    "{\"type\":\"StaticImage\",\"messageType\":\"$Failed\",\"imageData\":{\"\
+imageSource\":\"data:image/png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAWgAAADmCAYAAAD4KB/\
+JAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAGphJREFUeJzt3XFwnPV5J/\
+Dv89My8v3RM74LToc0tM3NCUe5sRmfx+\
+PxudYr16cKsbhuWkho4uqova8oiaE2JrEPiF4lTPCFQCi0if1KghI3JQm5jMfsKYtxvO9qXGoYKhzH\
+KEYznfNlwBAluVxmYMYK6PfcH+++tixbsuxd7fu+u9/PjAZpd708WstfPXr0+/1eoAKu6/\
+ZW8ueJiGhmpsI/71WjCCIiulClAU1ERPOEAU1ElFAVBzTn0ERE84MdNBFRPXJdV+\
+OugYioXrGDJiJKKAY0EVFCMaCJiBIq9as4XllxpHdkxYttcdZARDQfUt1Bj6x4sU0Enspk8MqK4eIr\
+K4a55I+I6oZU8odd11Xf9yt6jmp4ZcVwr4h4gAICqGpgVLzlr6wtxV0bEdGVqouAjoysGG6zBo5APQ\
+AQKAB4sDZY/so6hjURpUpdBfRUIyuDXlU4IupEXbUAwfKX1/\
+XFXRsR0VzUbUBPNbLycC8kOnlPw7C2xmNXTURJ1hABHRlZcbgNxjpnw1oAwHoAguVHOxjWRJQoFQc0\
+AKQppCMjKw/\
+1qrGOQBxAAWgAaLD8aCdHIESUCA3VQc9kZNXBXgG8MKgBhQaA8dhVE1GcGNBTjKw62AZYR2RKWKt6A\
+ILlR7sY1kRUUwzoGYysGuoF4IjAAcpdtWiw/\
+MUsRyBEVBMM6DkYWTXUKyZcWw0oRBEYtd7SoxvYVRPRvGFAX4aRVUNtMNYxOBfWADxjETCsiajaGnY\
+VR6WOrT7QC6gDiVaBADf80x833OtARAnFK6qEjq3e33vsv+zXY6u/\
+z8OaiKhqUn2aXVLc8OLGPqgNzu1WJCKqHAO6SoyBB1EcW/M9dtFEVBUZAOjt7TWnT5/\
+eLiI9qvoRETG+78vmzZs/aIzZJyKrVPWotXbT4ODgz+IuOomWHvl46dia7wXlk/S4FI+\
+IKmYA4K233rpLRHoA3HbttddeFf3Sr6mpaTeAHwP4sIicMMY8FGOtKWADQHFszXfZRRNRxTIAoKp3q\
+OrnBgYGXpl2f4cxZuXevXt/3dPT84iqvjT9CaZe8sr3/YbuHG84cmvfj/7gOx67aCKqhmgG/\
+XvGmPWu676Ty+XGXNftLN/+AVUdBwBVHReRa+IpMz3CreGKY2v+\
+kV00EVUkAwAi8ksAQ83NzdsnJibWAxgE8CEAvxCRxQDeFJHF1tqfT3+CRu+ap7vhyCf7fvQH/+\
+hB1AG7aCKqQNRBFwDg7bffjtY12/J/\
+X7DWbnddd6G1druIvFDzClNIxXoi6hxf8y1ebZyIrpgBAGPMLgCfWbRo0f8F8LCq3g4AmUxmJ4Blqv\
+oGgGWZTGZXfKWmxw3Dn+4DFCqTXty1EFGD4k7CmR1f+83e42uf1uNrnmYXTURXpOKNKlNXcdA5S4f/\
+og+iUMMumoiuDHcSzie1ngic42sG2UUTUW1xxHFpx9sG9UdrB4px10FE6cMOer6pemLUOe7sZRdNRJ\
+eFAT3Plg5v6YsO9o+5FCJKGQZ0TVhPwC6aiC4PA7oGlgZ3lLtoruggormrxjI7/qJwDhQa7i50/\
+o5dNBHNScUB3YjXI7wSS4M7y110dMFZIqLZccRRQ6rWE7HOcedv2EUT0SUxoGtoaXBXH0TBaxcS0Vw\
+woGtMoJ4R64w6j7CLJqJZMaBrzNjJAFBYwy6aiGbHw5JqrDW4pwRoAAG7aCKaFTvoGBgLD7CwZtKJu\
+xYiqlNcA33ljq/7H8UTf/\
+gVvn5ENCN20HGx8CAWJ9bv5oiIiC6KAR2TpcHnS4ANhBtXiGgGDOgYGagHKE6sf5BdNBFdgKs4YtR6\
+6L6SwgZSZxtXRru+yK8JoipgBx0zA/HCLro+Qu21G/uKALzyf4moAtU4LKmvGoU0qtZD95VUbSCS/\
+ln0aJfXK6IOoBBR57Ubv8CQJqoAO+gEMIAHUZzo+EJqu+\
+jRzgfaAOup2qB1qFfCbzrivHbjAwxpoiskwIXrmaMjRGe6PeK6rvK40eo48V8fKIqI87GDX0zd6zna\
++UAbmhCoIvjY0Jfao9tf63qgKAIHk3BaC18qxVkjUWrNtOHkUhtRuFGlekbXP9A22vGAjnbcn6ouer\
+RzV9tPbrpPR2+6/6JfC6913V/8yU3362jnLm5rJ7pMmegd13V/BcCqaqCqdw8MDLwx2+\
+1UXa2HvlR6reP+aBadirn+aOeuNmmSAAAwKc7FHvOxoQfbR7v+e1GaJBjt3OW0Fh5iJ000RwYIRxe+\
+7y8yxnwUwCljzNOz3T6V67oavdW29PojdtIDFKMdO9PRRZtwHbdO2tlHGDZ8nDQhYCdNNHfn/\
+ZJwz5494wsWLOhT1ZVzuR04G+LCWXTlWg89VFK1QRoO9B/t+\
+lxRBI5O4pJdcWvhoZJOwglD2ga1qZAo/\
+c4L6O7u7qsnJiZ2isirc7mdqk9suC56tPNzie2iR7P3lsN5cs4jizCkJx1AMZq9lys7iObAAOfGFM3\
+NzadUdZm1tnu222n+\
+tB56qKRig6ReXHY0u6MogKNivdbCw5c1T24tPFxSUUcAZzS7gyFNNJ84d54fo507en/\
+SuUNHO3ckqosezW4v/iR7j1YarqPZe9vC59nOkCaaBTeqJFBr4at94W4868VdS2Qsu61NAEehQWv+\
+q+2X/hMza80/XFJoIIBzMruNIU00g2oclsQueh4oyis6Ov869i56LLutzUIDgQat+UcrCudIa/\
+7RdoEGgDpj2W1c2UF0EdU4i4OrN+ZBa+GxPkABWCfOOsayW9ssbADYYEn+\
+a1UJ50j4fDawsMFYditDmmgajjgSTNV6InBGO+MJr7Hs1jYrCCBaPru6+\
+pbkHw9DWsCQJpqGAZ1grYXH+yAKxHTSnRUNAIVRdVryT8zbDsAl+\
+SfaAYUVDcayf8WQJipjQCecQj0j6ox11ja4Tmb/\
+qhiGs8xrOEeMihOGtDCkicoY0AnXOvS3fYDCmtrtLjyZvaMIgWPU1iScAaAl/\
+0TJqHUAhU3oGnCiWuMlr1LBeqhRF30y6xYhcKDqteS/\
+UdODjVry3ygZhQOBczLrcvkdNTx20CmwZGhPuYue9Obz/\
+3Py5lxRDJxwxcaeWE7UC0N6Mgzpm3MMaWpovORVSlidDLvobG5euuixbK5NBI6qBkue86u6nO5yteT\
+7S4AGInBO3ryFIU0Nix10SrQODfRBFBbV76LHsre3qbFBGM79sYZzZMlz/\
+e2qGoioc3LDX3KMRg2JAZ0q1gPgjGVvr1oXHYazlMN5IBHhHFny3EAY0oBXzc+\
+ZKC0Y0CmyJP9kn1RxlUMYzuFa5yXPPZmocI4see7JdlUN1GjAkKZGw4BOGYV6IuqMZTdVHFZqbAAox\
+MKpvLL5s+S5p9qBsN5qfN5EacHDklJmSf7vwxUdqGxd9MkNm4oQhVjrtOSfSvx1AsVOOhCFNoEhTQ2\
+DhyWlUHhGx5V30a9v+HRRRB2ZVKclvy/x4QwALfl9JZlUB1Co4UYWagwccaTQkvw/hF20XP6Kjtc3/\
+Hk5nCdTE86RMKTFEVHn9Q1/zuV3VPcY0CmlsEHYRd825y769Q2fLIqoo2qDlvwzqQrnSEt+\
+XwmTthzStzGkqa4xoFPKKDyBQud40t3YxtvObkS5/sAziVyxMVct+\
+WdK0PCXpa9vuJUhTXWLAZ1SLflnSqo2EKPOWPaWWbvosY23tAGTgaoNrj/\
+w7VSHc6TlwLf7ws8fztjGW7mRheoSV3GkmKh6gAWMOjM9JgxnBGo1uP7Ad+sinCPXH/\
+huu4aXzfLKnydRXeEqjhRryT9bUtUAcvEld2MbN7YB4Vrn6w88W1fhHLl+/7PlkLZB+PkS1Q+\
+OOFJOrHiAxckNHz/vx/wwrExQfpRT88Jq6Pr93yuHtGFIU11hQKdcS/7ZkooG5sK1wV540dlJp2X/\
+s6lcsXE5BNYDFAIwpKluZIAL58jR2GLz5s0fNMbsE5FVqnrUWrtpcHDwZ3EUSjMTqCfQYGzjht6W/\
+Qf6xjZuKArgKNRp2b+/7sMZAFr27y+NbdzoAAhENADA0Rul3tkO2vd9id6i25qamnYD+\
+DGAD4vICWPMQ3EUSbNr2b+/pCif+rbx5qIIHMX7DRPOkfB1eN8BFGMbb+byO0q9TPSO67q/\
+AmBVNVDVuwcGBt4A0GGMWbl3795f9/T0PKKqL01/gqmXvOLh/XGyHgSBAI4qgpb9+YYK50jL/\
+nxpbGPWEZFgbGO22LI/X5e/\
+HKXGYICz3fMiY8xHAZwyxjxdvv8DqjoOAKo6LiLXxFUoza5lf76kiiAM5+\
+caOpTC12LSE4EztjHLeTSlVmbqB3v27BnfunVr35kzZ94s3/QLEVkM4E0RWWyt/\
+fn0J2DXnCheo3bO07XsH+ob+3jW03AJYkN/\
+w6L0Om8VR3d399UTExM7ReTV8k0vWGu3u6670Fq7XUReiKFGmiOG8wXKXXQnu2hKJQOEqzhc19Xm5u\
+ZTqrrMWtsNAJlMZieAZar6BoBlmUxmV5zFEl2Olu/n+yCAZowXdy1ENcdt3pR0Y3+\
+W7X39lqyO3cJZNKVPNc7i4EE1lFgt3wu7aDvDdniiJONOQqp7Gs2ib2MXTQ2EIw5Ki5OfzOrJT2a5e\
+YVShR00NQoP7KIpZRjQ1BCWfJuzaEofBjQ1DAt4KnBGN7GLpnRgQFPj0PcDiAJqvbhLIZoLXvKKGkb\
+rM4Xw1D8RZ3QTdxdS8vGSV9RYxHoqgAp3F1LyccRBDaV137kuOu5aiC6FAU0NR5qsBwFG/\
+1sXd8FSojGgqeG0PlUoWWigIl7ctRDNhgFNDclI2EWf+\
+Et20ZRcXMVBDan1qXAWDXbRlGBcxUENy5Rn0ce3sIumZOKIgxpWa3+hBGhg2EVTQjGgqaFFs+\
+jjLrtoSh4GNDW01v5wRYewi6YEYkATRbPoO9hFU7LwklfU8JZ+\
+gys6KJnYQRMBQDSLvpNdNNUJroGmevKjO7uKxz9zE7+\
+mKTHYQROVSVN40t2xz7KLpmTITP0gl8t5ItIbbT6Z3iFzUwrVs6VPFErHPtsVrejoi7seorMB7bruC\
+gDu9AcwlKmhGAQAnGN3dfXe8PgQQ5piZQCgu7t7AYAnAXxq+gNc1/2V67q/zOVy/3PLli2/U+\
+sCiWrphseH+lQAruigJDAA0NzcvFtVn/J9vzj1Tt/\
+3xff9RcaYjwI4ZYx5evoTuK6r0VuNaiaaX6IeBDj215xFU7yiWbON3o9MH21s3br13545c+bN/v7+\
+34puc11XOQKhenRsW7ia44av/S9+fVNsDAD4vm/K3bKUPz7vi7K7u/\
+vqiYmJnSLyahxFEtWaVfVUgJFtvLgsxWfWZXbR6KK5ufmUqi6z1nbXqjCiOC1/\
+bKgPogAvLktpxbkz1bORHV29r+\
+7o0pF72UVTPLhRhWgGy78aruhQcEUHxYOXvCKajcATEYddNMWBl7wimsXyrwz1QQBeAZziwBEH0SVY\
+gQcjzsgudtFUWwxooktYsTvsoi1n0VRjDGiiOdBoFs0ummqIAU00Byu+\
+HK7osJxFUw3xkldEc2TVhrPoB9hFU22wgyaao5VfLvRBgPc5i6YaqcYyO56ZSw3DlmfRL7OLphpgB0\
+10GVZ+MVzRwfOiqRYY0ESXScvrol/\
+uYxdN84sBTXSZVnrl3YWcRdM84yoOoiug0ECEXTTNL3bQRFdAEB7ob8U4cddCdFE8yY4a2dEHbyy+\
+9GAX/w3QvGEHTXSFTPniskcf5MVlaX4woImu0Mr7CiWFBjDw4q6F6hMDmqgCBuUu+\
+svsoqn6GNBEFVh5X6EEYRdN84OXvCKqkJFwRceLu9lFU3XxkldEFVr5+XAWLUa9uGuh+\
+sIRB1FVhLPoF7/SyS6aqiYz9YNcLueJSG/UFW/evPmDxph9IrJKVY9aazcNDg7+LJ5SiZJr9ecLpX/\
+6SmcgRjwAPOGRquJsB+267goRcafe2dTUtBvAjwF8WEROGGMeqnWBRGkhTQi76K+\
+yi6bqMADQ3d29AMCTAD417f4OY8yjvu//WkQeAdBR6wKJ0mL1PdG6aB6iRNVhAKC5uXm3qj7l+\
+35x2v0fUNVxAFDVcRG5ZvoTuK6r0VsN6iVKNAE8FeDIo+\
+yiqXLRiOMuEXk0CtkpYfsLEVkMACKyWFV/Pv0JfN+X6K02JRMl1+\
+p7CiUVjWbRRBUxAOD7vpkaslPC9gVr7XbXdRdaa7eLyAuxVUqUEkbCWfSRx9hFU2VmXWaXyWR2Alim\
+qm8AWJbJZHbVpiyi9Fp9N2fRlACcOxNd3It/\
+09l25Ikb9cjj7KLpynGjCtE8WH13oQQBlF00VYCXvCKaJ7a8u3D4b9lF05VhB000T9Z+\
+ttAHAbiig65UNQ5L4rZWohmoqgMDDO/pnL7HgOiS2EETzaO1nymUVNSBEWfY56iDLg8Dmmiere05t+\
+xueLCzLe56KD0Y0EQ10OYW2lU0gEgw/\
+DRDmuaGAU1UI4Jwh6EqL49Fc8NLXhHVyNrNhRJMOI8OvslfGtKl8ZJXRDW0tju6PJY4w9/\
+iqINmxxEHUY05f1FoV0GgYgKGNM2GAU0UA1PeZWibuImFZsaAJorB2k8VStJkHYg4wXdv5DyaLooBT\
+RSTtbcWShB4MOIMf5+\
+jDroQV3EQxci5dagPooGFCRjSNB1XcRDFzPnTH7RDAGtMEHctlCwccRAlgGmyjgpw+\
+ADn0XQOA5ooAdZuKJRUrCcizuF8Fw9VIgAMaKLEWLeh0KeigQi8w0OcRxMDmihR1mV/\
+0A4DCOfRBF7yiihxtDyP/\
+uHznEc3OnbQRAmzrqNQglhHjDiHD3EeTVeIa6CJ5s8PD91YPPzDLj18mPPoRsUOmiih/nD9D8qH/\
+Jvg8DBDuhFlAMB13U+oah+A6wC8BmBHf39/aXqHzE0pRLUlGfVUJVA1HoD2uOuh2sqU/\
+3vT5OTkHy1cuHD83Xff/RMAzwC4FmAoE8Vp3dpC6fBwpwNpCg4d6SquXzPEkG4g54Xv1q1bm8+\
+cOZMVkS/4vr+s3EH/PwBWVQNVvXtgYOCN6PHl+73oY9/3+\
+2pVOFEjOXSkqygijsiks251oRR3PVQbZ2fQruvqxMTEGQD91toeIOyefd9fZIz5KIBTxpin4yqUqJG\
+tXzPUrtBApSk4/DLn0Y0iGnHA933Ztm3bv3n33Xf/RET2AfiP0X179uwZ37p1a9+\
+ZM2fenP4E7JqJasOI9aw0cR7dQAwAuK772O23334NAKiqVdXmqQ/q7u6+\
+emJiYqeIvBpHkUQErFtdKBkz6cCIc/DlLm5iaQAGAFT1+\
+FVXXXXsnXfeGReRrSLyCSAce7iuq83NzadUdZm1tjvecoka27qVhRJEA9MkzuERjjpoFtyoQhSPQ//\
+SVTz06k16+DhDup5xowpRCq3/\
+z0PtKsCkNgVx10Lzh5e8IkopNZMOBDh4nPPoesVLXhGlVMfSQkmNemLEOXiChyrVI444iFKs4z8NhY\
+f8N4l3cIzz6HrDgCZKuY6PhfNocB5ddxjQRPWgPI9+fozz6HrCgCaqAx0thZJFOI9+/l8Z0vWiol/\
+wRYclcbs3UTI8/69dRRHjAO87HR/hoUpTFU519cICABwRceKtJqSqXudHhmbMz8xMdxBR+\
+vzRfxhqf/5UtgjJBAd/mnU6rss3XEgf/\
+Glnm4VxzgvjaDFwytacVRzQ7J6JkkUMPAUCGx4FXNeHKh083dlmrXFgARHxoICinMPlMFZVDwCMsUH\
+Hden6qYIdNFGd6bguXzr406wDg6DwZrbY+\
+aF8XYR04XQ2XOtt7dmuWO25MFbVAEAAAAY26PjddIXxxTCgiepQx3X5UuHNbCAC5+\
+B4tq1jcXpGHQfHs23WwgEAWDgQnBtRABCRs10xAHT+\
+zswz3LRjQBPVqc4P5dsLp7uKak1wcDzrJDGkC+\
+NRVwxAwqszWTvlAQJAw9sNEHRcm7zPYT5xFQdRHRsa72wzyAQAApjwx//YRV0xgLOdsQJQBCiPKDp/\
+O89MATtoorrWtbhQOjiedWwYzk7M5YSmdMUA0LmYYTwveJIdEdH84U5CIqKEYkATESUUA5qIKKEY0E\
+RECcVLXlWJ67q8okVZLpdry+VyPDwefC2m47+Tc+\
+byWvCSV9XjxV1AUohIYk4Lixtfiwt4cReQIN6lHhDriMN13d5Kv6NW6TkS8VNApXUk5fWshmr8nSTl\
+OapQQ1X+Xrds2cJ/J0jXv5NZu99cLtd2ie/+Hir4jqiqDgCISBDnc6DCzyMpz5GU15N/J+\
+ck5fXk38k5aXg9VTXo7+8vxRrQRER0oSigK3qSJPwoTERERERERERERESJxTXMFXBd95bylR1+\
+H8BrInKP7/vDMZcVu1wu54lIbyOvke/t7TWnT5/eLiI9qvoRETGN/Hps2bIla4x5WFV/X0T+\
+t7X23oGBgXzcddXK1KWBU78ONm/e/EFjzD4RWaWqR621mwYHB38W3c+t3pW5pamp6RO/+c1v/\
+p2I7AXwTNwFxc113RUi4sZdR9zeeuutu0SkB8Bt11577VWNHM4AYIx5SlW3L1iwYCGAHcaYJ+\
+OuqZZ835eLfQ00NTXtBvBjAB8WkRPGmIem3s8D+yvg+/\
+6t0fu5XK4oIjvjrCdu3d3dCwA8CeBTAA7HXE6sVPUOVf3cwMDAK3HXkhCnAeDtt9/\
+WRYsWAcCb8ZaTGB3GmJV79+79dU9PzyOq+tLUO9lBV8Gdd9752yLyHVXdHnctcWpubt6tqk/5vl+\
+Mu5YE+D1jzHrXdd/\
+J5XJjrut2xl1QzFwReWbRokUTAL4F4I64C0qID6jqOACo6riIXDP1TgZ0hXp6ela+9957/2yt/Vp/\
+f/+BuOuJ2V0i8mg0b0vK1uA4iMgvAQw1Nzf/exHZBmAw7pripKr7VPW25ubmBQh/\
+wvpm3DUlxC9EZDEAiMhiVf351Ds54qjAli1bcqr6JWPMpr17974Qdz1x833/7Dd813W1weeuBeC8H+\
+nt7A+vewuB816PhfGWkxgvWGu3u677RWvtdhE5L0cY0BUwxvgAoKoHXTf8vVgmk/mtr3/96+/\
+EWhjFzhizy1r794sWLfoOgJ+q6u1x1xQnY4yrqo9dffXVvwvg/wDIxV1TLU39aTJ63/\
+d9yWQyO997771/UNU3ALyUyWQ+HVuRRERERESp9/8ByV42p+e0xq0AAAAASUVORK5CYII=\",\"\
+boundingBox\":{\"width\":360,\"height\":230,\"baseline\":118}}}"],FormBox[
+    FormBox[
+     TemplateBox[{
+       FormBox[
+        StyleBox[
+         StyleBox[
+          PaneBox[
+           GraphicsBox[{
+             RasterBox[CompressedData["
+1:eJwdl3k0VP//x21ZIiKUpSwtFFGyVOiJNktSIkpIRBKKFkqblCRLKkKiiFIq
+SR/Rvllj5rpDk23GNjN3CCVpoe/9/f6459zzOPeP132/X+fxer50doW77hYX
+ERGppR9R+vm/94SYDNcMOR42bf5hkJMyiHWMaw6kbDMs1EyjzivzcMksgz3k
+OojxrpA4d6lm9JczcqI1eSDUVsTbqQ6ieGjVqxaxZlxxDX23dx4PMya/mF5l
+D2DHP8XfHpME7IZkBF6GPGzpjunmXR+AvEKfKfsXgeHEQnlnUx6ufJyTunLn
+AF7PqQjf/oNArv5q01VWPLCKX1snzR1AhFFicdswAecPXduM1/CgmrJL2NUv
+xLxVPn07Bgj88Ys5qb2BB49IiUyTYiFanJdqd/IIFE/Ouq3oxsM1j8J1Z0OF
+OO8t4eXbQ8Azu7xObAcPbEv70dYlQqwMbb3K6SQgudx1+Ls/D+ra1M1FoxQG
+YooZfl8IlJNfVfpCeNgucdHl+H8Ublw8LtvDIuB/INGyJZKHbP7iiaajFFyu
+b1oXwCSgKK/vV32Mh/aGpmLdVRRE78893ddA4HXx+3MVZ3iYXXrA85AohbKq
+sarAGgJh6/3u303kwefqDMma9wLsrq8d470joNk7wcy6zMON6PIy9fMCzGy7
+vjT4FYG6U1k/E7N54Hh7+IU6CVBLhe+jKglEz7aYfTyfB227X/Kv5QU49tuu
+KOQpAb3KZruwezz4Lch+rkTwsXiqavdAKQHW1v17fMt4uDXVeu/uq3x0qQk0
+w0oIxH2XS95UxUPP186ZFZ58XFr43GPoDgGT1Ltltu94mHP46eOpmnysXpGS
+tr+AAMdwHduknoe8TGN77y4eftjv+jSSSyCltntybjMPc1/c6Xh4i4ciTzPp
+yGwC1oEn56m08XCboxMpFsjDtj3Sq0fTCQjFNB0le3jQk8iWdl/Ig2xU2/FD
+aQQycyvCf1I8FOsp3yga6MeL+AcVY0kE7K3cr/K/8WDolLTs98N+hGec/n4k
+gcDY55FK9m8eHoZJ1m6I7IdOkZvRrzgCBYeSOXVifCxNO+mTa96P5qd6wUdP
+EdiiZCD5fCofZeXj30d+9eHsx9/5f44REH1YbVCixIc5+0DCmhd9sGj51Blz
+hMBDp4DNN9T5qPhLzck41QdBX57aZAQBH77IkRRdPlZqBzwRrO5D9o9It5Nh
+BOTO5lw/tYiPF6s7HKyk+uA8ZX2KyF4ClTor3x4w4QNBW7uS63rxT1m97vRu
+AntetvB2reTj7YWmg9ykXpTOG5QQ9yMw0ytympsdH2se2E813dwLf9PXiNtB
+4MNPhWVrHfn4yHyTe065FyprLh+d4kkg8sp9T3NXPhx+rDRjt/agektg+bkt
+BHSXOpzQ285Hw6wndQbZPYj2XzEs5UKA8akvf9YuPjZaLd55wqcHBpFyBgmO
+BE7sja2V2csHw7fwB0OnBx2xXbunriOwWEpr6PcBPvJiEq/N7etGStrjvERb
+Am35VcoD0Xxwdy5ed/hON2xvnW2TsyaQYOO5suM0Hzprm77XhHTje6mnavJy
+AhYdo76NCXz4LzxwU8O4G7ffGGxWMCXQH33p7KtLfORPm+ES9o0LD+ZkYqox
+gSuqRvceZfLRO/Lk7+tyLmS4zI+KBrRnyuoYN2/yMb9la/GMaC6qhgtELy8g
+MOISNJZ2l4/AynGPQCsuQkWirJR1ac8MiGvGlfJRdCNryrN/HGhNdzpydTbt
+mYQ820PP+ODHWpXJvuOAqTXnsaoagb/zrYMC3/ChH9S50+ccB2eMRwYylGnP
+vGVf9KjlI9jplHypAwdmeK+nNp32jO/hx/ZMPoqNdZ+LT+OAtzFjV5Ys7Zm/
+Sp9XsPlo1TvffD+vC5k+e3M0pGjPXHs4sYjLh+dwvZGrXhecwqw/XxejPWO2
+Ya6mgI8vFQoXfpZ0YuL49BlzJplQJPj200b42HF6S9910048TOpxzv3FxOuw
+s2GT43x0OmTY2FV1wC/n6XntH0yEyepeGRIRwFepLZtn2wGlkoR3N4eZ0Lzz
+8hlHWgDulzk/L9a04/3zHZO6A0zUr/HqYk4XYFf+LlcTl3YcbjBeUcBjIpr7
+U+LdLAF6QwpLWllt0G8XOzi/hwmbHQ7e47oCjG4wXpoe3IYl0bXa3z8zsfyy
+hMbTpQJo+9pNiZ/Zht4lR0q3vWNiSd2rz5E2AjgdcGcf+fAFGfx5dq9LmNAX
+PZa+1EWAw2f2lOyJ/AKnPIJYcI0J7eXmbkPeAuRfPXZ6m84X/PM45Z8Uy4Ra
++IhiyT4BGouS3R2b2ChTMBr9vo8+n8L7TXuPCfDr2c2FlsfZCKxui9vuwYRM
+R1CS/gUB5jc8mTAwYEP9ZILKG1smRJXnOvVfE2BTZzVTk/0ZjeYWhXqGTPx2
+7JQuKBIgZvjL7WnxnxH7tdc8WZWJb6czP/o9FaBI7Gv0pOlnmBWmVY+KMEFV
+uMVpfRCAUBbdONTdCoG3jaeXkIHuIQW7jmYBJhco63JSW5Gj8pX/hsXAlwX1
+/7K6BVi4Qm+MsaoVmz5lR+u/ZqDZ+9wLzxEB3JxW1r0ZaIHEWYepKcUM1F+x
+PaYqQuGUt/ONx1ktqLD6mfXjCgPv6v8uJ+Up3AvfGZFv34J9owUGO04yUCVW
+MXZpNoXPpyPXXRljQeu+6/O3wQyUrYh84mJIQfzKOfWzBSw0+4s4L3Rj4N5+
+o4hplhSMCjO/HnJlIV7jQUfKKgboMzCud6CwveL+20ARFiybvcLG9Bm43lkw
+eN6Twtm6V+keD0h8vSDzb8cMBvJ0UmVEgii8nFHmI7ebxIK23QFmYgxIffij
+ahdJwVvlzgeOH4nTQ+bh15UZCN8TNC/uJIUJ1RzDch8SbeLSR8X1GGiRbV76
+MZHC9VlplxO8SJjNYsftXcGA9cNVkL5GwVI9/re3J4kUw+IUphNdp2vxBscC
+Cl80YvxM3EkIbI5lLfdhQHZMZfvFRxQ9Jw/USLqSWO2+4XbufgYiMk8HNT6n
+oKYVaNy2kURO8OxHkmfoe7EaPDi9lkKFtlf6QycS48e/VoZeZcCW4xnryqLg
+obtp4ow9Cde0Vx/IIgbunHmfcoVLYWzu2gDPtSTuF6YyLCsZUNBbktMySCF9
+/sp6QzsSklV+bbcaGDhcl1086zcFMz1jE1GQ2Nlk0i/TxUBHqFTFdkkhSP15
+mSxLEpU94iP7RxhYoxj54bqSEJGL1ESKl5NQHif/tIozcf9JJ9E5RwglQ/mg
+E2YkwuUKJUH35wxPR462gRCPF4s3upqQqNU+olioz8TRP+WDuyyE2Gw8bqpn
+TGKumb3mNEsmuDd0/hSsFmJ4yWD2HwMSxx3U9A46M2FvlyTNcxEixaRbjKFP
+otWbWtrmy8SjvnGVhTuEMDJtDS6YT2JpRJWVXQQTMxMC5obsEaLRrIERpUvi
+4rmL6+/GMXHCkLGk5KAQoRZvLJy1SPRnebtOz2CCbbS7uueQEFbRt8w2LSLR
+K+wqO86l6/fWGqqgueJqP0k1CxKHA5ZzhCYENiSyVZNp3ien3cpdTUK6I1Vu
+Oz3fzz27vMqf5pUtnUXFm0hkuQuW19A57TXPOXA5zVPycqIivUkYNNruNtdr
+xi8V6eRpNA/Yu8PBai+JF+uyLhVENWPZmrfl3XSdy0011KccIeHy6tsLpbpm
+hEbEdPxH82mTbOrTGRJcCyfqlAaJwjzzKUk0766+VpWeSiLyUb7q0D4SnMZh
+w100/++Sx0XfHPreF/61835JQn2i2M2C5he9VL31i0lcu+kWXq/AwhaD3TFy
+NPebz1o88pTEIvWS7BV+LCRt0yrgRgphNnR58tk7Es/TptQUPWbhYzy7/inN
+pz5zbYplkNgo6zOqItECkaeXvyfSvCtWMc+pg67jzFPtOPcWrOx11vCj+ZMN
+jP3KFF3nX3nnb4UtiFSSXm1O8wTVFNuOMRJTDgVF7xxvQYnN272yNPfhOCsV
+irOQMfjqdqNDK3hhMWmcCCFMiuV6wqazsDBwFmGV3QrtHPPKcppLHawvs5jN
+wvPO/ZPFA63YXj/MvUDzdusLcSKLWNjoUbtIbdVnXPlVLLOT5qVSDu615ixw
+mnQ84lM+Q8ar96xiGN1XPavbOxewUBlkEFwg+IzZW70NS4OEOF2942WWNAsW
+KdO+zrJnY8nmFmKTnxDN9w7lbaX/68nToYikQjbWbHCJHt4uxILU5FilBro/
+O5k/Rad8gcf6Gq1UNyGiDhYFNJaQeDDlScxh/y8IsbP9aLxRiDrP1+supNB9
+sjhdVPjmC05YV+5rWi/EbGu2/roDJO64RZ3z1W5D2vJlM8Jthdiv822q2BYS
+ujHbZckTbShcdv+ZvKUQ76bIDr4wJZGbb5Vq39GGZ0bzdz4wFUKFmtsUrUpC
+s36OygvLdnxaeENyo5EQexqtSs3Gm5H5TSRraVY7OPNmlgzq0f382P3yCLsZ
+quo9cwrH2zGqlbolSUcIuYywQyVV9N5l+yFf3aMDUhoyvw01hPA9Fu8RnNOM
+6cFF+inlHdBQjc1rUKbP2TdvxfyTzUhOTSgRV+6EkeKfdfvkhZBY80yDu7MZ
+UytCTKIiOmEnd3BQVlqIrfrExHW7Zpzvcv5vgNEJd6nBy/dEhbgrJ+zynNcM
+CaklVn7GXQgWC1zp9IfCn2Hxt8qSzYg1UnrDSupCzEQnh6L3qI0szQIGvY9N
+uo+udRzoQuq4R/yFrxTynpmdu1hL4OWqkN2+8znI/85YvIhP4VvOxj329wjE
+uLYXZbpx8N9XB7KW9ura2CBHCTr3WwY6U81nOKgTvD0a3EYhI/CU4Ws6Z/+K
+fmkoX8ZBZ6+ljgztZ8oxUz5mE4GKJONw+24ORrqeVN9ppGBl/HjYgvbI4Zt5
+pbGKXExpWxxmX0MhZUY98X0GAbNyxdHnNlzMailU5r+hwP3Z8+QhnZ++18Sa
+/wznwpCpVRVfRcG0/W96SCsTj9u/Ry3N5QIN1/z0yimce60SrfeMif3DAVUh
+jVxsqVaUrn5Az98CI6+eLCaMJVombk9wEfT2woPAOxQMEtZb58YwMThzvQ3H
+sBtHX4i7S96icDx0p5aXD+13g4pY9R3dSK6I+XM7mwJjc7ToTBsmgrHwg1ti
+N26W/bi59iqFueZpPYQOnZ+2ZEmlVHaj/EGYfV8yhUPq9z4k03OiP1DWsVbQ
+jZq7vK9x5ynUTL4rcuxj4PbRmIviaj1oL9h5dV4sBfWe9gTJagb8kwcbre17
+MJTLtnx/jEJo9Y+Qt3cY0L3loxh1pAfi2a7d/ocovLonv/HEBQY45U1bHhf2
+QDW9/rx4OAXFVL0lK/cxkFtrkz7A6sGiS2uM8/dQCDhoozTmzIBPR+nnBVN6
+YX3xBctuF4WnnttGS40Z0BzR1fAz7cXmePOYbi8KMtYRLaGK9DyWuOKd7d+L
+gNiHurHu9Pd2qge29DfBNcb/NiutF1HH9Wt1XCh4ydqb1d9tQtOmiX8Kb3uR
+GHUz/I09BREy+pddaBM2zM/Y7jjSi9xIdVU/Owq3r997UbmkCTW/lpTHaffh
+cdjl5yJWFBx3d5w2GW3E2sY6hVcuffgYLOefZ0ZhaLHCuuL/GvH2VsDeXyf6
+wA44K2NjTOHKmM1U3WONwJHJ98se9GHQd/Jhlz6FFa8iGjNXNeK50zWtsI4+
+iHod2XpSl0JnfEGaolgjVmibHL0j1w/lrcN/52hSOLOpZWvCh094OlpPdlv2
+Q39zcP5LFQr6atIaogmfsKx2t/HskH5Ybuh28FGg8Im7oitqwyc8yvmX4JHV
+D5f1XsMT0hQiikPyhxU+YXFEZu+l2n7ssiPTc8QozIzMCdrT3IDidcvQMN6P
+w9bO1tZ/BXhh2WTASW/AAo1PmZL6PCQs/9jT/oPO/xKiwx7bG5A/FDhq48FD
+zjJciBkSQOqTyZOm2Q3Qfi/icuwcD4+MKpZoCgS4fzUgaj23HjnXsu6Wl/Pw
+fuHS1io63272Sbd6VVAP9VBTieFeHlrnFR/3ahdgbEGNiMWeemTYNvosUuZD
+qDV33h+WANlDv94/MKiHsuqeZwGr+ZhUv16X1SSATYVBwoKhOlyiRJVzI/hQ
+UlU5sLJWgL7/D8R1kH+VHcam98D/AXXbhZ8=
+              "], {{
+                Rational[-15, 2], 
+                Rational[-225, 2]}, {
+                Rational[15, 2], 
+                Rational[225, 2]}}], {Antialiasing -> False, 
+              AbsoluteThickness[0.1], 
+              Directive[
+               Opacity[0.3], 
+               GrayLevel[0]], 
+              LineBox[
+               NCache[{{
+                  Rational[15, 2], 
+                  Rational[-225, 2]}, {
+                  Rational[-15, 2], 
+                  Rational[-225, 2]}, {
+                  Rational[-15, 2], 
+                  Rational[225, 2]}, {
+                  Rational[15, 2], 
+                  Rational[225, 2]}}, {{7.5, -112.5}, {-7.5, -112.5}, {-7.5, 
+                112.5}, {7.5, 112.5}}]]}, {
+              CapForm[None], {}}, {Antialiasing -> False, 
+              StyleBox[
+               LineBox[{{7.5, -112.5}, {7.5, 112.5}}], 
+               Directive[
+                AbsoluteThickness[0.2], 
+                Opacity[0.3], 
+                GrayLevel[0]], StripOnInput -> False], 
+              StyleBox[
+               StyleBox[{{
+                  StyleBox[
+                   LineBox[{{{7.5, -112.5}, 
+                    Offset[{4., 0}, {7.5, -112.5}]}, {{7.5, -67.5}, 
+                    Offset[{4., 0}, {7.5, -67.5}]}, {{7.5, -22.5}, 
+                    Offset[{4., 0}, {7.5, -22.5}]}, {{7.5, 22.5}, 
+                    Offset[{4., 0}, {7.5, 22.5}]}, {{7.5, 67.5}, 
+                    Offset[{4., 0}, {7.5, 67.5}]}, {{7.5, 112.5}, 
+                    Offset[{4., 0}, {7.5, 112.5}]}}], 
+                   Directive[
+                    AbsoluteThickness[0.2], 
+                    GrayLevel[0.4]], StripOnInput -> False], 
+                  StyleBox[
+                   LineBox[{{{7.5, -101.25}, 
+                    Offset[{2.5, 0.}, {7.5, -101.25}]}, {{7.5, -90.}, 
+                    Offset[{2.5, 0.}, {7.5, -90.}]}, {{7.5, -78.75}, 
+                    Offset[{2.5, 0.}, {7.5, -78.75}]}, {{7.5, -56.25}, 
+                    Offset[{2.5, 0.}, {7.5, -56.25}]}, {{7.5, -45.}, 
+                    Offset[{2.5, 0.}, {7.5, -45.}]}, {{7.5, -33.75}, 
+                    Offset[{2.5, 0.}, {7.5, -33.75}]}, {{7.5, -11.25}, 
+                    Offset[{2.5, 0.}, {7.5, -11.25}]}, {{7.5, 0.}, 
+                    Offset[{2.5, 0.}, {7.5, 0.}]}, {{7.5, 
+                    11.250000000000014`}, 
+                    Offset[{2.5, 0.}, {7.5, 11.250000000000014`}]}, {{7.5, 
+                    33.75}, 
+                    Offset[{2.5, 0.}, {7.5, 33.75}]}, {{7.5, 45.}, 
+                    Offset[{2.5, 0.}, {7.5, 45.}]}, {{7.5, 56.25}, 
+                    Offset[{2.5, 0.}, {7.5, 56.25}]}, {{7.5, 78.75}, 
+                    Offset[{2.5, 0.}, {7.5, 78.75}]}, {{7.5, 90.}, 
+                    Offset[{2.5, 0.}, {7.5, 90.}]}, {{7.5, 101.25}, 
+                    Offset[{2.5, 0.}, {7.5, 101.25}]}}], 
+                   Directive[
+                    AbsoluteThickness[0.2], 
+                    GrayLevel[0.4], 
+                    Opacity[0.3]], StripOnInput -> False]}, 
+                 StyleBox[
+                  StyleBox[{{
+                    StyleBox[{
+                    InsetBox[
+                    FormBox["0", TraditionalForm], 
+                    Offset[{7., 0.}, {7.5, -112.5}], {-1, 0.}, Automatic, {1, 
+                    0}], 
+                    InsetBox[
+                    FormBox[
+                    TagBox[
+                    InterpretationBox["\"0.2\"", 0.2, AutoDelete -> True], 
+                    NumberForm[#, {
+                    DirectedInfinity[1], 1}]& ], TraditionalForm], 
+                    Offset[{7., 0.}, {7.5, -67.5}], {-1, 0.}, Automatic, {1, 
+                    0}], 
+                    InsetBox[
+                    FormBox[
+                    TagBox[
+                    InterpretationBox["\"0.4\"", 0.4, AutoDelete -> True], 
+                    NumberForm[#, {
+                    DirectedInfinity[1], 1}]& ], TraditionalForm], 
+                    Offset[{7., 0.}, {7.5, -22.5}], {-1, 0.}, Automatic, {1, 
+                    0}], 
+                    InsetBox[
+                    FormBox[
+                    TagBox[
+                    InterpretationBox["\"0.6\"", 0.6, AutoDelete -> True], 
+                    NumberForm[#, {
+                    DirectedInfinity[1], 1}]& ], TraditionalForm], 
+                    Offset[{7., 0.}, {7.5, 22.5}], {-1, 0.}, Automatic, {1, 
+                    0}], 
+                    InsetBox[
+                    FormBox[
+                    TagBox[
+                    InterpretationBox["\"0.8\"", 0.8, AutoDelete -> True], 
+                    NumberForm[#, {
+                    DirectedInfinity[1], 1}]& ], TraditionalForm], 
+                    Offset[{7., 0.}, {7.5, 67.5}], {-1, 0.}, Automatic, {1, 
+                    0}], 
+                    InsetBox[
+                    FormBox[
+                    TagBox[
+                    InterpretationBox["\"1.0\"", 1., AutoDelete -> True], 
+                    NumberForm[#, {
+                    DirectedInfinity[1], 1}]& ], TraditionalForm], 
+                    Offset[{7., 0.}, {7.5, 112.5}], {-1, 0.}, Automatic, {1, 
+                    0}]}, 
+                    Directive[
+                    AbsoluteThickness[0.2], 
+                    GrayLevel[0.4]], {
+                    Directive[
+                    Opacity[1], 
+                    GrayLevel[0.3]], 
+                    Directive[
+                    Opacity[1], 
+                    GrayLevel[0.3]]}, StripOnInput -> False], 
+                    
+                    StyleBox[{{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}}, 
+                    Directive[
+                    AbsoluteThickness[0.2], 
+                    GrayLevel[0.4], 
+                    Opacity[0.3]], {
+                    Directive[
+                    Opacity[1], 
+                    GrayLevel[0.3]], 
+                    Directive[
+                    Opacity[1], 
+                    GrayLevel[0.3]]}, StripOnInput -> False]}, {}}, {
+                    Directive[
+                    Opacity[1], 
+                    GrayLevel[0.3]], 
+                    Directive[
+                    Opacity[1], 
+                    GrayLevel[0.3]]}, StripOnInput -> False], "GraphicsLabel",
+                   StripOnInput -> False]}, "GraphicsTicks", StripOnInput -> 
+                False], 
+               Directive[
+                AbsoluteThickness[0.2], 
+                Opacity[0.3], 
+                GrayLevel[0]], StripOnInput -> False]}}, PlotRangePadding -> 
+            Scaled[0.02], PlotRange -> All, Frame -> True, 
+            FrameTicks -> {{False, False}, {True, False}}, FrameStyle -> 
+            Opacity[0], FrameTicksStyle -> Opacity[0], 
+            ImageSize -> {Automatic, 225}, BaseStyle -> {}, BoxID -> 
+            "{\"imageData\":{\"imageSource\":\"data:image/png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAACsAAADhCAYAAABRLkwSAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAACGpJREFUeJztXV1sXMUV/\
+s7sn02xLNUQKlk0mKjpU5SHVKj0JUhOU5HlWiAwKKpSpZZJKlWKKrcgkCoF8QIVIuKVKjESFkLIrUC\
+72fATGXAr8SM1W6HACzyEtKzFn1M5CXh/\
+vDM82GtvtvfeuTN7752d5X7RSOvM7L1nz373fGfm3LkLJIgGFNeJHMcRrdfFYtH1vI7j3CSEmAPwcw\
+DvEdGhYrH4RaufRW/mloFeRrYghHiSiM4PDg7eTEQfAniivT/t8b672l5/\
+vNF8MT09vZNzPsIYWwaAWq22PDc3tyx7Xwf2c85vm5+fX8nn808zxt6XGvvyrheL2wd+rHSWi+//B/\
+ecP9gtrW4YHR39EgBGR0e/XFpaurG904MGAgBXbML1SIr4ulKpbAOASqWyjYi+\
+khtLQq91j7OMsZnJyclhxtiMEOKs3Fhlr7aaNxzHEa2I0Pl686ycPwJg9+rq6mcAdnPOH20/\
+hivHXtn9vNg+cLPvyTtxsfpf3P3BbyINhR7RoMVZFYRCA194G6vMQWPGyjno/\
+p5o4W6sztUdTjTwhWs0IHDl1sys4dChQyOxGwuCRpwFcrncyPT09M6ojA2Ns+\
+kGcPLkSWkO0Q2s4qz90YAIIEVPUQxpvP2eXVcjWxSM+HpTgep4DVjlWU9RIBJKrZnhhhRMK/\
+EWphRMXRRSa6YUzKrQZZPcEgRI0VNkLs5a5NmEsyHAqqm4+xxMUb2IBHiiYNciNM6mmsKUgvUmZ+\
+1fPmotXKhAdbwOrEq++\
+2FaA4TtKVmNa2PMXQCeAjAG4AKAh4rF4ulWv8e0hus1H8hqXBt4Tggx02g0honoTwBm2zs9VhGFcmu\
+mhUzB9nPOT8zPz69wzp8GsN/lAy0BwNDQUOtrrbT3h5rIbCjYCOBatPOtcQEAY+wI5/\
+z1arU6LIRYYYz9Sm6sziriGpcpWKvGValUKtsYY191Dtjg9MFGo/FmNpvdJ4R4HsBPNz+\
+M62E112cl8K1xbRg7DGzRoPW3v7ER1MG8alztdTAiOkJEz1Sr1ctCiBMAHmw/hqs/\
+Xt37B3HLD27wPXknPv3ma9y5+IyJOphV0xpoRIPujZGhDzzboylieHUwuYJFY6zu/\
+QbmVhHDV7CukSTfUcHTs+\
+qrgkZXEVU9a3StyxrPWsZZazy7vjKouMhh6raTLc8Gb7VsClNTU7dbsYqYazQwO/\
+vCu2EY5YUkRYwKSR0sKvQJZ20RBcs8C8ThKVWEp2C5tCEF0+\
+BsrlbH7OysAQUTfL2pQHW8BvohGlhlbDwnV0U/\
+xFkBiHBpEKQOdvz4cXbu3LkZAEcB3EpErH1bVmhxVmZskDpYuVw+BuAoY+zgnj17Mp37x+\
+Is4fvu9QIAIcTvhBAPFwqFfxUKhf87QGjRoJbNYGpq6nafzWvSOhgR3UJE+\
+xzHmQOwBOBYsVh8LXRjc/WaTMGC1MGWGWNn6vX6TDab3cc5PwVgtNXvzlkh9Jo/\
+pHUwAK8BW3Uw6lgP6Kk6WCaTeVQI8ftqtXpJCPEUEf22/RiuNZY3fnmHGLv+et+Td+LC1avYf/\
+ZtE3UwwCIFsyk3SFLE7mGVsaHtFa/\
+lBszMwcTGPxVka6uRz8Fi24UfBqwy1oMGUKZBHBJiv2eBXhTb/vBsb4qCzwWmBnMXGKm3qikF0/\
+HtQD16BesDGvQorPKsVaEroUFUsIoGVnk2vDlYdtCUgqkjZ0zBaL2pQHW8Drxvo1YliEljlT1lzlhS\
+fyJIDE8QSTgbFTw8SxCKX6tsfJCiXdvYxwAc76yDhTatkXk24OY1TExM/\
+EwIccStz8NYUm5r6UzXm9f27t07wDmfZYz92u0A7jRg600JW4/\
+A0t68NjQ09CSA5wqFwluO4wQzNsjX2omUWOt68xoRHQNAjuOcANbLTu289ci6NC4w+\
+adrFe0er1arrkW7YrG4+X12Ggp4cZZpNh8EKdrJ4OqOv9/3C7F9+LqgxwAAXFz5Fvf+\
+7R0DRTuChtx2b4wMfTBhTHKD7uGpYEKxNVNSBYvKWL1mZvNagLjZiRSkCtY1YksRw0BouYHB5Fs96z\
+IXujQ4G4e89IGxPSoKVsltaPlsM5U2pGCaybehR2ARwNS+\
+1xSahhRMY3arPBvWQBK6ooL9nrWLszZlXb3K2fAUjBlSsJXVxiZvgzYwYGlpaWfsCnZ5taE+\
+B6M1LCz8cxkBfpBHF/\
+aHLq0LLImz18LHs5YU7ayiQRQKFqQONjExMck5fwzrD3H8iDH2x0Kh8I9Wv6s/\
+VGNsEI4HqYNxzieFEA9cuXLlhwCe5Zy/2N7vvTCnqmBIYceOHUM+9krrYKdPn76/\
+VCp9uLi4WE2n028BWG3vD5Wzw8PDI4cPH/\
+4JAKRSqeVTp05dahshrYO1cODAgR81m82XGGMzcmN1VhFTTZTL5U/\
+L5fInHkOkdTAAyOfztxHRS5zzP5dKpWv2BrpzljQ4K78gpZvX8vn8g0RUIKIjpVLphc7+\
+UKfifghSB2OM/ZWIbgLwRusHzyYnJzc3psUWZ8+cOfM5gH2d/\
+99eRZT99KFVybfnBWZPbgBYNAezK59VX+uKI+\
+sKLTeoixzGx8d3GVhF9PoY3shkalhYWDyP2OdgtoUuay4wrTqYsWhgk2cBxMJBVfSBZzU4m5RDA51C\
+Y8LYWLNJwXKGFMzCtS7FI5mTW40UUXW8BuxfmOvV+\
+w36gbOwhwa9yllPBVOdgzXqphRMgwbpwRoWFt62ZA6WZF3Xog/uRbSKBt/3myNU9oN5wWetixSb/\
+4mC7gdTNlZnWhPgm5DWwWRwpcG336zhswtXpW++fKmOK/9rAAAuVQjj4+O7xsbGAOjtB9My9i9H/\
+x3F5RKoDuaHGALOJoI8xNEXsRnrVQdLkCBBggQJEiRIkKALfAexzNJU71XFswAAAABJRU5ErkJggg=\
+=\",\"boundingBox\":{\"width\":43,\"height\":225,\"baseline\":116}},\"\
+jsonData\":{\"width\":43.0,\"type\":\"Graphics\",\"UserCoords\":[-7.8125,117.\
+188,7.8125,-117.188],\"offset\":[-66.0,-5.0],\"primitives\":[{\"transform\":[\
+1.0,0.0,0.0,1.0,66.0,120.0],\"type\":\"clip\",\"path\":[[0,-115],[0,110],[43,\
+110],[43,-115]]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"\
+position\":[5.15469,90.792],\"type\":\"backgroundRect\",\"Color\":[184,236,76]\
+},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,\
+89.788],\"type\":\"backgroundRect\",\"Color\":[184,234,76]},{\"width\":13.\
+4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,88.784],\"type\":\
+\"backgroundRect\",\"Color\":[184,232,76]},{\"width\":13.4531,\"height\":1.\
+00396,\"opacity\":1,\"position\":[5.15469,87.7801],\"type\":\"backgroundRect\"\
+,\"Color\":[185,230,75]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\
+\"position\":[5.15469,86.7761],\"type\":\"backgroundRect\",\"Color\":[185,228,\
+75]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.\
+15469,85.7722],\"type\":\"backgroundRect\",\"Color\":[185,227,75]},{\"width\":\
+13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,84.7682],\"\
+type\":\"backgroundRect\",\"Color\":[185,225,75]},{\"width\":13.4531,\"height\
+\":1.00396,\"opacity\":1,\"position\":[5.15469,83.7642],\"type\":\"\
+backgroundRect\",\"Color\":[186,223,75]},{\"width\":13.4531,\"height\":1.\
+00396,\"opacity\":1,\"position\":[5.15469,82.7603],\"type\":\"backgroundRect\"\
+,\"Color\":[186,221,75]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\
+\"position\":[5.15469,81.7563],\"type\":\"backgroundRect\",\"Color\":[186,219,\
+75]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.\
+15469,80.7524],\"type\":\"backgroundRect\",\"Color\":[186,217,75]},{\"width\":\
+13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,79.7484],\"\
+type\":\"backgroundRect\",\"Color\":[187,215,75]},{\"width\":13.4531,\"height\
+\":1.00396,\"opacity\":1,\"position\":[5.15469,78.7444],\"type\":\"\
+backgroundRect\",\"Color\":[187,213,75]},{\"width\":13.4531,\"height\":1.\
+00396,\"opacity\":1,\"position\":[5.15469,77.7405],\"type\":\"backgroundRect\"\
+,\"Color\":[187,211,75]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\
+\"position\":[5.15469,76.7365],\"type\":\"backgroundRect\",\"Color\":[187,209,\
+75]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.\
+15469,75.7326],\"type\":\"backgroundRect\",\"Color\":[188,208,75]},{\"width\":\
+13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,74.7286],\"\
+type\":\"backgroundRect\",\"Color\":[188,206,75]},{\"width\":13.4531,\"height\
+\":1.00396,\"opacity\":1,\"position\":[5.15469,73.7246],\"type\":\"\
+backgroundRect\",\"Color\":[188,204,74]},{\"width\":13.4531,\"height\":1.\
+00396,\"opacity\":1,\"position\":[5.15469,72.7207],\"type\":\"backgroundRect\"\
+,\"Color\":[188,202,74]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\
+\"position\":[5.15469,71.7167],\"type\":\"backgroundRect\",\"Color\":[189,200,\
+74]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.\
+15469,70.7128],\"type\":\"backgroundRect\",\"Color\":[189,198,74]},{\"width\":\
+13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,69.7088],\"\
+type\":\"backgroundRect\",\"Color\":[189,196,74]},{\"width\":13.4531,\"height\
+\":1.00396,\"opacity\":1,\"position\":[5.15469,68.7048],\"type\":\"\
+backgroundRect\",\"Color\":[189,194,74]},{\"width\":13.4531,\"height\":1.\
+00396,\"opacity\":1,\"position\":[5.15469,67.7009],\"type\":\"backgroundRect\"\
+,\"Color\":[190,192,74]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\
+\"position\":[5.15469,66.6969],\"type\":\"backgroundRect\",\"Color\":[190,190,\
+74]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.\
+15469,65.693],\"type\":\"backgroundRect\",\"Color\":[190,189,74]},{\"width\":\
+13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,64.689],\"type\
+\":\"backgroundRect\",\"Color\":[190,187,74]},{\"width\":13.4531,\"height\":1.\
+00396,\"opacity\":1,\"position\":[5.15469,63.685],\"type\":\"backgroundRect\",\
+\"Color\":[191,185,74]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"\
+position\":[5.15469,62.6811],\"type\":\"backgroundRect\",\"Color\":[191,183,\
+74]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.\
+15469,61.6771],\"type\":\"backgroundRect\",\"Color\":[191,181,74]},{\"width\":\
+13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,60.6732],\"\
+type\":\"backgroundRect\",\"Color\":[191,179,74]},{\"width\":13.4531,\"height\
+\":1.00396,\"opacity\":1,\"position\":[5.15469,59.6692],\"type\":\"\
+backgroundRect\",\"Color\":[192,177,74]},{\"width\":13.4531,\"height\":1.\
+00396,\"opacity\":1,\"position\":[5.15469,58.6652],\"type\":\"backgroundRect\"\
+,\"Color\":[192,175,73]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\
+\"position\":[5.15469,57.6613],\"type\":\"backgroundRect\",\"Color\":[192,173,\
+73]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.\
+15469,56.6573],\"type\":\"backgroundRect\",\"Color\":[192,172,73]},{\"width\":\
+13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,55.6534],\"\
+type\":\"backgroundRect\",\"Color\":[193,170,73]},{\"width\":13.4531,\"height\
+\":1.00396,\"opacity\":1,\"position\":[5.15469,54.6494],\"type\":\"\
+backgroundRect\",\"Color\":[193,168,73]},{\"width\":13.4531,\"height\":1.\
+00396,\"opacity\":1,\"position\":[5.15469,53.6454],\"type\":\"backgroundRect\"\
+,\"Color\":[193,166,73]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\
+\"position\":[5.15469,52.6415],\"type\":\"backgroundRect\",\"Color\":[193,164,\
+73]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.\
+15469,51.6375],\"type\":\"backgroundRect\",\"Color\":[194,162,73]},{\"width\":\
+13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,50.6336],\"\
+type\":\"backgroundRect\",\"Color\":[194,160,73]},{\"width\":13.4531,\"height\
+\":1.00396,\"opacity\":1,\"position\":[5.15469,49.6296],\"type\":\"\
+backgroundRect\",\"Color\":[194,158,73]},{\"width\":13.4531,\"height\":1.\
+00396,\"opacity\":1,\"position\":[5.15469,48.6256],\"type\":\"backgroundRect\"\
+,\"Color\":[194,156,73]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\
+\"position\":[5.15469,47.6217],\"type\":\"backgroundRect\",\"Color\":[195,154,\
+73]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.\
+15469,46.6177],\"type\":\"backgroundRect\",\"Color\":[195,153,73]},{\"width\":\
+13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,45.6138],\"\
+type\":\"backgroundRect\",\"Color\":[195,151,73]},{\"width\":13.4531,\"height\
+\":1.00396,\"opacity\":1,\"position\":[5.15469,44.6098],\"type\":\"\
+backgroundRect\",\"Color\":[195,149,72]},{\"width\":13.4531,\"height\":1.\
+00396,\"opacity\":1,\"position\":[5.15469,43.6058],\"type\":\"backgroundRect\"\
+,\"Color\":[196,147,72]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\
+\"position\":[5.15469,42.6019],\"type\":\"backgroundRect\",\"Color\":[196,145,\
+72]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.\
+15469,41.5979],\"type\":\"backgroundRect\",\"Color\":[196,143,72]},{\"width\":\
+13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,40.594],\"type\
+\":\"backgroundRect\",\"Color\":[196,141,72]},{\"width\":13.4531,\"height\":1.\
+00396,\"opacity\":1,\"position\":[5.15469,39.59],\"type\":\"backgroundRect\",\
+\"Color\":[197,139,72]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"\
+position\":[5.15469,38.586],\"type\":\"backgroundRect\",\"Color\":[197,137,72]\
+},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,\
+37.5821],\"type\":\"backgroundRect\",\"Color\":[197,135,72]},{\"width\":13.\
+4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,36.5781],\"type\":\
+\"backgroundRect\",\"Color\":[197,134,72]},{\"width\":13.4531,\"height\":1.\
+00396,\"opacity\":1,\"position\":[5.15469,35.5742],\"type\":\"backgroundRect\"\
+,\"Color\":[198,132,72]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\
+\"position\":[5.15469,34.5702],\"type\":\"backgroundRect\",\"Color\":[198,130,\
+72]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.\
+15469,33.5663],\"type\":\"backgroundRect\",\"Color\":[198,128,72]},{\"width\":\
+13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,32.5623],\"\
+type\":\"backgroundRect\",\"Color\":[198,126,72]},{\"width\":13.4531,\"height\
+\":1.00396,\"opacity\":1,\"position\":[5.15469,31.5583],\"type\":\"\
+backgroundRect\",\"Color\":[199,124,72]},{\"width\":13.4531,\"height\":1.\
+00396,\"opacity\":1,\"position\":[5.15469,30.5544],\"type\":\"backgroundRect\"\
+,\"Color\":[199,122,71]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\
+\"position\":[5.15469,29.5504],\"type\":\"backgroundRect\",\"Color\":[199,120,\
+71]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.\
+15469,28.5465],\"type\":\"backgroundRect\",\"Color\":[199,118,71]},{\"width\":\
+13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,27.5425],\"\
+type\":\"backgroundRect\",\"Color\":[200,117,71]},{\"width\":13.4531,\"height\
+\":1.00396,\"opacity\":1,\"position\":[5.15469,26.5385],\"type\":\"\
+backgroundRect\",\"Color\":[200,115,71]},{\"width\":13.4531,\"height\":1.\
+00396,\"opacity\":1,\"position\":[5.15469,25.5346],\"type\":\"backgroundRect\"\
+,\"Color\":[200,113,71]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\
+\"position\":[5.15469,24.5306],\"type\":\"backgroundRect\",\"Color\":[200,111,\
+71]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.\
+15469,23.5267],\"type\":\"backgroundRect\",\"Color\":[201,109,71]},{\"width\":\
+13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,22.5227],\"\
+type\":\"backgroundRect\",\"Color\":[201,108,71]},{\"width\":13.4531,\"height\
+\":1.00396,\"opacity\":1,\"position\":[5.15469,21.5187],\"type\":\"\
+backgroundRect\",\"Color\":[202,107,70]},{\"width\":13.4531,\"height\":1.\
+00396,\"opacity\":1,\"position\":[5.15469,20.5148],\"type\":\"backgroundRect\"\
+,\"Color\":[202,105,70]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\
+\"position\":[5.15469,19.5108],\"type\":\"backgroundRect\",\"Color\":[202,104,\
+70]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.\
+15469,18.5069],\"type\":\"backgroundRect\",\"Color\":[203,103,69]},{\"width\":\
+13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,17.5029],\"\
+type\":\"backgroundRect\",\"Color\":[203,101,69]},{\"width\":13.4531,\"height\
+\":1.00396,\"opacity\":1,\"position\":[5.15469,16.4989],\"type\":\"\
+backgroundRect\",\"Color\":[204,100,69]},{\"width\":13.4531,\"height\":1.\
+00396,\"opacity\":1,\"position\":[5.15469,15.495],\"type\":\"backgroundRect\",\
+\"Color\":[204,99,68]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"\
+position\":[5.15469,14.491],\"type\":\"backgroundRect\",\"Color\":[205,98,68]}\
+,{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,13.\
+4871],\"type\":\"backgroundRect\",\"Color\":[205,96,68]},{\"width\":13.4531,\"\
+height\":1.00396,\"opacity\":1,\"position\":[5.15469,12.4831],\"type\":\"\
+backgroundRect\",\"Color\":[206,95,67]},{\"width\":13.4531,\"height\":1.00396,\
+\"opacity\":1,\"position\":[5.15469,11.4791],\"type\":\"backgroundRect\",\"\
+Color\":[206,94,67]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"\
+position\":[5.15469,10.4752],\"type\":\"backgroundRect\",\"Color\":[207,92,67]\
+},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,9.\
+47122],\"type\":\"backgroundRect\",\"Color\":[207,91,66]},{\"width\":13.4531,\
+\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,8.46726],\"type\":\"\
+backgroundRect\",\"Color\":[207,90,66]},{\"width\":13.4531,\"height\":1.00396,\
+\"opacity\":1,\"position\":[5.15469,7.4633],\"type\":\"backgroundRect\",\"\
+Color\":[208,89,65]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"\
+position\":[5.15469,6.45934],\"type\":\"backgroundRect\",\"Color\":[208,87,65]\
+},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,5.\
+45538],\"type\":\"backgroundRect\",\"Color\":[209,86,65]},{\"width\":13.4531,\
+\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,4.45142],\"type\":\"\
+backgroundRect\",\"Color\":[209,85,64]},{\"width\":13.4531,\"height\":1.00396,\
+\"opacity\":1,\"position\":[5.15469,3.44746],\"type\":\"backgroundRect\",\"\
+Color\":[210,84,64]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"\
+position\":[5.15469,2.4435],\"type\":\"backgroundRect\",\"Color\":[210,82,64]}\
+,{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,1.\
+43954],\"type\":\"backgroundRect\",\"Color\":[211,81,64]},{\"width\":13.4531,\
+\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,0.435577],\"type\":\"\
+backgroundRect\",\"Color\":[211,81,64]},{\"width\":13.4531,\"height\":1.00396,\
+\"opacity\":1,\"position\":[5.15469,-0.568383],\"type\":\"backgroundRect\",\"\
+Color\":[211,81,64]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"\
+position\":[5.15469,-1.57234],\"type\":\"backgroundRect\",\"Color\":[212,81,\
+64]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.\
+15469,-2.5763],\"type\":\"backgroundRect\",\"Color\":[212,81,65]},{\"width\":\
+13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,-3.58026],\"\
+type\":\"backgroundRect\",\"Color\":[213,81,65]},{\"width\":13.4531,\"height\"\
+:1.00396,\"opacity\":1,\"position\":[5.15469,-4.58422],\"type\":\"\
+backgroundRect\",\"Color\":[213,81,65]},{\"width\":13.4531,\"height\":1.00396,\
+\"opacity\":1,\"position\":[5.15469,-5.58818],\"type\":\"backgroundRect\",\"\
+Color\":[213,81,66]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"\
+position\":[5.15469,-6.59214],\"type\":\"backgroundRect\",\"Color\":[214,81,\
+66]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.\
+15469,-7.5961],\"type\":\"backgroundRect\",\"Color\":[214,81,66]},{\"width\":\
+13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,-8.60006],\"\
+type\":\"backgroundRect\",\"Color\":[215,81,66]},{\"width\":13.4531,\"height\"\
+:1.00396,\"opacity\":1,\"position\":[5.15469,-9.60402],\"type\":\"\
+backgroundRect\",\"Color\":[215,81,67]},{\"width\":13.4531,\"height\":1.00396,\
+\"opacity\":1,\"position\":[5.15469,-10.608],\"type\":\"backgroundRect\",\"\
+Color\":[215,80,67]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"\
+position\":[5.15469,-11.6119],\"type\":\"backgroundRect\",\"Color\":[216,80,\
+67]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.\
+15469,-12.6159],\"type\":\"backgroundRect\",\"Color\":[216,80,68]},{\"width\":\
+13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,-13.6199],\"\
+type\":\"backgroundRect\",\"Color\":[216,80,68]},{\"width\":13.4531,\"height\"\
+:1.00396,\"opacity\":1,\"position\":[5.15469,-14.6238],\"type\":\"\
+backgroundRect\",\"Color\":[217,80,68]},{\"width\":13.4531,\"height\":1.00396,\
+\"opacity\":1,\"position\":[5.15469,-15.6278],\"type\":\"backgroundRect\",\"\
+Color\":[217,80,68]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"\
+position\":[5.15469,-16.6317],\"type\":\"backgroundRect\",\"Color\":[218,80,\
+69]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.\
+15469,-17.6357],\"type\":\"backgroundRect\",\"Color\":[218,80,69]},{\"width\":\
+13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,-18.6397],\"\
+type\":\"backgroundRect\",\"Color\":[218,80,69]},{\"width\":13.4531,\"height\"\
+:1.00396,\"opacity\":1,\"position\":[5.15469,-19.6436],\"type\":\"\
+backgroundRect\",\"Color\":[219,80,70]},{\"width\":13.4531,\"height\":1.00396,\
+\"opacity\":1,\"position\":[5.15469,-20.6476],\"type\":\"backgroundRect\",\"\
+Color\":[219,80,70]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"\
+position\":[5.15469,-21.6515],\"type\":\"backgroundRect\",\"Color\":[219,80,\
+71]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.\
+15469,-22.6555],\"type\":\"backgroundRect\",\"Color\":[219,80,72]},{\"width\":\
+13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,-23.6595],\"\
+type\":\"backgroundRect\",\"Color\":[219,81,74]},{\"width\":13.4531,\"height\"\
+:1.00396,\"opacity\":1,\"position\":[5.15469,-24.6634],\"type\":\"\
+backgroundRect\",\"Color\":[219,81,75]},{\"width\":13.4531,\"height\":1.00396,\
+\"opacity\":1,\"position\":[5.15469,-25.6674],\"type\":\"backgroundRect\",\"\
+Color\":[219,81,76]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"\
+position\":[5.15469,-26.6713],\"type\":\"backgroundRect\",\"Color\":[219,81,\
+77]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.\
+15469,-27.6753],\"type\":\"backgroundRect\",\"Color\":[219,81,79]},{\"width\":\
+13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,-28.6793],\"\
+type\":\"backgroundRect\",\"Color\":[219,82,80]},{\"width\":13.4531,\"height\"\
+:1.00396,\"opacity\":1,\"position\":[5.15469,-29.6832],\"type\":\"\
+backgroundRect\",\"Color\":[219,82,81]},{\"width\":13.4531,\"height\":1.00396,\
+\"opacity\":1,\"position\":[5.15469,-30.6872],\"type\":\"backgroundRect\",\"\
+Color\":[219,82,82]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"\
+position\":[5.15469,-31.6911],\"type\":\"backgroundRect\",\"Color\":[219,82,\
+84]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.\
+15469,-32.6951],\"type\":\"backgroundRect\",\"Color\":[219,82,85]},{\"width\":\
+13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,-33.6991],\"\
+type\":\"backgroundRect\",\"Color\":[219,83,86]},{\"width\":13.4531,\"height\"\
+:1.00396,\"opacity\":1,\"position\":[5.15469,-34.703],\"type\":\"\
+backgroundRect\",\"Color\":[219,83,88]},{\"width\":13.4531,\"height\":1.00396,\
+\"opacity\":1,\"position\":[5.15469,-35.707],\"type\":\"backgroundRect\",\"\
+Color\":[219,83,89]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"\
+position\":[5.15469,-36.7109],\"type\":\"backgroundRect\",\"Color\":[219,83,\
+90]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.\
+15469,-37.7149],\"type\":\"backgroundRect\",\"Color\":[219,83,91]},{\"width\":\
+13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,-38.7189],\"\
+type\":\"backgroundRect\",\"Color\":[219,84,93]},{\"width\":13.4531,\"height\"\
+:1.00396,\"opacity\":1,\"position\":[5.15469,-39.7228],\"type\":\"\
+backgroundRect\",\"Color\":[219,84,94]},{\"width\":13.4531,\"height\":1.00396,\
+\"opacity\":1,\"position\":[5.15469,-40.7268],\"type\":\"backgroundRect\",\"\
+Color\":[219,84,95]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"\
+position\":[5.15469,-41.7307],\"type\":\"backgroundRect\",\"Color\":[219,84,\
+96]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.\
+15469,-42.7347],\"type\":\"backgroundRect\",\"Color\":[219,84,98]},{\"width\":\
+13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,-43.7387],\"\
+type\":\"backgroundRect\",\"Color\":[219,84,99]},{\"width\":13.4531,\"height\"\
+:1.00396,\"opacity\":1,\"position\":[5.15469,-44.7426],\"type\":\"\
+backgroundRect\",\"Color\":[219,84,101]},{\"width\":13.4531,\"height\":1.\
+00396,\"opacity\":1,\"position\":[5.15469,-45.7466],\"type\":\"backgroundRect\
+\",\"Color\":[219,83,102]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":\
+1,\"position\":[5.15469,-46.7505],\"type\":\"backgroundRect\",\"Color\":[218,\
+83,104]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.\
+15469,-47.7545],\"type\":\"backgroundRect\",\"Color\":[218,82,105]},{\"width\"\
+:13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,-48.7585],\"\
+type\":\"backgroundRect\",\"Color\":[218,82,107]},{\"width\":13.4531,\"height\
+\":1.00396,\"opacity\":1,\"position\":[5.15469,-49.7624],\"type\":\"\
+backgroundRect\",\"Color\":[218,81,108]},{\"width\":13.4531,\"height\":1.\
+00396,\"opacity\":1,\"position\":[5.15469,-50.7664],\"type\":\"backgroundRect\
+\",\"Color\":[218,81,109]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":\
+1,\"position\":[5.15469,-51.7703],\"type\":\"backgroundRect\",\"Color\":[217,\
+80,111]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.\
+15469,-52.7743],\"type\":\"backgroundRect\",\"Color\":[217,80,112]},{\"width\"\
+:13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,-53.7783],\"\
+type\":\"backgroundRect\",\"Color\":[217,79,114]},{\"width\":13.4531,\"height\
+\":1.00396,\"opacity\":1,\"position\":[5.15469,-54.7822],\"type\":\"\
+backgroundRect\",\"Color\":[217,79,115]},{\"width\":13.4531,\"height\":1.\
+00396,\"opacity\":1,\"position\":[5.15469,-55.7862],\"type\":\"backgroundRect\
+\",\"Color\":[217,78,117]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":\
+1,\"position\":[5.15469,-56.7901],\"type\":\"backgroundRect\",\"Color\":[216,\
+78,118]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.\
+15469,-57.7941],\"type\":\"backgroundRect\",\"Color\":[216,77,120]},{\"width\"\
+:13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,-58.7981],\"\
+type\":\"backgroundRect\",\"Color\":[216,77,121]},{\"width\":13.4531,\"height\
+\":1.00396,\"opacity\":1,\"position\":[5.15469,-59.802],\"type\":\"\
+backgroundRect\",\"Color\":[216,77,123]},{\"width\":13.4531,\"height\":1.\
+00396,\"opacity\":1,\"position\":[5.15469,-60.806],\"type\":\"backgroundRect\"\
+,\"Color\":[216,76,124]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\
+\"position\":[5.15469,-61.8099],\"type\":\"backgroundRect\",\"Color\":[215,76,\
+126]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.\
+15469,-62.8139],\"type\":\"backgroundRect\",\"Color\":[215,75,127]},{\"width\"\
+:13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,-63.8178],\"\
+type\":\"backgroundRect\",\"Color\":[215,75,129]},{\"width\":13.4531,\"height\
+\":1.00396,\"opacity\":1,\"position\":[5.15469,-64.8218],\"type\":\"\
+backgroundRect\",\"Color\":[215,74,130]},{\"width\":13.4531,\"height\":1.\
+00396,\"opacity\":1,\"position\":[5.15469,-65.8258],\"type\":\"backgroundRect\
+\",\"Color\":[215,74,132]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":\
+1,\"position\":[5.15469,-66.8297],\"type\":\"backgroundRect\",\"Color\":[214,\
+73,133]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.\
+15469,-67.8337],\"type\":\"backgroundRect\",\"Color\":[214,73,135]},{\"width\"\
+:13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,-68.8376],\"\
+type\":\"backgroundRect\",\"Color\":[214,72,136]},{\"width\":13.4531,\"height\
+\":1.00396,\"opacity\":1,\"position\":[5.15469,-69.8416],\"type\":\"\
+backgroundRect\",\"Color\":[214,72,138]},{\"width\":13.4531,\"height\":1.\
+00396,\"opacity\":1,\"position\":[5.15469,-70.8456],\"type\":\"backgroundRect\
+\",\"Color\":[214,71,139]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":\
+1,\"position\":[5.15469,-71.8495],\"type\":\"backgroundRect\",\"Color\":[213,\
+71,140]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.\
+15469,-72.8535],\"type\":\"backgroundRect\",\"Color\":[213,70,142]},{\"width\"\
+:13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,-73.8574],\"\
+type\":\"backgroundRect\",\"Color\":[213,70,143]},{\"width\":13.4531,\"height\
+\":1.00396,\"opacity\":1,\"position\":[5.15469,-74.8614],\"type\":\"\
+backgroundRect\",\"Color\":[213,69,145]},{\"width\":13.4531,\"height\":1.\
+00396,\"opacity\":1,\"position\":[5.15469,-75.8654],\"type\":\"backgroundRect\
+\",\"Color\":[213,69,146]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":\
+1,\"position\":[5.15469,-76.8693],\"type\":\"backgroundRect\",\"Color\":[212,\
+69,148]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.\
+15469,-77.8733],\"type\":\"backgroundRect\",\"Color\":[212,68,149]},{\"width\"\
+:13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,-78.8772],\"\
+type\":\"backgroundRect\",\"Color\":[212,68,151]},{\"width\":13.4531,\"height\
+\":1.00396,\"opacity\":1,\"position\":[5.15469,-79.8812],\"type\":\"\
+backgroundRect\",\"Color\":[212,67,152]},{\"width\":13.4531,\"height\":1.\
+00396,\"opacity\":1,\"position\":[5.15469,-80.8852],\"type\":\"backgroundRect\
+\",\"Color\":[212,67,154]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":\
+1,\"position\":[5.15469,-81.8891],\"type\":\"backgroundRect\",\"Color\":[211,\
+66,155]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.\
+15469,-82.8931],\"type\":\"backgroundRect\",\"Color\":[211,66,157]},{\"width\"\
+:13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,-83.897],\"\
+type\":\"backgroundRect\",\"Color\":[211,65,158]},{\"width\":13.4531,\"height\
+\":1.00396,\"opacity\":1,\"position\":[5.15469,-84.901],\"type\":\"\
+backgroundRect\",\"Color\":[211,65,160]},{\"width\":13.4531,\"height\":1.\
+00396,\"opacity\":1,\"position\":[5.15469,-85.905],\"type\":\"backgroundRect\"\
+,\"Color\":[211,64,161]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\
+\"position\":[5.15469,-86.9089],\"type\":\"backgroundRect\",\"Color\":[210,64,\
+163]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.\
+15469,-87.9129],\"type\":\"backgroundRect\",\"Color\":[210,63,164]},{\"width\"\
+:13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,-88.9168],\"\
+type\":\"backgroundRect\",\"Color\":[210,63,166]},{\"width\":13.4531,\"height\
+\":1.00396,\"opacity\":1,\"position\":[5.15469,-89.9208],\"type\":\"\
+backgroundRect\",\"Color\":[210,62,167]},{\"width\":13.4531,\"height\":1.\
+00396,\"opacity\":1,\"position\":[5.15469,-90.9248],\"type\":\"backgroundRect\
+\",\"Color\":[210,62,169]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":\
+1,\"position\":[5.15469,-91.9287],\"type\":\"backgroundRect\",\"Color\":[209,\
+61,170]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.\
+15469,-92.9327],\"type\":\"backgroundRect\",\"Color\":[209,61,171]},{\"width\"\
+:13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,-93.9366],\"\
+type\":\"backgroundRect\",\"Color\":[209,60,173]},{\"width\":13.4531,\"height\
+\":1.00396,\"opacity\":1,\"position\":[5.15469,-94.9406],\"type\":\"\
+backgroundRect\",\"Color\":[209,60,174]},{\"width\":13.4531,\"height\":1.\
+00396,\"opacity\":1,\"position\":[5.15469,-95.9446],\"type\":\"backgroundRect\
+\",\"Color\":[209,60,176]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":\
+1,\"position\":[5.15469,-96.9485],\"type\":\"backgroundRect\",\"Color\":[208,\
+59,177]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.\
+15469,-97.9525],\"type\":\"backgroundRect\",\"Color\":[208,59,179]},{\"width\"\
+:13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,-98.9564],\"\
+type\":\"backgroundRect\",\"Color\":[208,58,180]},{\"width\":13.4531,\"height\
+\":1.00396,\"opacity\":1,\"position\":[5.15469,-99.9604],\"type\":\"\
+backgroundRect\",\"Color\":[208,58,182]},{\"width\":13.4531,\"height\":1.\
+00396,\"opacity\":1,\"position\":[5.15469,-100.964],\"type\":\"backgroundRect\
+\",\"Color\":[208,57,183]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":\
+1,\"position\":[5.15469,-101.968],\"type\":\"backgroundRect\",\"Color\":[207,\
+57,185]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.\
+15469,-102.972],\"type\":\"backgroundRect\",\"Color\":[207,56,186]},{\"width\"\
+:13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,-103.976],\"\
+type\":\"backgroundRect\",\"Color\":[207,56,188]},{\"width\":13.4531,\"height\
+\":1.00396,\"opacity\":1,\"position\":[5.15469,-104.98],\"type\":\"\
+backgroundRect\",\"Color\":[207,55,189]},{\"width\":13.4531,\"height\":1.\
+00396,\"opacity\":1,\"position\":[5.15469,-105.984],\"type\":\"backgroundRect\
+\",\"Color\":[207,55,191]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":\
+1,\"position\":[5.15469,-106.988],\"type\":\"backgroundRect\",\"Color\":[206,\
+54,192]},{\"width\":13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.\
+15469,-107.992],\"type\":\"backgroundRect\",\"Color\":[206,54,194]},{\"width\"\
+:13.4531,\"height\":1.00396,\"opacity\":1,\"position\":[5.15469,-108.996],\"\
+type\":\"backgroundRect\",\"Color\":[206,53,195]},{\"width\":13.4531,\"height\
+\":1.00396,\"opacity\":1,\"position\":[5.15469,-110],\"type\":\"\
+backgroundRect\",\"Color\":[206,53,197]},{\"transform\":[1.0,0.0,0.0,1.0,0.0,\
+0.0],\"type\":\"clip\",\"path\":[[66,5],[66,230],[109,230],[109,5]]},{\"\
+points\":[[84.6078,211.796],[71.1547,211.796],[71.1547,10],[84.6078,10]],\"\
+type\":\"Line\",\"faceForm\":null,\"antialiased\":false,\"edgeForm\":{\"color\
+\":[0,0,0],\"capForm\":\"Square\",\"opacity\":0.3,\"thickness\":{\"absolute\":\
+0.1},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"points\"\
+:[[84.6078,211.796],[84.6078,10]],\"type\":\"Line\",\"faceForm\":null,\"\
+antialiased\":false,\"edgeForm\":{\"color\":[0,0,0],\"capForm\":\"Square\",\"\
+opacity\":0.3,\"thickness\":{\"absolute\":0.2},\"joinForm\":{\"type\":\"Miter\
+\",\"d\":3.25},\"dashing\":[]}},{\"points\":[[84.6078,211.796],[88.6078,211.\
+796]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":false,\"edgeForm\":{\
+\"color\":[102,102,102],\"capForm\":\"Square\",\"opacity\":0.3,\"thickness\":{\
+\"absolute\":0.2},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}\
+},{\"points\":[[84.6078,171.437],[88.6078,171.437]],\"type\":\"Line\",\"\
+faceForm\":null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"\
+capForm\":\"Square\",\"opacity\":0.3,\"thickness\":{\"absolute\":0.2},\"\
+joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"points\":[[84.\
+6078,131.078],[88.6078,131.078]],\"type\":\"Line\",\"faceForm\":null,\"\
+antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\"\
+Square\",\"opacity\":0.3,\"thickness\":{\"absolute\":0.2},\"joinForm\":{\"\
+type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"points\":[[84.6078,90.7184],[\
+88.6078,90.7184]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":false,\"\
+edgeForm\":{\"color\":[102,102,102],\"capForm\":\"Square\",\"opacity\":0.3,\"\
+thickness\":{\"absolute\":0.2},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"\
+dashing\":[]}},{\"points\":[[84.6078,50.3592],[88.6078,50.3592]],\"type\":\"\
+Line\",\"faceForm\":null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,\
+102,102],\"capForm\":\"Square\",\"opacity\":0.3,\"thickness\":{\"absolute\":0.\
+2},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"points\":[\
+[84.6078,10],[88.6078,10]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\"\
+:false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\"Square\",\"opacity\
+\":0.3,\"thickness\":{\"absolute\":0.2},\"joinForm\":{\"type\":\"Miter\",\"d\"\
+:3.25},\"dashing\":[]}},{\"points\":[[84.6078,201.706],[87.1078,201.706]],\"\
+type\":\"Line\",\"faceForm\":null,\"antialiased\":false,\"edgeForm\":{\"color\
+\":[102,102,102],\"capForm\":\"Square\",\"opacity\":0.3,\"thickness\":{\"\
+absolute\":0.2},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},\
+{\"points\":[[84.6078,191.616],[87.1078,191.616]],\"type\":\"Line\",\"\
+faceForm\":null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"\
+capForm\":\"Square\",\"opacity\":0.3,\"thickness\":{\"absolute\":0.2},\"\
+joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"points\":[[84.\
+6078,181.527],[87.1078,181.527]],\"type\":\"Line\",\"faceForm\":null,\"\
+antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\"\
+Square\",\"opacity\":0.3,\"thickness\":{\"absolute\":0.2},\"joinForm\":{\"\
+type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"points\":[[84.6078,161.347],[\
+87.1078,161.347]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":false,\"\
+edgeForm\":{\"color\":[102,102,102],\"capForm\":\"Square\",\"opacity\":0.3,\"\
+thickness\":{\"absolute\":0.2},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"\
+dashing\":[]}},{\"points\":[[84.6078,151.257],[87.1078,151.257]],\"type\":\"\
+Line\",\"faceForm\":null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,\
+102,102],\"capForm\":\"Square\",\"opacity\":0.3,\"thickness\":{\"absolute\":0.\
+2},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"points\":[\
+[84.6078,141.167],[87.1078,141.167]],\"type\":\"Line\",\"faceForm\":null,\"\
+antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\"\
+Square\",\"opacity\":0.3,\"thickness\":{\"absolute\":0.2},\"joinForm\":{\"\
+type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"points\":[[84.6078,120.988],[\
+87.1078,120.988]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":false,\"\
+edgeForm\":{\"color\":[102,102,102],\"capForm\":\"Square\",\"opacity\":0.3,\"\
+thickness\":{\"absolute\":0.2},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"\
+dashing\":[]}},{\"points\":[[84.6078,110.898],[87.1078,110.898]],\"type\":\"\
+Line\",\"faceForm\":null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,\
+102,102],\"capForm\":\"Square\",\"opacity\":0.3,\"thickness\":{\"absolute\":0.\
+2},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"points\":[\
+[84.6078,100.808],[87.1078,100.808]],\"type\":\"Line\",\"faceForm\":null,\"\
+antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\"\
+Square\",\"opacity\":0.3,\"thickness\":{\"absolute\":0.2},\"joinForm\":{\"\
+type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"points\":[[84.6078,80.6286],[\
+87.1078,80.6286]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":false,\"\
+edgeForm\":{\"color\":[102,102,102],\"capForm\":\"Square\",\"opacity\":0.3,\"\
+thickness\":{\"absolute\":0.2},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"\
+dashing\":[]}},{\"points\":[[84.6078,70.5388],[87.1078,70.5388]],\"type\":\"\
+Line\",\"faceForm\":null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,\
+102,102],\"capForm\":\"Square\",\"opacity\":0.3,\"thickness\":{\"absolute\":0.\
+2},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"points\":[\
+[84.6078,60.449],[87.1078,60.449]],\"type\":\"Line\",\"faceForm\":null,\"\
+antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\"\
+Square\",\"opacity\":0.3,\"thickness\":{\"absolute\":0.2},\"joinForm\":{\"\
+type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"points\":[[84.6078,40.2694],[\
+87.1078,40.2694]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":false,\"\
+edgeForm\":{\"color\":[102,102,102],\"capForm\":\"Square\",\"opacity\":0.3,\"\
+thickness\":{\"absolute\":0.2},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"\
+dashing\":[]}},{\"points\":[[84.6078,30.1796],[87.1078,30.1796]],\"type\":\"\
+Line\",\"faceForm\":null,\"antialiased\":false,\"edgeForm\":{\"color\":[102,\
+102,102],\"capForm\":\"Square\",\"opacity\":0.3,\"thickness\":{\"absolute\":0.\
+2},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"points\":[\
+[84.6078,20.0898],[87.1078,20.0898]],\"type\":\"Line\",\"faceForm\":null,\"\
+antialiased\":false,\"edgeForm\":{\"color\":[102,102,102],\"capForm\":\"\
+Square\",\"opacity\":0.3,\"thickness\":{\"absolute\":0.2},\"joinForm\":{\"\
+type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"type\":\"Inset\",\"metadata\"\
+:{\"localRect\":{\"left\":26,\"top\":87,\"bottom\":97,\"right\":32},\"\
+transform\":[1,0,0,1,66,120]},\"boxImageData\":{\"imageSource\":\"data:image/\
+png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAYAAAAMCAYAAABBV8wuAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAJRJREFUGJWVj6ERwkAQAPceFQ9B/\
+GAjeSQVxH0J9BEqAANNINMIaCghP8wEDOpV7jBEIrJ2Z8XCVAQgxrg0swuwBa4isnMAZnYUkXtRFCs\
+ReQAH9ytrVT23bftR1RNQj2Luve8BvPe9mS1G8U4plQAppVJEXjOAqqrWzrlNCOE2DENjZk8HoKoNE\
+HLOHRBUdT/57z9fM4A4Fv3OBhcAAAAASUVORK5CYII=\",\"boundingBox\":{\"width\":6,\"\
+height\":12,\"baseline\":10}}},{\"type\":\"Inset\",\"metadata\":{\"localRect\"\
+:{\"left\":26,\"top\":46,\"bottom\":56,\"right\":42},\"transform\":[1,0,0,1,\
+66,120]},\"boxImageData\":{\"imageSource\":\"data:image/png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAMCAYAAABr5z2BAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAASNJREFUKJHVkKFOA1EQRc9MV7SCkBAoJBsEP0H4goo2r27BgIQPKAaJAwNo\
+sEAIqdvtGipIMYCm/AErKBhSsZjOw5Rk07SacOXMvWdyB/5aAuCcW/\
+beXwIbwJOI7CRJ8l40NpvNyMwOgTXgVVX34zh+UADv/\
+bGIvFQqlVUR6QNHk5fMLPLebw2HwwXg3MxuAHS8r5nZabvd/\
+jKzE6A2Ceh0OptpmvZ7vd53EAT3QF4ELIZhOAAIw3DgvV+a1bler6+\
+MRqNbVW0VAZ9ZllUBsiyrisjHtHCj0VhX1UczO4vjOC4CuqraiqJoXlVb3vvulPCuiMQispem6fXvP\
+Bg/6KBUKl3lef4mIs9mtg3gnPNJkgiAql6MM3fOOQDK5fLcrKr/SD/\
+dGnMExQPKawAAAABJRU5ErkJggg==\",\"boundingBox\":{\"width\":16,\"height\":12,\"\
+baseline\":10}}},{\"type\":\"Inset\",\"metadata\":{\"localRect\":{\"left\":26,\
+\"top\":6,\"bottom\":16,\"right\":41},\"transform\":[1,0,0,1,66,120]},\"\
+boxImageData\":{\"imageSource\":\"data:image/png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAYAAAC9QufkAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAOpJREFUKJHV0CFOxFAQxvH/\
+VLWihsAiXjjDGgSublVfL0AQGCQaDBAMa9gjAAmyrq8ei4cj8AQLCFSrZjBbRFk0YcxkkvlN8g38VQ\
+mA937bzO6BPeBRRA5CCK/rgPf+\
+AjgPIUgCYGZzEXnKsmxHRJ6Bq3WwqqpdMzsa5mTVZ6q6qOv6U1WvgdkYFkWRqupNkiT7Y7zpnFsCOO\
+eWZrY1xnmez4Hbpmkexvg9xjgBiDFOROTtx3NEjkVk4b23VXYTgLIs70TkI03Ty77vz8xso23bw3W5\
+B/j9MFU9AaZd170AU1U9HZZ+O/CP6wt4RFmt8ta9dwAAAABJRU5ErkJggg==\",\"boundingBox\"\
+:{\"width\":15,\"height\":12,\"baseline\":10}}},{\"type\":\"Inset\",\"\
+metadata\":{\"localRect\":{\"left\":26,\"top\":-34,\"bottom\":-24,\"right\":\
+41},\"transform\":[1,0,0,1,66,120]},\"boxImageData\":{\"imageSource\":\"data:\
+image/png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAYAAAC9QufkAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAR1JREFUKJHVkD9LQmEUh5/\
+fS3dwuDRUNlyC6As4uPQBwu0dHRoamgwCQYfISZwKor5Bk6ObFyLwCzSkS32E7oXsDzQpCO9pUQhzj\
+37r7zw85xz4qwjAe79tZl1gH3iQdJSm6evPwXa77YbDYROoAXuSnAMws0tJT4VCYUfSM3CxbBmNRnW\
+g5pw7LJfLUZqmcvOuEkK46fV6XyGEa6CyDJvZiZmd9fv9x06nEwDW5t1mkiRjgCRJxnmeb/\
+26T9qVdOC97wI5UF+Y37MsKwJkWVaU9LbC/\
+CHpbjabbUhqmNntAh4455rVanXdOdc0s8GK594DxHFs802CAwghnAOlyWTyApRCCC0A770tyCiKWmZ\
+2Op1OP83sStLxCsF/yDdp2W6rzi668gAAAABJRU5ErkJggg==\",\"boundingBox\":{\"width\"\
+:15,\"height\":12,\"baseline\":10}}},{\"type\":\"Inset\",\"metadata\":{\"\
+localRect\":{\"left\":26,\"top\":-75,\"bottom\":-65,\"right\":41},\"transform\
+\":[1,0,0,1,66,120]},\"boxImageData\":{\"imageSource\":\"data:image/png;\
+base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAYAAAC9QufkAAAABHNCSVQICAgIfAhkiAAAAAl\
+wSFlzAAAOxAAADsQBlSsOGwAAAQdJREFUKJHVkDFKAwEQRd8MFqYI22gsFgtPkNYTaOOWKUQszQGCg\
+p5AQQyeQMGUKVNJLmCvvY27YLSJTRYW5ttsIITtxV8NM/P4Mx/+\
+SgaQZdmOpBGwD7yY2elkMvlcXcyy7Ai4BfaAd+\
+DCASTdmNlrq9XaNbM34LrB6FHSoKqqxMzOgQevBwcRMRyPx/\
+OIuAMO1klJBUC73VbdyjfqYitN0xlAmqazoii212F370fEc1mWiaS5ux8unb/\
+zPO8A5HneMbOvBucRcFxV1aa7n0h6WsJTdx/0er3E3QeSpg1wsnq2pMQBIuIS6C4Wiw+gGxFXdcLL/\
+zCzvpndl2X5I2kInDWE+h/0C1oGcTHJ8WYPAAAAAElFTkSuQmCC\",\"boundingBox\":{\"\
+width\":15,\"height\":12,\"baseline\":10}}},{\"type\":\"Inset\",\"metadata\":{\
+\"localRect\":{\"left\":26,\"top\":-115,\"bottom\":-105,\"right\":41},\"\
+transform\":[1,0,0,1,66,120]},\"boxImageData\":{\"imageSource\":\"data:image/\
+png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAYAAAC9QufkAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAALRJREFUKJHNkCFyAkEURLv/\
+qlUxCVA1xTmSEyC26st1cAkuASZcgriVI7kAaHKFMSSGA+w0ahQgRiVP/\
+upXv6uBv4IA4O4qhxgjHwXdfSppD+ADwJHkyorwTCpI2pI8t207J/\
+kNYGMVLRc5590wDNec8yeARY38GkK4AEAI4SLprUb+TSlNACClNCH5UyMfzGzd9/\
+2Lma0lHe7WLsQY6e4qQ3ZdN2ua5kvSO8nTOI7Lisf/iRtGjEMkDxYMWgAAAABJRU5ErkJggg==\",\
+\"boundingBox\":{\"width\":15,\"height\":12,\"baseline\":10}}},{\"type\":\"\
+Group\",\"name\":\"Frame\",\"primitives\":[{\"points\":[[84.888,216],[70.8744,\
+216]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":false,\"edgeForm\":{\
+\"color\":[0,0,0],\"capForm\":\"Square\",\"opacity\":0,\"thickness\":{\"\
+absolute\":1},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\
+\"points\":[[70.8744,216],[70.8744,5.79592]],\"type\":\"Line\",\"faceForm\":\
+null,\"antialiased\":false,\"edgeForm\":{\"color\":[0,0,0],\"capForm\":\"\
+Square\",\"opacity\":0,\"thickness\":{\"absolute\":1},\"joinForm\":{\"type\":\
+\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"points\":[[70.8744,5.79592],[84.888,\
+5.79592]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":false,\"\
+edgeForm\":{\"color\":[0,0,0],\"capForm\":\"Square\",\"opacity\":0,\"\
+thickness\":{\"absolute\":1},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"\
+dashing\":[]}},{\"points\":[[84.888,5.79592],[84.888,216]],\"type\":\"Line\",\
+\"faceForm\":null,\"antialiased\":false,\"edgeForm\":{\"color\":[0,0,0],\"\
+capForm\":\"Square\",\"opacity\":0,\"thickness\":{\"absolute\":1},\"joinForm\"\
+:{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"points\":[[71.1547,216],[\
+71.1547,214.8]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":false,\"\
+edgeForm\":{\"color\":[0,0,0],\"capForm\":\"Butt\",\"opacity\":0,\"thickness\"\
+:{\"absolute\":1},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}\
+},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],\
+[66,230],[109,230],[109,5]]},{\"points\":[[71.6031,216],[71.6031,214.8]],\"\
+type\":\"Line\",\"faceForm\":null,\"antialiased\":false,\"edgeForm\":{\"color\
+\":[0,0,0],\"capForm\":\"Butt\",\"opacity\":0,\"thickness\":{\"absolute\":1},\
+\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"transform\":[\
+1.0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,230],[109,230]\
+,[109,5]]},{\"points\":[[72.0516,216],[72.0516,214.8]],\"type\":\"Line\",\"\
+faceForm\":null,\"antialiased\":false,\"edgeForm\":{\"color\":[0,0,0],\"\
+capForm\":\"Butt\",\"opacity\":0,\"thickness\":{\"absolute\":1},\"joinForm\":{\
+\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.\
+0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,230],[109,230],[109,5]]},{\"\
+points\":[[72.5,216],[72.5,214]],\"type\":\"Line\",\"faceForm\":null,\"\
+antialiased\":false,\"edgeForm\":{\"color\":[0,0,0],\"capForm\":\"Butt\",\"\
+opacity\":0,\"thickness\":{\"absolute\":1},\"joinForm\":{\"type\":\"Miter\",\"\
+d\":3.25},\"dashing\":[]}},{\"type\":\"Inset\",\"metadata\":{\"localRect\":{\"\
+left\":0,\"top\":99,\"bottom\":109,\"right\":13},\"transform\":[1,0,0,1,66,\
+120]},\"boxImageData\":{\"imageSource\":\"data:image/png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAA0AAAAMCAYAAAC5tzfZAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAA9JREFUKJFjYBgFo2BgAAACfAABbor6RQAAAABJRU5ErkJggg==\",\"\
+boundingBox\":{\"width\":13,\"height\":12,\"baseline\":10}}},{\"transform\":[\
+1.0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,230],[109,230]\
+,[109,5]]},{\"points\":[[72.9484,216],[72.9484,214.8]],\"type\":\"Line\",\"\
+faceForm\":null,\"antialiased\":false,\"edgeForm\":{\"color\":[0,0,0],\"\
+capForm\":\"Butt\",\"opacity\":0,\"thickness\":{\"absolute\":1},\"joinForm\":{\
+\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.\
+0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,230],[109,230],[109,5]]},{\"\
+points\":[[73.3969,216],[73.3969,214.8]],\"type\":\"Line\",\"faceForm\":null,\
+\"antialiased\":false,\"edgeForm\":{\"color\":[0,0,0],\"capForm\":\"Butt\",\"\
+opacity\":0,\"thickness\":{\"absolute\":1},\"joinForm\":{\"type\":\"Miter\",\"\
+d\":3.25},\"dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\"type\":\
+\"clip\",\"path\":[[66,5],[66,230],[109,230],[109,5]]},{\"points\":[[73.8453,\
+216],[73.8453,214.8]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":\
+false,\"edgeForm\":{\"color\":[0,0,0],\"capForm\":\"Butt\",\"opacity\":0,\"\
+thickness\":{\"absolute\":1},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"\
+dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"\
+path\":[[66,5],[66,230],[109,230],[109,5]]},{\"points\":[[74.2937,216],[74.\
+2937,214]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":false,\"\
+edgeForm\":{\"color\":[0,0,0],\"capForm\":\"Butt\",\"opacity\":0,\"thickness\"\
+:{\"absolute\":1},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}\
+},{\"type\":\"Inset\",\"metadata\":{\"localRect\":{\"left\":2,\"top\":99,\"\
+bottom\":109,\"right\":15},\"transform\":[1,0,0,1,66,120]},\"boxImageData\":{\
+\"imageSource\":\"data:image/png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAA0AAAAMCAYAAAC5tzfZAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAA9JREFUKJFjYBgFo2BgAAACfAABbor6RQAAAABJRU5ErkJggg==\",\"\
+boundingBox\":{\"width\":13,\"height\":12,\"baseline\":10}}},{\"transform\":[\
+1.0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,230],[109,230]\
+,[109,5]]},{\"points\":[[74.7422,216],[74.7422,214.8]],\"type\":\"Line\",\"\
+faceForm\":null,\"antialiased\":false,\"edgeForm\":{\"color\":[0,0,0],\"\
+capForm\":\"Butt\",\"opacity\":0,\"thickness\":{\"absolute\":1},\"joinForm\":{\
+\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.\
+0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,230],[109,230],[109,5]]},{\"\
+points\":[[75.1906,216],[75.1906,214.8]],\"type\":\"Line\",\"faceForm\":null,\
+\"antialiased\":false,\"edgeForm\":{\"color\":[0,0,0],\"capForm\":\"Butt\",\"\
+opacity\":0,\"thickness\":{\"absolute\":1},\"joinForm\":{\"type\":\"Miter\",\"\
+d\":3.25},\"dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\"type\":\
+\"clip\",\"path\":[[66,5],[66,230],[109,230],[109,5]]},{\"points\":[[75.639,\
+216],[75.639,214.8]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":\
+false,\"edgeForm\":{\"color\":[0,0,0],\"capForm\":\"Butt\",\"opacity\":0,\"\
+thickness\":{\"absolute\":1},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"\
+dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"\
+path\":[[66,5],[66,230],[109,230],[109,5]]},{\"points\":[[76.0875,216],[76.\
+0875,214]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":false,\"\
+edgeForm\":{\"color\":[0,0,0],\"capForm\":\"Butt\",\"opacity\":0,\"thickness\"\
+:{\"absolute\":1},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}\
+},{\"type\":\"Inset\",\"metadata\":{\"localRect\":{\"left\":3,\"top\":99,\"\
+bottom\":109,\"right\":17},\"transform\":[1,0,0,1,66,120]},\"boxImageData\":{\
+\"imageSource\":\"data:image/png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAA4AAAAMCAYAAABSgIzaAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAA9JREFUKJFjYBgFo2BoAAACrAAB0OyBEgAAAABJRU5ErkJggg==\",\"\
+boundingBox\":{\"width\":14,\"height\":12,\"baseline\":10}}},{\"transform\":[\
+1.0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,230],[109,230]\
+,[109,5]]},{\"points\":[[76.5359,216],[76.5359,214.8]],\"type\":\"Line\",\"\
+faceForm\":null,\"antialiased\":false,\"edgeForm\":{\"color\":[0,0,0],\"\
+capForm\":\"Butt\",\"opacity\":0,\"thickness\":{\"absolute\":1},\"joinForm\":{\
+\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.\
+0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,230],[109,230],[109,5]]},{\"\
+points\":[[76.9844,216],[76.9844,214.8]],\"type\":\"Line\",\"faceForm\":null,\
+\"antialiased\":false,\"edgeForm\":{\"color\":[0,0,0],\"capForm\":\"Butt\",\"\
+opacity\":0,\"thickness\":{\"absolute\":1},\"joinForm\":{\"type\":\"Miter\",\"\
+d\":3.25},\"dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\"type\":\
+\"clip\",\"path\":[[66,5],[66,230],[109,230],[109,5]]},{\"points\":[[77.4328,\
+216],[77.4328,214.8]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":\
+false,\"edgeForm\":{\"color\":[0,0,0],\"capForm\":\"Butt\",\"opacity\":0,\"\
+thickness\":{\"absolute\":1},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"\
+dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"\
+path\":[[66,5],[66,230],[109,230],[109,5]]},{\"points\":[[77.8812,216],[77.\
+8812,214]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":false,\"\
+edgeForm\":{\"color\":[0,0,0],\"capForm\":\"Butt\",\"opacity\":0,\"thickness\"\
+:{\"absolute\":1},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}\
+},{\"type\":\"Inset\",\"metadata\":{\"localRect\":{\"left\":9,\"top\":99,\"\
+bottom\":109,\"right\":15},\"transform\":[1,0,0,1,66,120]},\"boxImageData\":{\
+\"imageSource\":\"data:image/png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAYAAAAMCAYAAABBV8wuAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAA1JREFUGJVjYBgFxAIAASwAAZTQJuEAAAAASUVORK5CYII=\",\"\
+boundingBox\":{\"width\":6,\"height\":12,\"baseline\":10}}},{\"transform\":[1.\
+0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,230],[109,230],[\
+109,5]]},{\"points\":[[78.3297,216],[78.3297,214.8]],\"type\":\"Line\",\"\
+faceForm\":null,\"antialiased\":false,\"edgeForm\":{\"color\":[0,0,0],\"\
+capForm\":\"Butt\",\"opacity\":0,\"thickness\":{\"absolute\":1},\"joinForm\":{\
+\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.\
+0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,230],[109,230],[109,5]]},{\"\
+points\":[[78.7781,216],[78.7781,214.8]],\"type\":\"Line\",\"faceForm\":null,\
+\"antialiased\":false,\"edgeForm\":{\"color\":[0,0,0],\"capForm\":\"Butt\",\"\
+opacity\":0,\"thickness\":{\"absolute\":1},\"joinForm\":{\"type\":\"Miter\",\"\
+d\":3.25},\"dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\"type\":\
+\"clip\",\"path\":[[66,5],[66,230],[109,230],[109,5]]},{\"points\":[[79.2265,\
+216],[79.2265,214.8]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":\
+false,\"edgeForm\":{\"color\":[0,0,0],\"capForm\":\"Butt\",\"opacity\":0,\"\
+thickness\":{\"absolute\":1},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"\
+dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"\
+path\":[[66,5],[66,230],[109,230],[109,5]]},{\"points\":[[79.675,216],[79.675,\
+214]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":false,\"edgeForm\":{\
+\"color\":[0,0,0],\"capForm\":\"Butt\",\"opacity\":0,\"thickness\":{\"\
+absolute\":1},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\
+\"type\":\"Inset\",\"metadata\":{\"localRect\":{\"left\":10,\"top\":99,\"\
+bottom\":109,\"right\":17},\"transform\":[1,0,0,1,66,120]},\"boxImageData\":{\
+\"imageSource\":\"data:image/png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAcAAAAMCAYAAACulacQAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAA1JREFUGJVjYBgFtAIAAVwAASxJnpoAAAAASUVORK5CYII=\",\"\
+boundingBox\":{\"width\":7,\"height\":12,\"baseline\":10}}},{\"transform\":[1.\
+0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,230],[109,230],[\
+109,5]]},{\"points\":[[80.1234,216],[80.1234,214.8]],\"type\":\"Line\",\"\
+faceForm\":null,\"antialiased\":false,\"edgeForm\":{\"color\":[0,0,0],\"\
+capForm\":\"Butt\",\"opacity\":0,\"thickness\":{\"absolute\":1},\"joinForm\":{\
+\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.\
+0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,230],[109,230],[109,5]]},{\"\
+points\":[[80.5718,216],[80.5718,214.8]],\"type\":\"Line\",\"faceForm\":null,\
+\"antialiased\":false,\"edgeForm\":{\"color\":[0,0,0],\"capForm\":\"Butt\",\"\
+opacity\":0,\"thickness\":{\"absolute\":1},\"joinForm\":{\"type\":\"Miter\",\"\
+d\":3.25},\"dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\"type\":\
+\"clip\",\"path\":[[66,5],[66,230],[109,230],[109,5]]},{\"points\":[[81.0203,\
+216],[81.0203,214.8]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":\
+false,\"edgeForm\":{\"color\":[0,0,0],\"capForm\":\"Butt\",\"opacity\":0,\"\
+thickness\":{\"absolute\":1},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"\
+dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"\
+path\":[[66,5],[66,230],[109,230],[109,5]]},{\"points\":[[81.4687,216],[81.\
+4687,214]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":false,\"\
+edgeForm\":{\"color\":[0,0,0],\"capForm\":\"Butt\",\"opacity\":0,\"thickness\"\
+:{\"absolute\":1},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}\
+},{\"type\":\"Inset\",\"metadata\":{\"localRect\":{\"left\":12,\"top\":99,\"\
+bottom\":109,\"right\":18},\"transform\":[1,0,0,1,66,120]},\"boxImageData\":{\
+\"imageSource\":\"data:image/png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAYAAAAMCAYAAABBV8wuAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAA1JREFUGJVjYBgFxAIAASwAAZTQJuEAAAAASUVORK5CYII=\",\"\
+boundingBox\":{\"width\":6,\"height\":12,\"baseline\":10}}},{\"transform\":[1.\
+0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,230],[109,230],[\
+109,5]]},{\"points\":[[81.9171,216],[81.9171,214.8]],\"type\":\"Line\",\"\
+faceForm\":null,\"antialiased\":false,\"edgeForm\":{\"color\":[0,0,0],\"\
+capForm\":\"Butt\",\"opacity\":0,\"thickness\":{\"absolute\":1},\"joinForm\":{\
+\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.\
+0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,230],[109,230],[109,5]]},{\"\
+points\":[[82.3656,216],[82.3656,214.8]],\"type\":\"Line\",\"faceForm\":null,\
+\"antialiased\":false,\"edgeForm\":{\"color\":[0,0,0],\"capForm\":\"Butt\",\"\
+opacity\":0,\"thickness\":{\"absolute\":1},\"joinForm\":{\"type\":\"Miter\",\"\
+d\":3.25},\"dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\"type\":\
+\"clip\",\"path\":[[66,5],[66,230],[109,230],[109,5]]},{\"points\":[[82.814,\
+216],[82.814,214.8]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":\
+false,\"edgeForm\":{\"color\":[0,0,0],\"capForm\":\"Butt\",\"opacity\":0,\"\
+thickness\":{\"absolute\":1},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"\
+dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"\
+path\":[[66,5],[66,230],[109,230],[109,5]]},{\"points\":[[83.2624,216],[83.\
+2624,214]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":false,\"\
+edgeForm\":{\"color\":[0,0,0],\"capForm\":\"Butt\",\"opacity\":0,\"thickness\"\
+:{\"absolute\":1},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}\
+},{\"type\":\"Inset\",\"metadata\":{\"localRect\":{\"left\":14,\"top\":99,\"\
+bottom\":109,\"right\":20},\"transform\":[1,0,0,1,66,120]},\"boxImageData\":{\
+\"imageSource\":\"data:image/png;base64,\
+iVBORw0KGgoAAAANSUhEUgAAAAYAAAAMCAYAAABBV8wuAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAA\
+AOxAAADsQBlSsOGwAAAA1JREFUGJVjYBgFxAIAASwAAZTQJuEAAAAASUVORK5CYII=\",\"\
+boundingBox\":{\"width\":6,\"height\":12,\"baseline\":10}}},{\"transform\":[1.\
+0,0.0,0.0,1.0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,230],[109,230],[\
+109,5]]},{\"points\":[[83.7109,216],[83.7109,214.8]],\"type\":\"Line\",\"\
+faceForm\":null,\"antialiased\":false,\"edgeForm\":{\"color\":[0,0,0],\"\
+capForm\":\"Butt\",\"opacity\":0,\"thickness\":{\"absolute\":1},\"joinForm\":{\
+\"type\":\"Miter\",\"d\":3.25},\"dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.\
+0,0.0,0.0],\"type\":\"clip\",\"path\":[[66,5],[66,230],[109,230],[109,5]]},{\"\
+points\":[[84.1593,216],[84.1593,214.8]],\"type\":\"Line\",\"faceForm\":null,\
+\"antialiased\":false,\"edgeForm\":{\"color\":[0,0,0],\"capForm\":\"Butt\",\"\
+opacity\":0,\"thickness\":{\"absolute\":1},\"joinForm\":{\"type\":\"Miter\",\"\
+d\":3.25},\"dashing\":[]}},{\"transform\":[1.0,0.0,0.0,1.0,0.0,0.0],\"type\":\
+\"clip\",\"path\":[[66,5],[66,230],[109,230],[109,5]]},{\"points\":[[84.6078,\
+216],[84.6078,214.8]],\"type\":\"Line\",\"faceForm\":null,\"antialiased\":\
+false,\"edgeForm\":{\"color\":[0,0,0],\"capForm\":\"Butt\",\"opacity\":0,\"\
+thickness\":{\"absolute\":1},\"joinForm\":{\"type\":\"Miter\",\"d\":3.25},\"\
+dashing\":[]}}],\"metadata\":\"TBD\"},{\"type\":\"Group\",\"name\":\"Axes\",\"\
+primitives\":[],\"metadata\":\"TBD\"}],\"height\":225.0,\"PlotRange\":{\"left\
+\":4.87442,\"top\":-114.204,\"bottom\":96.0,\"right\":18.888}}}"], Alignment -> 
+           Left, AppearanceElements -> None, ImageMargins -> {{5, 5}, {5, 5}},
+            ImageSizeAction -> "ResizeToFit"], LineIndent -> 0, StripOnInput -> 
+          False], {FontFamily -> "Arial"}, Background -> Automatic, 
+         StripOnInput -> False], TraditionalForm]}, "BarLegend", 
+      DisplayFunction -> (#& ), 
+      InterpretationFunction :> (
+       RowBox[{"BarLegend", "[", "\"NeonColors\"", "]"}]& )], 
+     TraditionalForm], TraditionalForm]},
+  "Legended",
+  DisplayFunction->(GridBox[{{
+      TagBox[
+       ItemBox[
+        PaneBox[
+         TagBox[#, "SkipImageSizeLevel"], Alignment -> {Center, Baseline}, 
+         BaselinePosition -> Baseline], DefaultBaseStyle -> "Labeled"], 
+       "SkipImageSizeLevel"], 
+      ItemBox[#2, DefaultBaseStyle -> "LabeledLabel"]}}, 
+    GridBoxAlignment -> {"Columns" -> {{Center}}, "Rows" -> {{Center}}}, 
+    AutoDelete -> False, GridBoxItemSize -> Automatic, 
+    BaselinePosition -> {1, 1}]& ),
+  Editable->True,
+  InterpretationFunction->(RowBox[{"Legended", "[", 
+     RowBox[{#, ",", 
+       RowBox[{"Placed", "[", 
+         RowBox[{#2, ",", "After"}], "]"}]}], "]"}]& )]], "Output",
+ CellID->168]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{
+  3.6335899620933747`*^9, 3.633590419369282*^9, {3.6336113601343985`*^9, 
+   3.633611380992281*^9}},
+ CellID->174],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ServiceExecute", "[", "\"\<Twitter\>\"", "]"}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.633591040455953*^9, 3.6335910404715247`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"RunScheduledTask", "[", 
+   RowBox[{
+    RowBox[{"SendMessage", "[", 
+     RowBox[{"\"\<Twitter\>\"", ",", 
+      RowBox[{"Legended", "[", 
+       RowBox[{
+        RowBox[{"ListLinePlot", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+           "63.`", ",", "61.`", ",", "50.`", ",", "56.`", ",", "50.`", ",", 
+            "39.`", ",", "32.`", ",", "32.`", ",", "33.`", ",", "33.`"}], 
+           "}"}], ",", 
+          RowBox[{"ColorFunction", " ", "\[Rule]", "\"\<NeonColors\>\""}]}], 
+         "]"}], ",", 
+        RowBox[{"BarLegend", "[", "\"\<NeonColors\>\"", "]"}]}], "]"}]}], 
+     "]"}], ",", "1800"}], "]"}], "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.6335903915632176`*^9, 3.6335903915788345`*^9}, {
+  3.63359160676348*^9, 3.6335916116368303`*^9}, {3.6335921403365507`*^9, 
+  3.633592191817401*^9}, {3.63359275282146*^9, 3.6335927543025894`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"sensors", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"GeoPosition", "[", 
+      RowBox[{"{", 
+       RowBox[{"41.383`", ",", "2.10587`"}], "}"}], "]"}], ",", 
+     RowBox[{"GeoPosition", "[", 
+      RowBox[{"{", 
+       RowBox[{"41.3846`", ",", "2.11191`"}], "}"}], "]"}], ",", 
+     RowBox[{"GeoPosition", "[", 
+      RowBox[{"{", 
+       RowBox[{"41.3859`", ",", "2.11708`"}], "}"}], "]"}], ",", 
+     RowBox[{"GeoPosition", "[", 
+      RowBox[{"{", 
+       RowBox[{"41.3866`", ",", "2.11993`"}], "}"}], "]"}], ",", 
+     RowBox[{"GeoPosition", "[", 
+      RowBox[{"{", 
+       RowBox[{"41.3872`", ",", "2.12252`"}], "}"}], "]"}], ",", 
+     RowBox[{"GeoPosition", "[", 
+      RowBox[{"{", 
+       RowBox[{"41.3888`", ",", "2.12873`"}], "}"}], "]"}], ",", 
+     RowBox[{"GeoPosition", "[", 
+      RowBox[{"{", 
+       RowBox[{"41.3905`", ",", "2.13537`"}], "}"}], "]"}], ",", 
+     RowBox[{"GeoPosition", "[", 
+      RowBox[{"{", 
+       RowBox[{"41.3913`", ",", "2.13864`"}], "}"}], "]"}], ",", 
+     RowBox[{"GeoPosition", "[", 
+      RowBox[{"{", 
+       RowBox[{"41.3925`", ",", "2.14373`"}], "}"}], "]"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"GeoGraphics", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"PointSize", "[", ".03", "]"}], ",", 
+    RowBox[{"Map", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"ColorData", "[", "\"\<NeonColors\>\"", "]"}], "[", 
+          RowBox[{
+           RowBox[{"#", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "/", "90."}], "]"}], ",", 
+         RowBox[{"Point", "[", 
+          RowBox[{"#", "[", 
+           RowBox[{"[", "2", "]"}], "]"}], "]"}]}], "}"}], "&"}], ",", 
+      RowBox[{"Transpose", "[", 
+       RowBox[{"{", 
+        RowBox[{"values", ",", "sensors"}], "}"}], "]"}]}], "]"}]}], "}"}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.633592409751552*^9, 3.633592410267185*^9}}]
+},
+WindowSize->{1526, 783},
+WindowMargins->{{Automatic, 2}, {Automatic, 0}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (December 4, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 407, 11, 52, "Input",
+ CellID->11],
+Cell[CellGroupData[{
+Cell[990, 35, 272, 9, 31, "Input",
+ CellID->57],
+Cell[1265, 46, 69861, 1088, 248, "Output",
+ CellID->90]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[71163, 1139, 258, 8, 31, "Input",
+ CellID->119],
+Cell[71424, 1149, 204, 5, 31, "Output",
+ CellID->122]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[71665, 1159, 248, 9, 31, "Input",
+ CellID->102],
+Cell[71916, 1170, 290, 6, 31, "Output",
+ CellID->103]
+}, Open  ]],
+Cell[72221, 1179, 771, 25, 31, "Input",
+ CellID->96],
+Cell[CellGroupData[{
+Cell[73017, 1208, 494, 13, 31, "Input"],
+Cell[73514, 1223, 84293, 1246, 252, "Output",
+ CellID->168]
+}, Open  ]],
+Cell[157822, 2472, 161, 4, 31, "Input",
+ CellID->174],
+Cell[157986, 2478, 188, 4, 52, "Input"],
+Cell[158177, 2484, 928, 21, 72, "Input"],
+Cell[159108, 2507, 1958, 54, 72, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
